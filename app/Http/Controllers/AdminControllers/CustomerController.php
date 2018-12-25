@@ -24,7 +24,7 @@ class CustomerController extends Controller
     public function SaveCustomer(Request $request){
         $request->validate([
             'name' => 'required',
-            'mobile' => 'required|min:10|max:10|unique:mobile',
+            'mobile' => 'required|min:10|max:10|unique:customers',
             'address' => 'required',
             'gst' => 'required',
         ]);

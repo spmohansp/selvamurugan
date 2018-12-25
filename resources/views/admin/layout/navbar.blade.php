@@ -44,6 +44,63 @@
                 </li>
                 <!--Master-->
 
+                <li class="nav-item @yield('IncommingProducts')" data-toggle="tooltip" data-placement="right" title="Master">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#AddProductsIncome" data-parent="#exampleAccordion">
+                        <i class="ti i-cl-12 ti-settings"></i>
+                        <span class="nav-link-text">Income Products</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="AddProductsIncome">
+                        <li>
+                            <a href="{{ url('/admin/Product/Beam') }}">Beam</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('/admin/subCustomers') }}">Sub Customer</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('/admin/companies') }}">Companies</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="nav-item @yield('Warping')" data-toggle="tooltip" data-placement="right" title="Master">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#WARPING" data-parent="#exampleAccordion">
+                        <i class="ti i-cl-12 ti-settings"></i>
+                        <span class="nav-link-text">Warping</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="WARPING">
+                        <li>
+                            <a href="{{ url('/admin/Customers') }}">Customer</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('/admin/subCustomers') }}">Sub Customer</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('/admin/companies') }}">Companies</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="nav-item @yield('Sizing')" data-toggle="tooltip" data-placement="right" title="Master">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#SIZING" data-parent="#exampleAccordion">
+                        <i class="ti i-cl-12 ti-settings"></i>
+                        <span class="nav-link-text">Sizing</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="SIZING">
+                        <li>
+                            <a href="{{ url('/admin/Customers') }}">Customer</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('/admin/subCustomers') }}">Sub Customer</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('/admin/companies') }}">Companies</a>
+                        </li>
+                    </ul>
+                </li>
+
+
 
 
 

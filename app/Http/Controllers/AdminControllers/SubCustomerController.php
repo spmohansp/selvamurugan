@@ -22,6 +22,17 @@ class SubCustomerController extends Controller
         return view('admin.master.subCustomer.add',compact('Customers'));
     }
 
+    public function getSubCustomerData(){
+        $SubCustomers = SubCustomer::where('customer_id',request('Customer_id'))->get();
+        $FinalDatas = '<select name="sub_customer_id" class="form-control" required> <option value="">Select Sub Customer</option>';
+        if(!empty($SubCustomers)){
+            foreach($SubCustomers as $SubCustomer){
+                $FinalDatas .= '<option value="'.$SubCustomer->id.'">'.$SubCustomer->name.'</option>';
+            }
+        }
+        return $FinalDatas.'</select>';
+    }
+
 
     public function SaveSubCustomer(Request $request){
         $request->validate([

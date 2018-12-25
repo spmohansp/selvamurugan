@@ -1,17 +1,21 @@
 $(document).ready(function () {
 
 
-    $("#CatagoryChange").change(function(e){
+    $("#CustomerIdsChanges").change(function(e){
         e.preventDefault();
-        console.log('sdf');
-        var catagoryId =$("#CatagoryChange option:selected").val();
+        var Customer_id =$("#CustomerIdsChanges option:selected").val();
+        // console.log(Customer_id);
         $.ajax({
             type:"get",
             url :'/admin/getSubCustomerData',
-            data: {catagoryId:catagoryId},
+            data: {Customer_id:Customer_id},
             success:function(data){
-                console.log(data);
-                $('#SubCatagoryData').html(data);
+                // console.log(data);
+                if(data !=''){
+                    $('#SubCustomerDivDataLoad').html(data);
+                }else{
+                    $('#SubCustomerDivDataLoad').html('<p style="color: red">Nill Sub Customer</p>');
+                }
             }
         });
     });
