@@ -35,10 +35,10 @@
                             <a href="{{ url('/admin/Customers') }}">Customer</a>
                         </li>
                         <li>
-                            <a href="{{ url('/admin/subCustomers/') }}">Sub Customer</a>
+                            <a href="{{ url('/admin/subCustomers') }}">Sub Customer</a>
                         </li>
                         <li>
-                            <a href="{{ url('/admin/companies/') }}">Companies</a>
+                            <a href="{{ url('/admin/companies') }}">Companies</a>
                         </li>
                     </ul>
                 </li>

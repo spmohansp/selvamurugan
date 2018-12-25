@@ -8,7 +8,7 @@
 @section('content')
     <div class="row page-titles">
         <div class="col-md-12 align-self-center">
-            <h4 class="theme-cl">Add Customer</h4>
+            <h4 class="theme-cl">Add Sub Customer</h4>
         </div>
     </div>
     @include('admin.layout.errors')
@@ -24,7 +24,7 @@
 
     <div class="row">
         <div class="col-md-12 col-sm-12">
-            <form data-toggle="validator" class="padd-20" method="post" action="{{ route('admin.AddCustomer') }}">
+            <form data-toggle="validator" class="padd-20" method="post" action="{{ route('admin.AddSubCustomer') }}">
                 <div class="card">
                     {{ csrf_field() }}
                     <div class="row page-titles">
@@ -36,6 +36,21 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Customer Name</span></label>
+                                <select name="customer_id" class="form-control" required>
+                                    <option value="">Select Customer</option>
+                                    @foreach($Customers as $Customer)
+                                        <option value="{{ $Customer->id }}" {{ ($Customer->id == old('customer_id'))? 'selected':'' }}>{{ $Customer->name }}</option>
+                                    @endforeach
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mrg-0">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label"><span class="asterisk">Sub Customer Name</span></label>
                                 <input type="text" class="form-control text-only" name="name"  value="{{ old("name") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -51,23 +66,15 @@
                     <div class="row mrg-0">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label class="control-label"><span class="asterisk">Address</span></label>
-                                <textarea name="address" class="form-control" required="">{{ old('address') }}</textarea>
-                                <div class="help-block with-errors"></div>
+                                <label class="control-label">Address</label>
+                                <textarea name="address" class="form-control">{{ old('address') }}</textarea>
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="control-label"><span class="asterisk">GST / TIN</span></label>
-                                <input type="text" name="gst" class="form-control" value="{{ old('gst') }}" required="">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="col-12">
                         <div class="form-group">
                             <div class="text-center">
-                                <button id="form-button" class="btn gredient-btn">Add Customer</button>
+                                <button id="form-button" class="btn gredient-btn">Add Sub Customer</button>
                             </div>
                         </div>
                     </div>

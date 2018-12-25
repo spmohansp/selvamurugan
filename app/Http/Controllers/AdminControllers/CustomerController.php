@@ -13,7 +13,7 @@ class CustomerController extends Controller
     }
 
     public function ShowAllCustomer(){
-        $Customers = Customer::orderBy('customer_name')->get()->all();
+        $Customers = Customer::orderBy('name')->get()->all();
         return view('admin.master.customer.view',compact('Customers'));
     }
 
@@ -23,14 +23,14 @@ class CustomerController extends Controller
 
     public function SaveCustomer(Request $request){
         $request->validate([
-            'customer_name' => 'required',
-            'mobile' => 'required|min:10|max:10',
+            'name' => 'required',
+            'mobile' => 'required|min:10|max:10|unique:mobile',
             'address' => 'required',
             'gst' => 'required',
         ]);
         try {
             $Customer = new Customer;
-            $Customer->customer_name = request('customer_name');
+            $Customer->name = request('name');
             $Customer->mobile = request('mobile');
             $Customer->address = request('address');
             $Customer->gst = request('gst');
