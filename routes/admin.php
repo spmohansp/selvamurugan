@@ -10,3 +10,8 @@ Route::get('/home', function () {
     return view('admin.home');
 })->name('home');
 
+//CUSTOMER
+Route::get('/Customers', 'AdminControllers\CustomerController@ShowAllCustomer');
+Route::get('/Customer/Add', 'AdminControllers\CustomerController@AddCustomer');
+Route::post('/Customer/Add', 'AdminControllers\CustomerController@SaveCustomer')->name('AddCustomer');
+

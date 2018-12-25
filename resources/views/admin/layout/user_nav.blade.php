@@ -13,7 +13,7 @@
                     <span class="a-dropdown__header-title">{{ Auth::user()->name }}</span>
                 </div>
             </li>
-            <!-- <li><a class="dropdown-item" href="#"><i class="ti-user"></i> My Profile</a></li> -->
+           <li><a class="dropdown-item" href="#"><i class="ti-user"></i>Setting</a></li>
             {{--<li><a class="dropdown-item" href="#"><i class="ti-wallet"></i> My Balance</a></li>--}}
             {{--<li><a class="dropdown-item" href="#"><i class="ti-email"></i> Inbox</a></li>--}}
            {{--  <li><a class="dropdown-item" href="{{ url('/admin/account') }}" ><i class="ti-settings"></i> Account Setting</a></li>
