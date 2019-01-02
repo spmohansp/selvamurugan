@@ -40,8 +40,11 @@ class Admin extends Authenticatable
     }
 
 
-    public function getAllUnits()
-    {
+    public function getAllUnits(){
         return Unit::get()->all();
+    }
+
+    public function getAllCustomers(){
+        return Customer::get()->all();
     }
 }

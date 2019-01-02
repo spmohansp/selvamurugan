@@ -36,6 +36,12 @@ Route::post('/SubCustomer/Add', 'AdminControllers\SubCustomerController@SaveSubC
 
 
 //Beam Product
-Route::get('/Product/Beam', 'AdminControllers\BeamController@ShowAllCustomerBeam');
+Route::get('/Product/beam', 'AdminControllers\BeamController@ShowAllCustomerBeam');
 Route::get('/Product/beam/Add', 'AdminControllers\BeamController@AddCustomerBeam');
 Route::post('/Product/beam/Add', 'AdminControllers\BeamController@saveIncomeBeam')->name('addIncomeBeam');
+
+
+//Yarn Product
+Route::get('/Product/yarn', 'AdminControllers\YarnController@ShowAllCustomerYarn');
+Route::get('/Product/yarn/Add', 'AdminControllers\YarnController@AddCustomerYarn');
+Route::post('/Product/yarn/Add', 'AdminControllers\YarnController@saveIncomeYarn')->name('addIncomeYarn');

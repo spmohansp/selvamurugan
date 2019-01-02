@@ -54,10 +54,10 @@
                     </a>
                     <ul class="sidenav-second-level collapse" id="AddProductsIncome">
                         <li>
-                            <a href="{{ url('/admin/Product/Beam') }}">Beam</a>
+                            <a href="{{ url('/admin/Product/beam') }}">Beam</a>
                         </li>
                         <li>
-                            <a href="{{ url('/admin/subCustomers') }}">Sub Customer</a>
+                            <a href="{{ url('/admin/Product/yarn') }}">Yarn</a>
                         </li>
                         <li>
                             <a href="{{ url('/admin/companies') }}">Companies</a>
