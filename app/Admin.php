@@ -38,4 +38,10 @@ class Admin extends Authenticatable
     {
         $this->notify(new AdminResetPassword($token));
     }
+
+
+    public function getAllUnits()
+    {
+        return Unit::get()->all();
+    }
 }

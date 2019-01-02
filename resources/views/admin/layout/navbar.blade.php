@@ -40,6 +40,9 @@
                         <li>
                             <a href="{{ url('/admin/companies') }}">Companies</a>
                         </li>
+                        <li>
+                            <a href="{{ url('/admin/units') }}">Units</a>
+                        </li>
                     </ul>
                 </li>
                 <!--Master-->

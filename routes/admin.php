@@ -16,6 +16,12 @@ Route::get('/getSubCustomerData', 'AdminControllers\SubCustomerController@getSub
 
 
 //CUSTOMER
+Route::get('/units', 'AdminControllers\UnitController@ShowAllUnits');
+Route::get('/unit/Add', 'AdminControllers\UnitController@AddUnit');
+Route::post('/unit/Add', 'AdminControllers\UnitController@SaveUnit')->name('AddUnit');
+
+
+//CUSTOMER
 Route::get('/Customers', 'AdminControllers\CustomerController@ShowAllCustomer');
 Route::get('/Customer/Add', 'AdminControllers\CustomerController@AddCustomer');
 Route::post('/Customer/Add', 'AdminControllers\CustomerController@SaveCustomer')->name('AddCustomer');
@@ -32,3 +38,4 @@ Route::post('/SubCustomer/Add', 'AdminControllers\SubCustomerController@SaveSubC
 //Beam Product
 Route::get('/Product/Beam', 'AdminControllers\BeamController@ShowAllCustomerBeam');
 Route::get('/Product/beam/Add', 'AdminControllers\BeamController@AddCustomerBeam');
+Route::post('/Product/beam/Add', 'AdminControllers\BeamController@saveIncomeBeam')->name('addIncomeBeam');

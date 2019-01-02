@@ -22,7 +22,7 @@
 
     <div class="row">
         <div class="col-md-12 col-sm-12">
-            <form data-toggle="validator" class="padd-20" method="post" action="">
+            <form data-toggle="validator" class="padd-20" method="post" action="{{ route('admin.addIncomeBeam') }}">
                 <div class="card">
                     {{ csrf_field() }}
                     <div class="row page-titles">
@@ -33,14 +33,13 @@
 
                     <div class="row mrg-0">
 
-
-
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Unit</span></label>
-                                <select name="unit" class="form-control" required>
-                                    <option value="1">Unit I</option>
-                                    <option value="2">Unit II</option>
+                                <select name="unit_id" class="form-control" required>
+                                    @foreach(auth()->user()->getAllUnits() as $Unit)
+                                        <option value="{{ $Unit->id }}">{{ $Unit->name }}</option>
+                                    @endforeach
                                 </select>
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -77,7 +76,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label"><span class="asterisk">Total Beam</span></label>
-                                <input type="number" name="beam_count" class="form-control" value="{{ old('beam_count') }}" required="">
+                                <input type="number" name="beam_total" class="form-control" value="{{ old('beam_total') }}" required="">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>

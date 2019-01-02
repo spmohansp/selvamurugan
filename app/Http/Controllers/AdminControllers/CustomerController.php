@@ -39,7 +39,5 @@ class CustomerController extends Controller
         }catch (Exception $e){
             return back()->with('danger','Something went wrong!');
         }
-
-
     }
 }
