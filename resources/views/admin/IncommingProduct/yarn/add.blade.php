@@ -66,16 +66,60 @@
                         </div>
 
                         <hr>
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Date</span></label>
                                 <input type="date" class="form-control" name="date"  value="{{ old("date") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label"><span class="asterisk">Total Bag</span></label>
+                                <input type="number" class="form-control" name="total_bag"  value="{{ old("total_bag") }}"  required="" >
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label"><span class="asterisk">KG / Bag</span></label>
+                                <input type="text" class="form-control" name="total_kg_bag"  value="{{ old("total_kg_bag") }}"  required="" >
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="inputphone" class="control-label"><span class="asterisk">Total Beam</span></label>
+                                <label class="control-label"><span class="asterisk">Net Weight</span></label>
+                                <input type="text" class="form-control" name="net_weight"  value="{{ old("net_weight") }}"  required="" >
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label"><span class="asterisk">Color</span></label>
+                                <input type="text" class="form-control" name="color"  value="{{ old("color") }}"  required="" >
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="inputphone" class="control-label"><span class="asterisk">Yarn Company</span></label>
+                                <input type="number" name="beam_total" class="form-control" value="{{ old('beam_total') }}" required="">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="inputphone" class="control-label"><span class="asterisk">Yarn Type</span></label>
+                                <input type="number" name="beam_total" class="form-control" value="{{ old('beam_total') }}" required="">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="inputphone" class="control-label"><span class="asterisk">Cone Type</span></label>
                                 <input type="number" name="beam_total" class="form-control" value="{{ old('beam_total') }}" required="">
                                 <div class="help-block with-errors"></div>
                             </div>

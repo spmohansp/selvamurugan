@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64cf7327-e14a-4404-a54d-1a21ac2f9d15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,44 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="87" column="90" selection-start-line="87" selection-start-column="90" selection-end-line="87" selection-end-column="90" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Admin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="46" column="37" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/view.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/admin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="45" column="80" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/YarnController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+            <state relative-caret-position="523">
+              <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
             </state>
           </provider>
         </entry>
@@ -225,32 +184,6 @@
             <path>
               <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
               <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminControllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -282,14 +215,6 @@
               <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="IncommingProduct" type="462c0819:PsiDirectoryNode" />
               <item name="yarn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -342,12 +267,12 @@
       <workItem from="1545713870633" duration="13602000" />
       <workItem from="1545801870673" duration="1835000" />
       <workItem from="1546238265398" duration="3154000" />
-      <workItem from="1546421140108" duration="2690000" />
+      <workItem from="1546421140108" duration="5765000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23008000" />
+    <option name="totallyTimeSpent" value="26083000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1680" height="1052" extended-state="6" />
@@ -440,13 +365,6 @@
           <folding>
             <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -601,20 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="45" column="80" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/YarnController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="583">
@@ -629,10 +533,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="45" column="80" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/YarnController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="87" column="90" selection-start-line="87" selection-start-column="90" selection-end-line="87" selection-end-column="90" />
+        <state relative-caret-position="523">
+          <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
         </state>
       </provider>
     </entry>
