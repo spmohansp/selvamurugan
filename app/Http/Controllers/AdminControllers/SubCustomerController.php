@@ -14,7 +14,8 @@ class SubCustomerController extends Controller
     }
 
     public function ShowAllSubCustomer(){
-        return view('admin.master.subCustomer.view');
+        $Customers = SubCustomer::get()->all();
+        return view('admin.master.subCustomer.view',compact('Customers'));
     }
 
     public function AddSubCustomer(){
@@ -53,5 +54,36 @@ class SubCustomerController extends Controller
         }catch (Exception $e){
             return back()->with('danger','Something went wrong!');
         }
+    }
+
+    public function EditsubCustomer($id){
+        $Customers = Customer::get()->all();
+        $SubCustomers = SubCustomer::FindorFail($id);
+        return view('admin.master.subCustomer.edit',compact('Customers','SubCustomers'));
+    }
+
+    public function updatesubCustomer(Request $request,$id){
+        $request->validate([
+            'customer_id' => 'required|exists:customers,id',
+            'name' => 'required',
+            'mobile' => 'required|min:10|max:10|',
+            'address' => 'required',
+        ]);
+        try {
+            $SubCustomer = SubCustomer::FindorFail($id);
+            $SubCustomer->customer_id = request('customer_id');
+            $SubCustomer->name = request('name');
+            $SubCustomer->mobile = request('mobile');
+            $SubCustomer->address = request('address');
+            $SubCustomer->save();
+            return back()->with('success','Sub Customer Updated Successfully');
+        }catch (Exception $e){
+            return back()->with('danger','Something went wrong!');
+        }
+    }
+
+    public function DeletesubCustomer($id){
+        $Customer = SubCustomer::FindorFail($id)->delete();
+        return back()->with('Sucess','Sub Customer Deleted Successfully');
     }
 }

@@ -40,4 +40,38 @@ class CustomerController extends Controller
             return back()->with('danger','Something went wrong!');
         }
     }
+
+    public function EditCustomer($id){
+            try{
+            $Customer=Customer::FindorFail($id);
+            return view ('admin.master.customer.edit',compact('Customer'));
+         }catch(Exception $e){
+            return back()->with('danger','Something went wrong!');
+         }
+    }
+
+    public function UpdateCustomer(Request $request,$id){
+         $request->validate([
+            'name' => 'required',
+            'mobile' => 'required|min:10|max:10',
+            'address' => 'required',
+            'gst' => 'required',
+        ]);
+        try{
+            $Customer=Customer::FindorFail($id);
+            $Customer->name = request('name');
+            $Customer->mobile = request('mobile');
+            $Customer->address = request('address');
+            $Customer->gst = request('gst');
+            $Customer->save();
+            return back()->with('success','Customer Updated Successfully');
+        }catch(Exception $e){
+             return back()->with('danger','Something went wrong!');
+        }
+    }
+
+    public function DeleteCustomer($id){
+        $Customer=Customer::FindorFail($id)->delete();
+        return back()->with('success','Customer Deleted Successfully');
+    }
 }

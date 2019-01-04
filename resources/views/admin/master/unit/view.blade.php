@@ -30,12 +30,21 @@
                         <th>Name</th>
                         <th>Mobile</th>
                         <th>Address</th>
-                        <th>GST / TIN</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-
+                    @foreach($Customer as $Customers)
+                    <tr>
+                        <td>{{ $Customers->name }}</td>
+                        <td>{{ $Customers->mobile }}</td>
+                        <td>{{ $Customers->address }}</td>
+                        <td>
+                            <a href="{{ route('admin.unitEdit',$Customers->id) }}" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
+                             </form>
+                        </td>
+                    </tr>
+                @endforeach
                 </tbody>
             </table>
         </div>

@@ -43,6 +43,9 @@
                         <li>
                             <a href="{{ url('/admin/units') }}">Units</a>
                         </li>
+                        <li>
+                            <a href="{{ url('/admin/chemicals') }}">Chemicals</a>
+                        </li>
                     </ul>
                 </li>
                 <!--Master-->
