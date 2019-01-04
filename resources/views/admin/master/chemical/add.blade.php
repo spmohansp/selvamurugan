@@ -36,7 +36,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Chemical Name</span></label>
-                                <input type="text" class="form-control " name="chemical_name"   required="" >
+                                <input type="text" class="form-control" name="chemical_name" required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>

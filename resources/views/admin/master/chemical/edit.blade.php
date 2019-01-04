@@ -24,7 +24,7 @@
 
     <div class="row">
         <div class="col-md-12 col-sm-12">
-            <form data-toggle="validator" class="padd-20" method="post" action="{{ route('admin.UpdateChemical',$Customer->id) }}" >
+            <form data-toggle="validator" class="padd-20" method="post" action="{{ route('admin.UpdateChemical',$Chemical->id) }}" >
                 <div class="card">
                     {{ csrf_field() }}
                     <div class="row page-titles">
@@ -36,7 +36,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Chemical Name</span></label>
-                                <input type="text" class="form-control" name="chemical_name" value="{{ $Customer->chemical_name }}"  required="" >
+                                <input type="text" class="form-control" name="chemical_name" value="{{ $Chemical->chemical_name }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>

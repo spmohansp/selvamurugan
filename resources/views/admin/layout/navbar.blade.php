@@ -63,7 +63,7 @@
                             <a href="{{ url('/admin/Product/yarn') }}">Yarn</a>
                         </li>
                         <li>
-                            <a href="{{ url('/admin/companies') }}">Companies</a>
+                            <a href="{{ url('/admin/companies') }}">Chemical</a>
                         </li>
                     </ul>
                 </li>

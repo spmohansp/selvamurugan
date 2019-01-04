@@ -18,7 +18,7 @@ class CreateSubCustomersTable extends Migration
             $table->integer('customer_id')->unsigned();
             $table->foreign('customer_id')->references('id')->on('customers');
             $table->longText('name')->nullable();
-            $table->string('mobile')->unique()->nullable();
+            $table->string('mobile')->nullable();
             $table->string('address')->nullable();
             $table->softDeletes();
             $table->timestamps();

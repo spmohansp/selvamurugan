@@ -36,7 +36,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Customer Name</span></label>
-                                <input type="text" class="form-control text-only" name="name"  value="{{ old("name") }}"  required="" >
+                                <input type="text" class="form-control" name="name"  value="{{ old("name") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>

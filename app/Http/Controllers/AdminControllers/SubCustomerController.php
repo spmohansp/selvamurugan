@@ -39,7 +39,7 @@ class SubCustomerController extends Controller
         $request->validate([
             'customer_id' => 'required|exists:customers,id',
             'name' => 'required',
-            'mobile' => 'required|min:10|max:10|unique:sub_customers',
+            'mobile' => 'required|min:10|max:10',
             'address' => 'required',
         ]);
 
@@ -66,7 +66,7 @@ class SubCustomerController extends Controller
         $request->validate([
             'customer_id' => 'required|exists:customers,id',
             'name' => 'required',
-            'mobile' => 'required|min:10|max:10|',
+            'mobile' => 'required|min:10|max:10',
             'address' => 'required',
         ]);
         try {
@@ -83,7 +83,7 @@ class SubCustomerController extends Controller
     }
 
     public function DeletesubCustomer($id){
-        $Customer = SubCustomer::FindorFail($id)->delete();
+        SubCustomer::FindorFail($id)->delete();
         return back()->with('Sucess','Sub Customer Deleted Successfully');
     }
 }

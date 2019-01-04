@@ -17,19 +17,19 @@ Route::get('/getSubCustomerData', 'AdminControllers\SubCustomerController@getSub
 
 //UNIT
 Route::get('/units', 'AdminControllers\UnitController@ShowAllUnits');
-Route::get('/units/{id}/edit', 'AdminControllers\UnitController@EditUnits')->name('unitEdit');
-Route::post('/units/{id}/update', 'AdminControllers\UnitController@UpdateUnits')->name('unitUpdate');
 Route::get('/unit/Add', 'AdminControllers\UnitController@AddUnit');
 Route::post('/unit/Add', 'AdminControllers\UnitController@SaveUnit')->name('AddUnit');
+Route::get('/units/{id}/edit', 'AdminControllers\UnitController@EditUnits')->name('unitEdit');
+Route::post('/units/{id}/update', 'AdminControllers\UnitController@UpdateUnits')->name('unitUpdate');
 
 
 //CUSTOMER
 Route::get('/Customers', 'AdminControllers\CustomerController@ShowAllCustomer');
+Route::get('/Customer/Add', 'AdminControllers\CustomerController@AddCustomer');
+Route::post('/Customer/Add', 'AdminControllers\CustomerController@SaveCustomer')->name('AddCustomer');
 Route::get('/Customer/{id}/edit','AdminControllers\CustomerController@EditCustomer');
 Route::post('/Customer/{id}/update','AdminControllers\CustomerController@UpdateCustomer')->name('updateCustomer');
 Route::delete('/Customer/{id}/delete','AdminControllers\CustomerController@DeleteCustomer')->name('deleteCustomer');
-Route::get('/Customer/Add', 'AdminControllers\CustomerController@AddCustomer');
-Route::post('/Customer/Add', 'AdminControllers\CustomerController@SaveCustomer')->name('AddCustomer');
 
 
 

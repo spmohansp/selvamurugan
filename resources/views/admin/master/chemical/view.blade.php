@@ -32,14 +32,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($Customers as $Customer)
+                    @foreach($Chemicals as $Chemical)
                     <tr>
-                        <td>{{$Customer->chemical_name}}</td>
+                        <td>{{$Chemical->chemical_name}}</td>
                         <td>
-                            <form  method="POST" enctype="multipart/form-data" action="{{ route('admin.DeleteChemical',$Customer->id) }}">
+                            <form  method="POST" enctype="multipart/form-data" action="{{ route('admin.DeleteChemical',$Chemical->id) }}">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="_method" value="DELETE">
-                                <a href="{{ route('admin.EditChemical',$Customer->id) }}" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
+                                <a href="{{ route('admin.EditChemical',$Chemical->id) }}" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
                                 <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> </button>
 
                             </form>
