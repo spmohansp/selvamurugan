@@ -9,7 +9,7 @@
     <div class="row page-titles">
         <div class="col-md-12 align-self-center">
             <h4 class="theme-cl">Chemicals</h4>
-            <a href="{{ url('/admin/Chemicals/Add') }}"><button type="button" class="btn btn-outline-warning btn-rounded btn-primary pull-right ">Add Chemical</button></a>
+            <a href="{{ url('/admin/ChemicalProduct/Add') }}"><button type="button" class="btn btn-outline-warning btn-rounded btn-primary pull-right ">Add Chemical</button></a>
         </div>
     </div>
     @include('admin.layout.errors')
@@ -36,10 +36,10 @@
                     <tr>
                         <td>{{$Chemical->chemical_name}}</td>
                         <td>
-                            <form  method="POST" enctype="multipart/form-data" action="{{ route('admin.DeleteChemical',$Chemical->id) }}">
+                            <form  method="POST" enctype="multipart/form-data" action="{{ route('admin.DeleteChemicalProduct',$Chemical->id) }}">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="_method" value="DELETE">
-                                <a href="{{ route('admin.EditChemical',$Chemical->id) }}" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
+                                <a href="{{ route('admin.EditChemicalProduct',$Chemical->id) }}" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
                                 <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> </button>
 
                             </form>

@@ -54,8 +54,17 @@ Route::get('/Product/yarn', 'AdminControllers\YarnController@ShowAllCustomerYarn
 Route::get('/Product/yarn/Add', 'AdminControllers\YarnController@AddCustomerYarn');
 Route::post('/Product/yarn/Add', 'AdminControllers\YarnController@saveIncomeYarn')->name('addIncomeYarn');
 
-//Chemical
-Route::get('/chemicals', 'AdminControllers\ChemicalController@ShowAllCustomerChemical');
+//Chemical Names
+Route::get('/chemicalsProduct', 'AdminControllers\ChemicalProductsController@ShowAllCustomerChemicalProduct');
+Route::get('ChemicalProduct/Add', 'AdminControllers\ChemicalProductsController@AddChemical');
+Route::post('ChemicalProducts/AddChemical', 'AdminControllers\ChemicalProductsController@saveChemical')->name('AddChemicalProduct');
+Route::get('ChemicalProducts/{id}/edit', 'AdminControllers\ChemicalProductsController@EditChemical')->name('EditChemicalProduct');
+Route::post('ChemicalProducts/{id}/update', 'AdminControllers\ChemicalProductsController@UpdateChemical')->name('UpdateChemicalProduct');
+Route::delete('ChemicalProducts/{id}/delete', 'AdminControllers\ChemicalProductsController@DeleteChemical')->name('DeleteChemicalProduct');
+
+
+//Chemical Income Product
+Route::get('/incomeChemicals', 'AdminControllers\ChemicalController@ShowAllCustomerChemical');
 Route::get('Chemicals/Add', 'AdminControllers\ChemicalController@AddChemical');
 Route::post('Chemicals/AddChemical', 'AdminControllers\ChemicalController@saveChemical')->name('AddChemical');
 Route::get('Chemicals/{id}/edit', 'AdminControllers\ChemicalController@EditChemical')->name('EditChemical');

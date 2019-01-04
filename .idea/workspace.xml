@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64cf7327-e14a-4404-a54d-1a21ac2f9d15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/yarn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/ChemicalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/ChemicalController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/SubCustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/SubCustomerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_12_25_082231_create_sub_customers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_12_25_082231_create_sub_customers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/navbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/master/chemical/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/master/chemical/add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/master/chemical/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/master/chemical/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/master/chemical/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/master/chemical/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/master/customer/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/master/customer/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/master/customer/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/master/customer/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/master/subCustomer/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/master/subCustomer/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/master/subCustomer/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/master/subCustomer/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,16 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="51" column="14" lean-forward="true" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+            <state relative-caret-position="463">
+              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
             </state>
           </provider>
         </entry>
@@ -82,7 +68,6 @@
         <option value="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/view.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/YarnController.php" />
         <option value="$PROJECT_DIR$/app/Admin.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/layout/navbar.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_12_25_082231_create_sub_customers_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/SubCustomerController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layout/footer.blade.php" />
@@ -92,10 +77,13 @@
         <option value="$PROJECT_DIR$/resources/views/admin/master/customer/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/master/subCustomer/add.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/master/subCustomer/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/master/chemical/add.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/master/chemical/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/add.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/ChemicalController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/master/chemical/add.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/ChemicalProductsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/layout/navbar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/master/chemical/view.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/master/chemical/edit.blade.php" />
         <option value="$PROJECT_DIR$/routes/admin.php" />
       </list>
     </option>
@@ -214,32 +202,6 @@
             <path>
               <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
               <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminControllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -254,6 +216,14 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
@@ -291,6 +261,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical" />
       <recent name="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn" />
       <recent name="$PROJECT_DIR$/resources/views/admin/master/unit" />
       <recent name="$PROJECT_DIR$" />
@@ -330,12 +301,12 @@
       <workItem from="1546238265398" duration="3154000" />
       <workItem from="1546421140108" duration="5765000" />
       <workItem from="1546489847958" duration="55000" />
-      <workItem from="1546605693883" duration="3598000" />
+      <workItem from="1546605693883" duration="4345000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29736000" />
+    <option name="totallyTimeSpent" value="30483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1680" height="1052" extended-state="6" />
@@ -523,13 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/layout/navbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/customer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -613,27 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/master/chemical/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="49" column="26" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/master/chemical/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="31" column="74" lean-forward="true" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/master/chemical/view.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/CustomerController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -641,13 +584,6 @@
           <folding>
             <element signature="e#57#74#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/ChemicalController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -671,10 +607,62 @@
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="80" selection-start-line="24" selection-start-column="80" selection-end-line="24" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/ChemicalController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/layout/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="46" column="68" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/master/chemical/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="26" column="114" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/master/chemical/view.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="38" column="124" selection-start-line="38" selection-start-column="103" selection-end-line="38" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/master/chemical/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="35" column="46" lean-forward="true" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/ChemicalProductsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding>
+            <element signature="e#57#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="51" column="14" lean-forward="true" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+        <state relative-caret-position="463">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>
