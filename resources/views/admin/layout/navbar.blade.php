@@ -53,7 +53,7 @@
                 <li class="nav-item @yield('IncommingProducts')" data-toggle="tooltip" data-placement="right" title="Master">
                     <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#AddProductsIncome" data-parent="#exampleAccordion">
                         <i class="ti i-cl-12 ti-settings"></i>
-                        <span class="nav-link-text">Income Products</span>
+                        <span class="nav-link-text">Incoming Products</span>
                     </a>
                     <ul class="sidenav-second-level collapse" id="AddProductsIncome">
                         <li>
@@ -63,7 +63,7 @@
                             <a href="{{ url('/admin/Product/yarn') }}">Yarn</a>
                         </li>
                         <li>
-                            <a href="{{ url('/admin/companies') }}">Chemical</a>
+                            <a href="{{ url('/admin/Chemicals') }}">Chemical</a>
                         </li>
                     </ul>
                 </li>

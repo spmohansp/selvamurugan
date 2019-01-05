@@ -41,6 +41,23 @@ Route::post('/subcustomer/{id}/update','AdminControllers\SubCustomerController@U
 Route::delete('/subcustomer/{id}/delete','AdminControllers\SubCustomerController@DeletesubCustomer')->name('deletesubCustomer');
 Route::post('/SubCustomer/Add', 'AdminControllers\SubCustomerController@SaveSubCustomer')->name('AddSubCustomer');
 
+//Chemical Names
+Route::get('/chemicalsProduct', 'AdminControllers\ChemicalProductsController@ShowAllCustomerChemicalProduct');
+Route::get('/ChemicalProduct/Add', 'AdminControllers\ChemicalProductsController@AddChemical');
+Route::post('/ChemicalProducts/AddChemical', 'AdminControllers\ChemicalProductsController@saveChemical')->name('AddChemicalProduct');
+Route::get('/ChemicalProducts/{id}/edit', 'AdminControllers\ChemicalProductsController@EditChemical')->name('EditChemicalProduct');
+Route::post('/ChemicalProducts/{id}/update', 'AdminControllers\ChemicalProductsController@UpdateChemical')->name('UpdateChemicalProduct');
+Route::delete('/ChemicalProducts/{id}/delete', 'AdminControllers\ChemicalProductsController@DeleteChemical')->name('DeleteChemicalProduct');
+
+
+//Company
+Route::get('/companies', 'AdminControllers\CompanyController@ShowAllCompanies');
+Route::get('companies/Add', 'AdminControllers\CompanyController@AddCompany');
+Route::post('companies/Add', 'AdminControllers\CompanyController@saveCompany')->name('AddNewCompany');
+Route::get('companies/{id}/edit', 'AdminControllers\CompanyController@EditChemical')->name('EditChemical');
+Route::post('companies/{id}/update', 'AdminControllers\CompanyController@UpdateChemical')->name('UpdateChemical');
+Route::delete('companies/{id}/delete', 'AdminControllers\CompanyController@DeleteChemical')->name('DeleteChemical');
+
 
 
 //Beam Product
@@ -54,28 +71,15 @@ Route::get('/Product/yarn', 'AdminControllers\YarnController@ShowAllCustomerYarn
 Route::get('/Product/yarn/Add', 'AdminControllers\YarnController@AddCustomerYarn');
 Route::post('/Product/yarn/Add', 'AdminControllers\YarnController@saveIncomeYarn')->name('addIncomeYarn');
 
-//Chemical Names
-Route::get('/chemicalsProduct', 'AdminControllers\ChemicalProductsController@ShowAllCustomerChemicalProduct');
-Route::get('ChemicalProduct/Add', 'AdminControllers\ChemicalProductsController@AddChemical');
-Route::post('ChemicalProducts/AddChemical', 'AdminControllers\ChemicalProductsController@saveChemical')->name('AddChemicalProduct');
-Route::get('ChemicalProducts/{id}/edit', 'AdminControllers\ChemicalProductsController@EditChemical')->name('EditChemicalProduct');
-Route::post('ChemicalProducts/{id}/update', 'AdminControllers\ChemicalProductsController@UpdateChemical')->name('UpdateChemicalProduct');
-Route::delete('ChemicalProducts/{id}/delete', 'AdminControllers\ChemicalProductsController@DeleteChemical')->name('DeleteChemicalProduct');
+
 
 
 //Chemical Income Product
-Route::get('/incomeChemicals', 'AdminControllers\ChemicalController@ShowAllCustomerChemical');
-Route::get('Chemicals/Add', 'AdminControllers\ChemicalController@AddChemical');
+Route::get('/Chemicals', 'AdminControllers\ChemicalController@ShowAllincomeChemicals');
+Route::get('/Chemicals/Add', 'AdminControllers\ChemicalController@AddChemical');
 Route::post('Chemicals/AddChemical', 'AdminControllers\ChemicalController@saveChemical')->name('AddChemical');
 Route::get('Chemicals/{id}/edit', 'AdminControllers\ChemicalController@EditChemical')->name('EditChemical');
 Route::post('Chemicals/{id}/update', 'AdminControllers\ChemicalController@UpdateChemical')->name('UpdateChemical');
 Route::delete('Chemicals/{id}/delete', 'AdminControllers\ChemicalController@DeleteChemical')->name('DeleteChemical');
 
 
-//Company
-Route::get('/companies', 'AdminControllers\CompanyController@ShowAllCompanies');
-Route::get('companies/Add', 'AdminControllers\CompanyController@AddCompany');
-Route::post('companies/Add', 'AdminControllers\CompanyController@saveCompany')->name('AddNewCompany');
-Route::get('companies/{id}/edit', 'AdminControllers\CompanyController@EditChemical')->name('EditChemical');
-Route::post('companies/{id}/update', 'AdminControllers\CompanyController@UpdateChemical')->name('UpdateChemical');
-Route::delete('companies/{id}/delete', 'AdminControllers\CompanyController@DeleteChemical')->name('DeleteChemical');

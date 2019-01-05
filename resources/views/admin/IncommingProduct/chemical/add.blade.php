@@ -8,7 +8,7 @@
 @section('content')
     <div class="row page-titles">
         <div class="col-md-12 align-self-center">
-            <h4 class="theme-cl">Add Customer Beam</h4>
+            <h4 class="theme-cl">Add Chemical</h4>
         </div>
     </div>
     @include('admin.layout.errors')
@@ -27,7 +27,7 @@
                     {{ csrf_field() }}
                     <div class="row page-titles">
                         <div class="align-center">
-                            <h4 class="theme-cl">Customer Information</h4>
+                            <h4 class="theme-cl">Chemical Information</h4>
                         </div>
                     </div>
 
@@ -44,28 +44,6 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
-
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="control-label"><span class="asterisk">Customer Name</span></label>
-                                <select name="customer_id" class="form-control" id="CustomerIdsChanges" required>
-                                    <option value="">Select Customer</option>
-                                    @foreach($Customers as $Customer)
-                                        <option value="{{ $Customer->id }}" {{ ($Customer->id == old('customer_id'))? 'selected':'' }}>{{ $Customer->name }}</option>
-                                    @endforeach
-                                </select>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="control-label"><span class="asterisk">Sub Customer Name</span></label>
-                                <div id="SubCustomerDivDataLoad"></div>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-
-                        <hr>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Date</span></label>
@@ -73,9 +51,37 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
+
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="inputphone" class="control-label"><span class="asterisk">Total Beam</span></label>
+                                <label class="control-label"><span class="asterisk">Chemical Name</span></label>
+                                <select name="chemical_id" class="form-control" required>
+                                    <option value="">Select Chemical</option>
+                                    @foreach($Chemicals as $Chemical)
+                                        <option value="{{ $Chemical->id }}">{{ $Chemical->chemical_name }}</option>
+                                    @endforeach
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="inputphone" class="control-label"><span class="asterisk">Total Bag</span></label>
+                                <input type="number" name="beam_total" class="form-control" value="{{ old('beam_total') }}" required="">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="inputphone" class="control-label"><span class="asterisk">Cost Per</span></label>
+                                <input type="number" name="beam_total" class="form-control" value="{{ old('beam_total') }}" required="">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="inputphone" class="control-label"><span class="asterisk">Total</span></label>
                                 <input type="number" name="beam_total" class="form-control" value="{{ old('beam_total') }}" required="">
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -85,7 +91,7 @@
                     <div class="col-12">
                         <div class="form-group">
                             <div class="text-center">
-                                <button id="form-button" class="btn gredient-btn">Add Customer</button>
+                                <button id="form-button" class="btn gredient-btn">Add Chemical</button>
                             </div>
                         </div>
                     </div>

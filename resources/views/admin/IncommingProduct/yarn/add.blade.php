@@ -78,6 +78,9 @@
                                 <label for="inputphone" class="control-label"><span class="asterisk">Yarn Company</span></label>
                                 <select name="unit_id" class="form-control" required>
                                         <option value="">Yarn Company</option>
+                                        @foreach($Companies as $Company)
+                                        <option value="{{ $Company->id }}">{{ $Company->company_name }}</option>
+                                        @endforeach
                                 </select>
                                 <div class="help-block with-errors"></div>
                             </div>

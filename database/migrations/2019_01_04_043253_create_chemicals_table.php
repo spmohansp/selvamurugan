@@ -16,6 +16,7 @@ class CreateChemicalsTable extends Migration
         Schema::create('chemicals', function (Blueprint $table) {
             $table->increments('id');
             $table->string('chemical_name');
+            $table->string('unit');
             $table->softDeletes();
             $table->timestamps();
         });

@@ -50,7 +50,7 @@
                                 <label class="control-label"><span class="asterisk">Customer Name</span></label>
                                 <select name="customer_id" class="form-control" id="CustomerIdsChanges" required>
                                     <option value="">Select Customer</option>
-                                    @foreach($Customers as $Customer)
+                                    @foreach(auth()->user()->getAllCustomers() as $Customer)
                                         <option value="{{ $Customer->id }}" {{ ($Customer->id == old('customer_id'))? 'selected':'' }}>{{ $Customer->name }}</option>
                                     @endforeach
                                 </select>

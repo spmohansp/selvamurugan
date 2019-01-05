@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\AdminControllers;
 
+use App\Company;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -17,6 +18,7 @@ class YarnController extends Controller
     }
 
     public function AddCustomerYarn(){
-        return view('admin.IncommingProduct.yarn.add');
+        $Companies = Company::get()->all();
+        return view('admin.IncommingProduct.yarn.add',compact('Companies'));
     }
 }
