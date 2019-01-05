@@ -24,14 +24,14 @@ class ChemicalProductsController extends Controller
 
     public function saveChemical(Request $request){
         $request->validate([
-            'chemical_name' => 'required',
+            'chemical_name' => 'required|unique:chemicals',
         ]);
 
         try {
             $Chemical = new Chemical;
             $Chemical->chemical_name = request('chemical_name');
             $Chemical->save();
-            return back()->with('success','Chemical Addes Successfully');
+            return back()->with('success','Chemical Added Successfully');
         }catch (Exception $e){
             return back()->with('danger','Something went wrong!');
         }
