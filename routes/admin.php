@@ -54,9 +54,9 @@ Route::delete('/ChemicalProducts/{id}/delete', 'AdminControllers\ChemicalProduct
 Route::get('/companies', 'AdminControllers\CompanyController@ShowAllCompanies');
 Route::get('companies/Add', 'AdminControllers\CompanyController@AddCompany');
 Route::post('companies/Add', 'AdminControllers\CompanyController@saveCompany')->name('AddNewCompany');
-Route::get('companies/{id}/edit', 'AdminControllers\CompanyController@EditChemical')->name('EditChemical');
-Route::post('companies/{id}/update', 'AdminControllers\CompanyController@UpdateChemical')->name('UpdateChemical');
-Route::delete('companies/{id}/delete', 'AdminControllers\CompanyController@DeleteChemical')->name('DeleteChemical');
+Route::get('companies/{id}/edit', 'AdminControllers\CompanyController@EditCompany')->name('EditCompany');
+Route::post('companies/{id}/update', 'AdminControllers\CompanyController@UpdateCompany')->name('UpdateCompany');
+Route::get('companies/{id}/delete', 'AdminControllers\CompanyController@DeleteCompany')->name('DeleteCompany');
 
 
 

@@ -40,6 +40,18 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label"><span class="asterisk">Unit</span></label>
+                                <select name="unit" class="form-control">
+                                    <option value="" selected disabled>Select Unit Type</option>
+                                    <option value="litre" {{ ($Chemical->unit) == "litre"?'selected':'' }} > Litre </option>
+                                    <option value="kg"    {{ ($Chemical->unit) == "kg"?'selected':'' }} > KG</option>
+                                    <option value="ton"   {{ ($Chemical->unit) == "ton"?'selected':'' }} >Ton</option>
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>  
+                        </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
