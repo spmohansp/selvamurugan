@@ -38,12 +38,9 @@
                             <td>{{ $company->company_name }}</td>
                             <td>{{ $company->company_address }}</td>
                             <td>
-                                <form action="" method="POST" enctype="multipart/form-data">
-                                    {{ csrf_field() }}
-                                    <input type="hidden" name="_method" value="DELETE">
-                                    <a href="" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
-                                    <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> </button>
-                                </form>
+                                <input type="hidden" name="_method" value="DELETE">
+                                    <a href="{{ route('admin.EditCompany',$company->id) }}" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
+                                   <a href="{{ route('admin.DeleteCompany',$company->id) }}"> <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> </button></a>
                             </td>
                         </tr>
                     @endforeach
@@ -52,4 +49,4 @@
         </div>
     </div>
 
-@endsection
+@endsection 

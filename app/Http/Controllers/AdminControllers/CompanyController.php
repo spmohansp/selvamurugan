@@ -35,4 +35,33 @@ class CompanyController extends Controller
             return back()->with('danger','Something went wrong!');
         }
     }
-}
+
+    public function EditCompany($id){
+        $Company = Company::FindorFail($id);
+        return view('admin.master.company.edit',compact('Company'));
+    }
+
+    public function UpdateCompany($id){       
+       try {
+            $Company = Company::FindorFail($id);
+            $Company->company_name = request('company_name');
+            $Company->company_address = request('company_address');
+            $Company->save();
+            return back()->with('success','Company Updated Successfully');
+        }catch (Exception $e){
+            return back()->with('danger','Something went wrong!');
+        }
+    }
+
+    public function DeleteCompany($id){
+         try {
+            $Company = Company::FindorFail($id);
+            $Company->delete();
+            return back()->with('success','Company Deleted Successfully');
+        }catch (Exception $e){
+            return back()->with('danger','Something went wrong!');
+        }
+
+    }
+    
+}    

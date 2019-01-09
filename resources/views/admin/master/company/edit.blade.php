@@ -24,10 +24,10 @@
 
     <div class="row">
         <div class="col-md-12 col-sm-12">
-            <form data-toggle="validator" class="padd-20" method="post" action="" >
+            <form data-toggle="validator" class="padd-20" method="post" action="{{ route('admin.UpdateCompany',$Company->id) }}" >
                 <div class="card">
                     {{ csrf_field() }}
-                    <div class="row page-titles">
+                    <div class="row page-titles">   
                         <div class="align-center">
                             <h4 class="theme-cl">Chemical Information</h4>
                         </div>
@@ -35,8 +35,15 @@
                     <div class="row mrg-0">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label class="control-label"><span class="asterisk">Chemical Name</span></label>
-                                <input type="text" class="form-control" name="chemical_name" value="{{ $Chemical->chemical_name }}"  required="" >
+                                <label class="control-label"><span class="asterisk">Company Name</span></label>
+                                <input type="text" class="form-control" name="company_name" value="{{ $Company->company_name }}"  required="" >
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Company Address</label>
+                                <input type="text" class="form-control" name="company_address" value="{{ $Company->company_address }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>

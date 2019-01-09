@@ -51,6 +51,7 @@ class ChemicalProductsController extends Controller
         try {
             $Chemical =Chemical::FindorFail($id);
             $Chemical->chemical_name = request('chemical_name');
+            $Chemical->unit = request('unit');
             $Chemical->save();
             return back()->with('success','Chemical Updated Successfully');
         }catch (Exception $e){
