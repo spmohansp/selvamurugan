@@ -95,9 +95,6 @@
                             </div>
                         </div>
 
-
-
-
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Total Bag</span></label>

@@ -76,7 +76,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label"><span class="asterisk">Yarn Company</span></label>
-                                <select name="unit_id" class="form-control" required>
+                                <select name="company_id" class="form-control" required>
                                         <option value="">Yarn Company</option>
                                         @foreach($Companies as $Company)
                                         <option value="{{ $Company->id }}">{{ $Company->company_name }}</option>
@@ -88,8 +88,9 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label">Yarn Type</label><br>
-                                <input type="radio" class="YarnType" value="full" name="yarn_type">Full Cone
-                                <input type="radio" class="YarnType" value="baby" name="yarn_type" checked>Baby Cone
+                                <input type="radio" class="YarnType" value="full" name="yarn_type" checked>&nbsp;Full Cone
+                                <input type="radio" class="YarnType" value="warping" name="yarn_type">&nbsp;Warping
+                                <input type="radio" class="YarnType" value="baby" name="yarn_type">&nbsp;Baby Cone
                             </div>
                         </div>
                         <div class="col-sm-4" id="total_bag_div">
@@ -114,7 +115,7 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Color</span></label>
                                 <input type="text" class="form-control" name="color" value="{{ old("color") }}"  required="" >
@@ -122,7 +123,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label"><span class="asterisk">Yarn Count</span></label>
                                 <input type="number" name="yarn_count" class="form-control" value="{{ old('yarn_count') }}" required>
@@ -130,7 +131,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label">Note</label>
                                 <textarea name="note" class="form-control"></textarea>

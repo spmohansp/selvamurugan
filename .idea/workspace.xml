@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64cf7327-e14a-4404-a54d-1a21ac2f9d15" name="Default Changelist" comment="" />
+    <list default="true" id="64cf7327-e14a-4404-a54d-1a21ac2f9d15" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/public/js/yarn.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/yarn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/warping/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/warping/add.blade.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,38 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/warping/add.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="85" column="118" selection-start-line="85" selection-start-column="108" selection-end-line="85" selection-end-column="118" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/yarn.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/layout/master.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="41" column="20" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="20" />
+            <state relative-caret-position="392">
+              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
             </state>
           </provider>
         </entry>
@@ -112,10 +89,10 @@
         <option value="$PROJECT_DIR$/routes/admin.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/WarpingController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layout/footer.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/warping/add.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/IncommingProduct/beam/add.blade.php" />
         <option value="$PROJECT_DIR$/public/js/yarn.js" />
         <option value="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/IncommingProduct/beam/add.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/warping/add.blade.php" />
       </list>
     </option>
   </component>
@@ -323,15 +300,16 @@
       <workItem from="1546664410730" duration="11838000" />
       <workItem from="1546836297178" duration="1130000" />
       <workItem from="1546936281284" duration="4493000" />
-      <workItem from="1547012532088" duration="6775000" />
+      <workItem from="1547012532088" duration="8716000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56253000" />
+    <option name="totallyTimeSpent" value="58194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1680" height="1052" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2876377" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -684,24 +662,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/warping/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="85" column="118" selection-start-line="85" selection-start-column="108" selection-end-line="85" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/layout/navbar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="71" column="51" selection-start-line="71" selection-start-column="44" selection-end-line="71" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/yarn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -740,10 +704,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/yarn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+        <state relative-caret-position="-511">
+          <caret line="78" column="56" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
+          <folding>
+            <element signature="e#4587#4593#0#HTML" expanded="true" />
+            <element signature="e#4705#4711#0#HTML" expanded="true" />
+            <element signature="e#4818#4824#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/warping/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
         </state>
       </provider>
     </entry>
