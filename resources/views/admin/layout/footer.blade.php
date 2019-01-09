@@ -2,7 +2,7 @@
 <footer class="sticky-footer">
     <div class="container">
         <div class="text-center">
-            <small class="font-15">Copyright © <a href="https://greefitech.com">Greefi Technologies</a> <i class="fa fa-heart cl-danger"></i> In Salem</small>
+            <small class="font-15">Copyright © <a href="https://greefitech.com">Greefi Technologies</a> <i class="fa fa-heart cl-danger"></i> In Tiruchengode</small>
         </div>
     </div>
 </footer>

@@ -8,8 +8,8 @@
 @section('content')
     <div class="row page-titles">
         <div class="col-md-12 align-self-center">
-            <h4 class="theme-cl">Beam</h4>
-            <a href="{{ url('/admin/Product/beam/Add') }}"><button type="button" class="btn btn-outline-warning btn-rounded btn-primary pull-right ">Add Customer Beam</button></a>
+            <h4 class="theme-cl">Warping</h4>
+            <a href="{{ url('/admin/warping/Add') }}"><button type="button" class="btn btn-outline-warning btn-rounded btn-primary pull-right ">Add Warping</button></a>
         </div>
     </div>
     @include('admin.layout.errors')

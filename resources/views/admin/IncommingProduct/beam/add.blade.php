@@ -66,17 +66,24 @@
                         </div>
 
                         <hr>
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Date</span></label>
                                 <input type="date" class="form-control" name="date"  value="{{ old("date") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label"><span class="asterisk">Total Beam</span></label>
                                 <input type="number" name="beam_total" class="form-control" value="{{ old('beam_total') }}" required="">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label"><span class="asterisk">Beam Inch</span></label>
+                                <input type="number" class="form-control" name="beam_inch"  value="{{ old("beam_inch") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>

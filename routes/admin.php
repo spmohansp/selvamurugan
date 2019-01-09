@@ -83,3 +83,9 @@ Route::post('Chemicals/{id}/update', 'AdminControllers\ChemicalController@Update
 Route::delete('Chemicals/{id}/delete', 'AdminControllers\ChemicalController@DeleteChemical')->name('DeleteChemical');
 
 
+
+//Warping
+Route::get('/warping', 'AdminControllers\WarpingController@ShowAllWarpings');
+Route::get('/warping/Add', 'AdminControllers\WarpingController@AddWarping');
+
+

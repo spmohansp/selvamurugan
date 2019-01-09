@@ -76,7 +76,7 @@
                     </a>
                     <ul class="sidenav-second-level collapse" id="WARPING">
                         <li>
-                            <a href="{{ url('/admin/Customers') }}">Customer</a>
+                            <a href="{{ url('/admin/warping') }}">warping</a>
                         </li>
                         <li>
                             <a href="{{ url('/admin/subCustomers') }}">Sub Customer</a>

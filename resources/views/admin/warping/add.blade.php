@@ -1,6 +1,6 @@
 @extends('admin.layout.master')
 
-@section('IncommingProducts')
+@section('Warping')
     active
 @endsection
 
@@ -8,7 +8,7 @@
 @section('content')
     <div class="row page-titles">
         <div class="col-md-12 align-self-center">
-            <h4 class="theme-cl">Add Customer Yarn</h4>
+            <h4 class="theme-cl">Add Warping</h4>
         </div>
     </div>
     @include('admin.layout.errors')
@@ -27,7 +27,7 @@
                     {{ csrf_field() }}
                     <div class="row page-titles">
                         <div class="align-center">
-                            <h4 class="theme-cl">Customer Information</h4>
+                            <h4 class="theme-cl">Warping Information</h4>
                         </div>
                     </div>
 
@@ -66,32 +66,38 @@
                         </div>
 
                         <hr>
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Date</span></label>
                                 <input type="date" class="form-control" name="date"  value="{{ old("date") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <div class="form-group">
-                                <label for="inputphone" class="control-label"><span class="asterisk">Yarn Company</span></label>
-                                <select name="unit_id" class="form-control" required>
-                                        <option value="">Yarn Company</option>
-                                        @foreach($Companies as $Company)
-                                        <option value="{{ $Company->id }}">{{ $Company->company_name }}</option>
-                                        @endforeach
-                                </select>
+                                <label class="control-label"><span class="asterisk">Set Number</span></label>
+                                <input type="number" class="form-control" name="set_number"  value="{{ old("set_number") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-4">
                             <div class="form-group">
-                                <label for="inputphone" class="control-label">Yarn Type</label><br>
-                                <input type="radio" value="full" name="yarn_type" checked>Full Cone
-                                <input type="radio" value="baby" name="yarn_type">Baby Cone
+                                <label class="control-label"><span class="asterisk">Yarn Count</span></label>
+                                <input type="number" class="form-control" name="yarm_count"  value="{{ old("yarm_count") }}"  required="" >
+                                <div class="help-block with-errors"></div>
                             </div>
                         </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label"><span class="asterisk">Ilai</span></label>
+                                <input type="number" class="form-control" name="date"  value="{{ old("date") }}"  required="" >
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+
+
+
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Total Bag</span></label>
@@ -114,28 +120,12 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="control-label"><span class="asterisk">Color</span></label>
-                                <input type="text" class="form-control" name="color"  value="{{ old("color") }}"  required="" >
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="inputphone" class="control-label"><span class="asterisk">Count Type</span></label>
-                                <input type="text" name="beam_total" class="form-control" value="{{ old('beam_total') }}">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-
                     </div>
 
                     <div class="col-12">
                         <div class="form-group">
                             <div class="text-center">
-                                <button id="form-button" class="btn gredient-btn">Add Yarn</button>
+                                <button id="form-button" class="btn gredient-btn">Add Warping</button>
                             </div>
                         </div>
                     </div>
