@@ -83,7 +83,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Yarn Count</span></label>
-                                <input type="number" class="form-control" name="yarm_count"  value="{{ old("yarm_count") }}"  required="" >
+                                <input type="number" class="form-control" name="yarn_count"  value="{{ old("yarn_count") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>

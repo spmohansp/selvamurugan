@@ -87,6 +87,12 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="inputphone" class="control-label">Note</label>
+                                <textarea name="note" class="form-control"></textarea>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-12">
