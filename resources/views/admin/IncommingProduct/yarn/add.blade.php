@@ -88,18 +88,18 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label">Yarn Type</label><br>
-                                <input type="radio" value="full" name="yarn_type" checked>Full Cone
-                                <input type="radio" value="baby" name="yarn_type">Baby Cone
+                                <input type="radio" class="YarnType" value="full" name="yarn_type">Full Cone
+                                <input type="radio" class="YarnType" value="baby" name="yarn_type" checked>Baby Cone
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4" id="total_bag_div">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Total Bag</span></label>
                                 <input type="number" class="form-control CalculateYarnBagQuantity" id="total_bag" name="total_bag"  value="{{ old("total_bag") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4" id="total_kg_bag_div">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">KG / Bag</span></label>
                                 <input type="text" class="form-control CalculateYarnBagQuantity" id="total_kg_bag" name="total_kg_bag"  value="{{ old("total_kg_bag") }}"  required="" >
@@ -117,19 +117,25 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Color</span></label>
-                                <input type="text" class="form-control" name="color"  value="{{ old("color") }}"  required="" >
+                                <input type="text" class="form-control" name="color" value="{{ old("color") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="inputphone" class="control-label"><span class="asterisk">Count Type</span></label>
-                                <input type="text" name="beam_total" class="form-control" value="{{ old('beam_total') }}">
+                                <label for="inputphone" class="control-label"><span class="asterisk">Yarn Count</span></label>
+                                <input type="number" name="yarn_count" class="form-control" value="{{ old('yarn_count') }}" required>
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
 
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="inputphone" class="control-label">Note</label>
+                                <textarea name="note" class="form-control"></textarea>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-12">
