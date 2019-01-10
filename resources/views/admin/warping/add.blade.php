@@ -98,14 +98,21 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Total Bag</span></label>
-                                <input type="number" class="form-control CalculateYarnBagQuantity" id="total_bag" name="total_bag"  value="{{ old("total_bag") }}"  required="" >
+                                <input type="number" class="form-control CalculateWarpingBagQuantity" id="total_bag" name="total_bag"  value="{{ old("total_bag") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">KG / Bag</span></label>
-                                <input type="text" class="form-control CalculateYarnBagQuantity" id="total_kg_bag" name="total_kg_bag"  value="{{ old("total_kg_bag") }}"  required="" >
+                                <input type="text" class="form-control CalculateWarpingBagQuantity" id="total_kg_bag" name="total_kg_bag"  value="{{ old("total_kg_bag") }}"  required="" >
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label"><span class="asterisk">Total Rewainding Cone KG</span></label>
+                                <input type="text" class="form-control CalculateWarpingBagQuantity" id="rewainding_weight" name="rewainding_weight"  value="{{ old("rewainding_weight") }}">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -128,7 +135,6 @@
                             <div class="AddWarpingDiv"></div>
                         </div>
                     </div>
-
 
                     <div class="col-12">
                         <div class="form-group">
