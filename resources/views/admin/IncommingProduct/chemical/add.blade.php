@@ -68,22 +68,28 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label"><span class="asterisk">Total Bag</span></label>
-                                <input type="number" name="beam_total" class="form-control" value="{{ old('beam_total') }}" required="">
+                                <input type="number" name="count" class="form-control" value="{{ old('count') }}" required="">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label"><span class="asterisk">Cost Per</span></label>
-                                <input type="number" name="beam_total" class="form-control" value="{{ old('beam_total') }}" required="">
+                                <input type="number" name="cost" class="form-control" value="{{ old('cost') }}" required="">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label"><span class="asterisk">Total</span></label>
-                                <input type="number" name="beam_total" class="form-control" value="{{ old('beam_total') }}" required="">
+                                <input type="number" name="total" class="form-control" value="{{ old('total') }}" required="">
                                 <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="inputphone" class="control-label">Note</label>
+                                <textarea name="note" class="form-control"></textarea>
                             </div>
                         </div>
                     </div>

@@ -89,8 +89,8 @@
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <label class="control-label"><span class="asterisk">Ilai</span></label>
-                                <input type="number" class="form-control" name="date"  value="{{ old("date") }}"  required="" >
+                                <label class="control-label"><span class="asterisk">இழை</span></label>
+                                <input type="number" class="form-control" name="ilai"  value="{{ old("ilai") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -118,6 +118,17 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row page-titles">
+                        <div class="align-center">
+                            <h4 class="theme-cl">Warping Details <button type="button" class="btn btn-primary btn-sm AddWarping">+</button></h4>
+                        </div>
+                    </div>
+                    <div class="row mrg-0">
+                        <div class="col-sm-12">
+                            <div class="AddWarpingDiv"></div>
+                        </div>
+                    </div>
+
 
                     <div class="col-12">
                         <div class="form-group">
@@ -126,9 +137,56 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </form>
         </div>
     </div>
 
+@endsection
+
+@section('scriptOnload')
+    <script>
+        $(document).ready(function () {
+            var warpingi = 0;
+
+            $('.AddWarping').click(function (e) {
+                e.preventDefault();
+                $('.AddWarpingDiv').append(
+                    '<div class="row">' +
+                    '<div class="col-2">' +
+                    '<label class="c-field__label">பாவுடன்</label>' +
+                    '<input class="form-control" name="warping[' + warpingi + '][totalWeight]" type="number" id="haltFromDate">' +
+                    '</div>' +
+                    '<div class="col-2">' +
+                    '<label class="c-field__label">காலி பீம் எடை</label>' +
+                    '<input class="form-control" name="warping[' + warpingi + '][emptyBeemWeight]" type="number" id="emptyBeem">' +
+                    '</div>' +
+                    '<div class="col-2">' +
+                    '<label class="c-field__label">நிகர் எடை</label>' +
+                    '<input class="form-control" name="warping[' + warpingi + '][totalWeight]" type="number" id="totalWeight">' +
+                    '</div>' +
+                    '<div class="col-2">' +
+                    '<label class="c-field__label">வார்ப்பிங் ஜெகம்</label>' +
+                    '<input class="form-control" name="warping[' + warpingi + '][warpingGeagam]" type="text" id="warpingGeagam">' +
+                    '</div>'+
+                    '<div class="col-2">' +
+                    '<label class="c-field__label">வார்பர் பெயர்</label>' +
+                    '<input class="form-control" name="warping[' + warpingi + '][warperName]" type="text" id="warperName">' +
+                    '</div>' +
+                    '<div class="col-2">' +
+                    '<button type="button" class="btn btn-danger btn-sm RemoveWarpingButon">X</button>' +
+                    '</div>' +
+                    '</div>'
+                );
+                halti++;
+            });
+
+
+            $('.AddWarpingDiv').on("click", ".RemoveWarpingButon", function (e) { // REMOVE HALT
+                e.preventDefault();
+                $(this).closest('div').parent('div').remove();
+            });
+        });
+</script>
 @endsection
