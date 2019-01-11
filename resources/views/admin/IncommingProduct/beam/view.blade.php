@@ -20,7 +20,6 @@
             color: red;
     </style>
 
-
     <div class="card">
         <div class="table-responsive">
             <table class="table table-striped table-hover">
@@ -35,7 +34,27 @@
                 </tr>
                 </thead>
                 <tbody>
-
+                    @foreach($Beams as $Beam)
+                    <tr>
+                        <td>{{ $Beam->date }}</td>
+                        <td>
+                            @foreach($Beam->Customer as $customers)
+                             {{ $customers->name  }}
+                            @endforeach
+                        </td>
+                        <td>
+                            @foreach($Beam->SubCustomer as $customers)
+                              {{ $customers->name }}
+                            @endforeach
+                        </td>
+                        <td>{{ $Beam->beam_total }}</td>
+                        <td>{{ $Beam->beam_inch }}</td> 
+                        <td>
+                            <a href="{{ route('admin.IncomeBeamEdit',$Beam->id) }}" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
+                            <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> </button>
+                        </td>
+                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

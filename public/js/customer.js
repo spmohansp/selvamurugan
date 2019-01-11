@@ -1,7 +1,5 @@
 $(document).ready(function () {
-
-
-    $("#CustomerIdsChanges").change(function(e){
+$("#CustomerIdsChanges").change(function(e){
         e.preventDefault();
         var Customer_id =$("#CustomerIdsChanges option:selected").val();
         // console.log(Customer_id);
@@ -19,7 +17,4 @@ $(document).ready(function () {
             }
         });
     });
-
-
-
 });
