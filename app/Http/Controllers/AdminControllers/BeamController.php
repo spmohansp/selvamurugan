@@ -14,7 +14,8 @@ class BeamController extends Controller
     }
 
     public function ShowAllCustomerBeam(){
-        return view('admin.IncommingProduct.beam.view');
+        $Beams = IncomeBeam::all();
+        return view('admin.IncommingProduct.beam.view',compact('Beams'));
     }
 
     public function AddCustomerBeam(){
@@ -37,11 +38,19 @@ class BeamController extends Controller
             $IncomeBeam->sub_customer_id = request('sub_customer_id');
             $IncomeBeam->date = request('date');
             $IncomeBeam->beam_total = request('beam_total');
+            $IncomeBeam->beam_inch = request('beam_inch');
+            $IncomeBeam->note = request('note');
             $IncomeBeam->save();
             return back()->with('success','Income Beam Added Successfully');
         }catch (Exception $e){
             return back()->with('danger','Something went wrong!');
         }
+    }
+
+    public function IncomeBeamEdit($id)
+    {
+       $IncomeBeam = IncomeBeam::FindorFail($id);
+       return view('admin.IncommingProduct.beam.edit',compact('IncomeBeam'));
     }
 
 }

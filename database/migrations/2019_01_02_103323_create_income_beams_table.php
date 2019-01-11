@@ -23,6 +23,8 @@ class CreateIncomeBeamsTable extends Migration
             $table->foreign('sub_customer_id')->references('id')->on('sub_customers');
             $table->string('date')->nullable();
             $table->string('beam_total')->nullable();
+            $table->string('beam_inch')->nullable();
+            $table->string('note')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
@@ -31,7 +33,7 @@ class CreateIncomeBeamsTable extends Migration
     /**
      * Reverse the migrations.
      *
-     * @return void
+     * @return vpopmail_del_domain(domain)
      */
     public function down()
     {

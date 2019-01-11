@@ -64,6 +64,7 @@ Route::get('companies/{id}/delete', 'AdminControllers\CompanyController@DeleteCo
 Route::get('/Product/beam', 'AdminControllers\BeamController@ShowAllCustomerBeam');
 Route::get('/Product/beam/Add', 'AdminControllers\BeamController@AddCustomerBeam');
 Route::post('/Product/beam/Add', 'AdminControllers\BeamController@saveIncomeBeam')->name('addIncomeBeam');
+Route::get('/Product/beam/{id}/Edit', 'AdminControllers\BeamController@IncomeBeamEdit')->name('IncomeBeamEdit');
 
 
 //Yarn Product
