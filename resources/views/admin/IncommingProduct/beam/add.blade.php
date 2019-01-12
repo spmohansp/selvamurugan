@@ -98,7 +98,7 @@
                     <div class="col-12">
                         <div class="form-group">
                             <div class="text-center">
-                                <button id="form-button" class="btn gredient-btn">Add Customer</button>
+                                <button id="form-button" class="btn gredient-btn">Add Beam</button>
                             </div>
                         </div>
                     </div>

@@ -39,8 +39,7 @@
                         <label class="control-label"><span class="asterisk">Unit</span></label>
                         <select name="unit_id" class="form-control" required>
                             @foreach(auth()->user()->getAllUnits() as $Unit)
-                            <option value="{{ $Unit->id }}" 
-                         {{ $Unit->id == $IncomeBeam->unit_id ?'selected':'' }} > {{ $Unit->name }} </option>
+                            <option value="{{ $Unit->id }}"{{ ($Unit->id == $IncomeBeam->unit_id) ?'selected':'' }} >{{ $Unit->name }}</option>
                             @endforeach
                          </select>
                         <div class="help-block with-errors"></div>
@@ -53,7 +52,7 @@
                                 <select name="customer_id" class="form-control" id="CustomerIdsChanges" required>
                                     <option value="">Select Customer</option>
                                     @foreach(auth()->user()->getAllCustomers() as $Customer)
-                                        <option value="{{ $Customer->id }}" {{ $Customer->id == $IncomeBeam->customer_id? 'selected':'' }}>{{ $Customer->name }}</option>
+                                        <option value="{{ $Customer->id }}" {{ ($Customer->id == $IncomeBeam->customer_id)? 'selected':'' }}>{{ $Customer->name }}</option>
                                     @endforeach
                                 </select>
                                 <div class="help-block with-errors"></div>
@@ -85,7 +84,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Beam Inch</span></label>
-                                <input type="number" class="form-control" name="beam_inch"  value="{{ $IncomeBeam->beam_inch }}"  required="" >
+                                <input type="number" class="form-control" name="beam_inch"  value="{{ $IncomeBeam->beam_inch }}" required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -109,4 +108,17 @@
         </div>
     </div>
 
+@endsection
+
+@section('scriptOnload')
+    <script>
+        $(document).ready(function () {
+            @if(!empty($IncomeBeam->sub_customer_id))
+                $("#CustomerIdsChanges").trigger('change');
+            @endif()
+            setTimeout(function(){
+                $("#sub_customer_id option[value='<?php echo $IncomeBeam->sub_customer_id ?>']").attr("selected",true);
+            }, 500);
+        });
+    </script>
 @endsection
