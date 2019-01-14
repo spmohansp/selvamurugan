@@ -161,15 +161,15 @@
                     '<div class="row">' +
                     '<div class="col-2">' +
                     '<label class="c-field__label">பாவுடன்</label>' +
-                    '<input class="form-control" name="warping[' + warpingi + '][totalWeight]" type="number" id="haltFromDate">' +
+                    '<input class="form-control CalculateWeight" name="warping[' + warpingi + '][totalBeemWeight]" type="number" id="haltFromDate">' +
                     '</div>' +
                     '<div class="col-2">' +
                     '<label class="c-field__label">காலி பீம் எடை</label>' +
-                    '<input class="form-control" name="warping[' + warpingi + '][emptyBeemWeight]" type="number" id="emptyBeem">' +
+                    '<input class="form-control CalculateWeight" name="warping[' + warpingi + '][emptyBeemWeight]" type="number" id="emptyBeem">' +
                     '</div>' +
                     '<div class="col-2">' +
                     '<label class="c-field__label">நிகர் எடை</label>' +
-                    '<input class="form-control" name="warping[' + warpingi + '][totalWeight]" type="number" id="totalWeight">' +
+                    '<input class="form-control CalculateWeight" name="warping[' + warpingi + '][totalWeight]" type="number" id="totalWeight" required>' +
                     '</div>' +
                     '<div class="col-2">' +
                     '<label class="c-field__label">வார்ப்பிங் ஜெகம்</label>' +
@@ -184,9 +184,17 @@
                     '</div>' +
                     '</div>'
                 );
-                halti++;
+                warpingi++;
+
             });
 
+            $('body').on("keyup paste", '.CalculateWeight', function (e) { // REMOVE HALT
+                e.preventDefault();
+                $(".CalculateWeight").prop("required", true);
+                for(i=0;i < warpingi;i++){
+                    $("input[name='warping[" + i + "][totalWeight]']").val(parseFloat($("input[name='warping[" + i + "][totalBeemWeight]']").val()) - parseFloat($("input[name='warping[" + i + "][emptyBeemWeight]']").val()));
+                }
+            });
 
             $('.AddWarpingDiv').on("click", ".RemoveWarpingButon", function (e) { // REMOVE HALT
                 e.preventDefault();
