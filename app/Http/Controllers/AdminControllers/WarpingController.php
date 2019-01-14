@@ -13,7 +13,8 @@ class WarpingController extends Controller
     }
 
     public function ShowAllWarpings(){
-        return view('admin.warping.view');
+        $Warpings = Warping::get()->all();
+        return view('admin.warping.view',compact('Warpings'));
     }
 
     public function AddWarping(){

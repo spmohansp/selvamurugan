@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64cf7327-e14a-4404-a54d-1a21ac2f9d15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/CustomerController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/WarpingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/WarpingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/SubCustomer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/SubCustomer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/warping/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/warping/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Warping.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Warping.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/warping/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/warping/view.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,32 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/CustomerController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
-              <caret line="75" column="12" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
-              <folding>
-                <element signature="e#57#74#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/admin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="90" column="75" selection-start-line="90" selection-start-column="64" selection-end-line="90" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/WarpingController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="240">
+              <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
               <folding>
                 <element signature="e#57#73#0#PHP" expanded="true" />
               </folding>
@@ -52,20 +29,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/SubCustomerController.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/warping/view.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="56" column="9" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="56" selection-end-column="9" />
+            <state relative-caret-position="179">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_10_051536_create_income_chemicals_table.php">
+        <entry file="file://$PROJECT_DIR$/app/Warping.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="17" selection-start-line="17" selection-end-line="26" selection-end-column="34" />
+            <state relative-caret-position="255">
+              <caret line="17" column="28" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="28" />
+              <folding>
+                <element signature="e#23#62#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/IncomeBeam.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="27" column="5" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -110,7 +99,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/ChemicalProductsController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/master/chemical/view.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layout/navbar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/warping/view.blade.php" />
         <option value="$PROJECT_DIR$/public/js/yarn.js" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_10_050955_create_income_yarns_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_10_051536_create_income_chemicals_table.php" />
@@ -132,11 +120,12 @@
         <option value="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/view.blade.php" />
         <option value="$PROJECT_DIR$/routes/admin.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_14_065233_create_warpings_table.php" />
-        <option value="$PROJECT_DIR$/app/Warping.php" />
         <option value="$PROJECT_DIR$/app/SubCustomer.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/WarpingController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/warping/add.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/CustomerController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/WarpingController.php" />
+        <option value="$PROJECT_DIR$/app/Warping.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/warping/view.blade.php" />
       </list>
     </option>
   </component>
@@ -300,7 +289,16 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
+              <item name="IncommingProduct" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="IncommingProduct" type="462c0819:PsiDirectoryNode" />
+              <item name="chemical" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
@@ -309,11 +307,6 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="warping" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -381,16 +374,15 @@
       <workItem from="1547114612613" duration="941000" />
       <workItem from="1547210106285" duration="2140000" />
       <workItem from="1547268752895" duration="5469000" />
-      <workItem from="1547442251992" duration="5547000" />
+      <workItem from="1547442251992" duration="8139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82640000" />
+    <option name="totallyTimeSpent" value="85232000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1680" height="1052" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30599755" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -417,13 +409,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/master/unit/view.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/UnitController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -527,13 +512,6 @@
           <folding>
             <element signature="e#57#85#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/warping/view.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -683,20 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/view.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="41" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/IncomeBeam.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/IncomeYarn.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -731,13 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="90" column="75" selection-start-line="90" selection-start-column="64" selection-end-line="90" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_10_051536_create_income_chemicals_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -759,16 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Warping.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding>
-            <element signature="e#23#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/SubCustomer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -783,16 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/WarpingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#57#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/warping/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
@@ -802,11 +739,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/CustomerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="75" column="12" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
+        <state relative-caret-position="448">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="e#57#74#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/layout/errors.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="7" lean-forward="true" selection-end-line="24" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/WarpingController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+          <folding>
+            <element signature="e#57#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/view.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="51" column="27" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="51" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/IncomeBeam.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Warping.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/warping/view.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
