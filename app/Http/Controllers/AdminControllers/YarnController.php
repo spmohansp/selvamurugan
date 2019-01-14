@@ -15,7 +15,8 @@ class YarnController extends Controller
 
 
     public function ShowAllCustomerYarn(){
-        return view('admin.IncommingProduct.yarn.view');
+        $IncomeYarns = IncomeYarn::get()->all();
+        return view('admin.IncommingProduct.yarn.view',compact('IncomeYarns'));
     }
 
     public function AddCustomerYarn(){

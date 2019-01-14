@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64cf7327-e14a-4404-a54d-1a21ac2f9d15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/ChemicalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/ChemicalController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/YarnController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/YarnController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/IncomeChemical.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/IncomeChemical.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/IncomeYarn.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/IncomeYarn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/view.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,15 +21,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="111" selection-start-line="24" selection-start-column="96" selection-end-line="24" selection-end-column="111" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/admin.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
@@ -39,28 +30,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/add.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/YarnController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="107" selection-start-line="24" selection-start-column="107" selection-end-line="24" selection-end-column="107" />
+            <state relative-caret-position="270">
+              <caret line="18" column="75" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="75" />
+              <folding>
+                <element signature="e#57#73#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/ChemicalController.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/view.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="29" column="52" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+            <state relative-caret-position="523">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/SubCustomerController.php">
+        <entry file="file://$PROJECT_DIR$/app/IncomeYarn.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="56" column="9" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="56" selection-end-column="9" />
+            <state relative-caret-position="375">
+              <caret line="25" column="31" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="31" />
+              <folding>
+                <element signature="e#23#62#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/IncomeBeam.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="27" column="5" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -81,7 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/SubCustomer.php" />
         <option value="$PROJECT_DIR$/public/js/customer.js" />
         <option value="$PROJECT_DIR$/resources/views/admin/master/unit/view.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/master/unit/add.blade.php" />
@@ -91,7 +96,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_01_02_103323_create_income_beams_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/BeamController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/CustomerController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/view.blade.php" />
         <option value="$PROJECT_DIR$/app/Admin.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_12_25_082231_create_sub_customers_table.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/master/customer/add.blade.php" />
@@ -110,12 +114,10 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_01_04_043253_create_chemicals_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/ChemicalProductsController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/master/chemical/view.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/view.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layout/navbar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/warping/view.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/WarpingController.php" />
         <option value="$PROJECT_DIR$/public/js/yarn.js" />
-        <option value="$PROJECT_DIR$/app/IncomeYarn.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_10_050955_create_income_yarns_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_10_051536_create_income_chemicals_table.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layout/footer.blade.php" />
@@ -129,9 +131,13 @@
         <option value="$PROJECT_DIR$/resources/views/admin/IncommingProduct/beam/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php" />
         <option value="$PROJECT_DIR$/routes/admin.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/YarnController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/add.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/ChemicalController.php" />
+        <option value="$PROJECT_DIR$/app/IncomeChemical.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/YarnController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/view.blade.php" />
+        <option value="$PROJECT_DIR$/app/IncomeYarn.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/view.blade.php" />
       </list>
     </option>
   </component>
@@ -253,6 +259,27 @@
             <path>
               <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
               <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="AdminControllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -283,6 +310,23 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="IncommingProduct" type="462c0819:PsiDirectoryNode" />
+              <item name="yarn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
               <item name="chemical" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -297,6 +341,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../JCB" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -350,12 +395,12 @@
       <workItem from="1547114612613" duration="941000" />
       <workItem from="1547210106285" duration="2140000" />
       <workItem from="1547268752895" duration="5469000" />
-      <workItem from="1547442251992" duration="933000" />
+      <workItem from="1547442251992" duration="2005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78026000" />
+    <option name="totallyTimeSpent" value="79098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1680" height="1052" extended-state="6" />
@@ -386,20 +431,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/master/subCustomer/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="53" column="70" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/master/subCustomer/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="53" column="70" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/master/unit/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="983">
@@ -513,20 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/master/chemical/view.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/view.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/CompanyController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -576,16 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="60" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="11" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/IncomeYarn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding>
-            <element signature="e#23#62#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -690,24 +697,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/IncomeBeam.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/beam/view.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="583">
           <caret line="55" column="11" lean-forward="true" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="111" selection-start-line="24" selection-start-column="96" selection-end-line="24" selection-end-column="111" />
         </state>
       </provider>
     </entry>
@@ -728,27 +721,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/YarnController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="42" column="84" selection-start-line="42" selection-start-column="84" selection-end-line="42" selection-end-column="84" />
-          <folding>
-            <element signature="e#57#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="107" selection-start-line="24" selection-start-column="107" selection-end-line="24" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="80" column="86" selection-start-line="80" selection-start-column="74" selection-end-line="80" selection-end-column="86" />
         </state>
       </provider>
     </entry>
@@ -759,10 +735,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="111" selection-start-line="24" selection-start-column="96" selection-end-line="24" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/ChemicalController.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="83" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/IncomeChemical.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="80" column="86" selection-start-line="80" selection-start-column="74" selection-end-line="80" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/master/chemical/view.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="45" column="25" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="45" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/view.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="41" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/YarnController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="75" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="75" />
+          <folding>
+            <element signature="e#57#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/IncomeBeam.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="29" column="52" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+          <caret line="27" column="5" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/IncomeYarn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="31" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/view.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>

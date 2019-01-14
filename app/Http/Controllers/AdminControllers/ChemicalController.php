@@ -13,7 +13,8 @@ class ChemicalController extends Controller
 
 
     public function ShowAllincomeChemicals(){
-        return view('admin.IncommingProduct.chemical.view');
+        $IncomeChemicals = IncomeChemical::get()->all();
+        return view('admin.IncommingProduct.chemical.view',compact('IncomeChemicals'));
     }
 
     public function AddChemical(){
