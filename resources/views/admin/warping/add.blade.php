@@ -22,7 +22,7 @@
 
     <div class="row">
         <div class="col-md-12 col-sm-12">
-            <form data-toggle="validator" class="padd-20" method="post" action="">
+            <form data-toggle="validator" class="padd-20" method="post" action="{{ route('admin.AddWarping') }}">
                 <div class="card">
                     {{ csrf_field() }}
                     <div class="row page-titles">
@@ -111,7 +111,7 @@
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <label class="control-label"><span class="asterisk">Total Rewainding Cone KG</span></label>
+                                <label class="control-label">Total Rewainding Cone KG</label>
                                 <input type="text" class="form-control CalculateWarpingBagQuantity" id="rewainding_weight" name="rewainding_weight"  value="{{ old("rewainding_weight") }}">
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -119,7 +119,7 @@
 
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <label class="control-label"><span class="asterisk">Net Weight</span></label>
+                                <label class="control-label">Net Weight</label>
                                 <input type="text" class="form-control" name="net_weight" id="net_weight"  value="{{ old("net_weight") }}" readonly="">
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -135,7 +135,6 @@
                             <div class="AddWarpingDiv"></div>
                         </div>
                     </div>
-
                     <div class="col-12">
                         <div class="form-group">
                             <div class="text-center">

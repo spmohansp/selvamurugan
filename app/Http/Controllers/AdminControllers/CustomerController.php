@@ -71,7 +71,11 @@ class CustomerController extends Controller
     }
 
     public function DeleteCustomer($id){
-        $Customer=Customer::FindorFail($id)->delete();
-        return back()->with('success','Customer Deleted Successfully');
+        try{
+        Customer::FindorFail($id)->delete();
+            return back()->with('success','Customer Deleted Successfully!!');
+        }catch(Exception $e){
+            return back()->with('danger','Something went wrong!');
+        }
     }
 }
