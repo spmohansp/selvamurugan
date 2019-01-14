@@ -91,3 +91,9 @@ Route::get('/warping/Add', 'AdminControllers\WarpingController@AddWarping');
 Route::post('/warping/Add', 'AdminControllers\WarpingController@SaveWarping')->name('AddWarping');
 
 
+
+
+//Sizing
+Route::get('/Sizing', 'AdminControllers\SizingController@ShowAllSizing');
+
+

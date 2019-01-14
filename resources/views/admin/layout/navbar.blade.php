@@ -78,12 +78,6 @@
                         <li>
                             <a href="{{ url('/admin/warping') }}">warping</a>
                         </li>
-                        <li>
-                            <a href="{{ url('/admin/subCustomers') }}">Sub Customer</a>
-                        </li>
-                        <li>
-                            <a href="{{ url('/admin/companies') }}">Companies</a>
-                        </li>
                     </ul>
                 </li>
 
@@ -95,22 +89,10 @@
                     </a>
                     <ul class="sidenav-second-level collapse" id="SIZING">
                         <li>
-                            <a href="{{ url('/admin/Customers') }}">Customer</a>
-                        </li>
-                        <li>
-                            <a href="{{ url('/admin/subCustomers') }}">Sub Customer</a>
-                        </li>
-                        <li>
-                            <a href="{{ url('/admin/companies') }}">Companies</a>
+                            <a href="{{ url('/admin/Sizing') }}">Sizing</a>
                         </li>
                     </ul>
                 </li>
-
-
-
-
-
-
 
 
                 <li class="nav-item @yield('approval')" data-toggle="tooltip" data-placement="right" title="Projects">
