@@ -70,7 +70,7 @@ Route::get('/Product/beam/{id}/Edit', 'AdminControllers\BeamController@IncomeBea
 //Yarn Product
 Route::get('/Product/yarn', 'AdminControllers\YarnController@ShowAllCustomerYarn');
 Route::get('/Product/yarn/Add', 'AdminControllers\YarnController@AddCustomerYarn');
-Route::post('/Product/yarn/Add', 'AdminControllers\YarnController@saveIncomeYarn')->name('addIncomeYarn');
+Route::post('/Product/yarn/Add', 'AdminControllers\YarnController@SaveCustomerYarn')->name('AddCustomerYarn');
 
 
 

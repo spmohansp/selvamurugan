@@ -22,7 +22,7 @@
 
     <div class="row">
         <div class="col-md-12 col-sm-12">
-            <form data-toggle="validator" class="padd-20" method="post" action="">
+            <form data-toggle="validator" class="padd-20" method="post" action="{{ route('admin.AddCustomerYarn') }}">
                 <div class="card">
                     {{ csrf_field() }}
                     <div class="row page-titles">
