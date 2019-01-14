@@ -9,7 +9,6 @@
     <div class="row page-titles">
         <div class="col-md-12 align-self-center">
             <h4 class="theme-cl">Sizing</h4>
-            <a href="{{ url('/admin/Sizing/Add') }}"><button type="button" class="btn btn-outline-warning btn-rounded btn-primary pull-right">Add Sizing Set</button></a>
         </div>
     </div>
     @include('admin.layout.errors')
@@ -34,6 +33,23 @@
                 </tr>
                 </thead>
                 <tbody>
+
+                @foreach($Sizings as $Sizing)
+                    <tr>
+                        <td>Date</td>
+                        <td>{{ @$Sizing->Warping->Customer->name }}</td>
+                        <td>{{ @$Sizing->Warping->set_number }}</td>
+                        <td>{{ @$Sizing->Warping->net_weight }}</td>
+                        <td>
+                            <form  method="POST" action="">
+                                {{ csrf_field() }}
+                                <input type="hidden" name="_method" value="DELETE">
+                                <a href="" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
+                                <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> </button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
 
                 </tbody>
             </table>

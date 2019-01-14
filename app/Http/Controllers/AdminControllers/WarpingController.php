@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\AdminControllers;
 
+use App\Sizing;
 use App\Warping;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -42,6 +43,11 @@ class WarpingController extends Controller
             $Warping->warping = serialize(request('warping'));
             $Warping->note = request('note');
             $Warping->save();
+
+            $Sizing = new Sizing;
+            $Sizing->warping_id = $Warping->id;
+            $Sizing->save();
+
             return back()->with('success','Warping Added Successfully!!');
         }catch (Exception $e){
             return back()->with('danger','Something went wrong!');
