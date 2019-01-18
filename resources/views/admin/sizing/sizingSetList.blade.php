@@ -79,7 +79,7 @@
                         <div class="col-sm-2">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">பீம் நெ</span></label>
-                                <input type="number" class="form-control" name="beam_number"  value="{{ old("beam_number") }}"  required="" >
+                                <input type="number" class="form-control" name="beam_number" min="0"  value="{{ (empty(old("beam_number")))? @$SizingBeamsLastData->beam_number+1:old("beam_number") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>

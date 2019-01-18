@@ -16,7 +16,7 @@ class SizingController extends Controller
 
 
     public function ShowAllSizing(){
-        $Sizings = Sizing::get()->all();
+        $Sizings = Sizing::orderBy('warping_id','desc')->get()->all();
         return view('admin.sizing.view',compact('Sizings'));
     }
 
@@ -24,7 +24,8 @@ class SizingController extends Controller
     public function SizingSetList($id){
         $Sizing = Sizing::findorfail($id);
         $SizingBeams = SizingBeam::where([['sizing_id',$id]])->get()->all();
-        return view('admin.sizing.sizingSetList',compact('Sizing','SizingBeams'));
+        $SizingBeamsLastData = SizingBeam::orderBy('beam_number','desc')->first();
+        return view('admin.sizing.sizingSetList',compact('Sizing','SizingBeams','SizingBeamsLastData'));
     }
 
     public function AddSigingBeamSetList($id,Request $request){

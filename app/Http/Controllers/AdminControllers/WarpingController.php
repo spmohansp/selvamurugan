@@ -14,7 +14,7 @@ class WarpingController extends Controller
     }
 
     public function ShowAllWarpings(){
-        $Warpings = Warping::get()->all();
+        $Warpings = Warping::orderBy('date','desc')->get()->all();
         return view('admin.warping.view',compact('Warpings'));
     }
 
@@ -25,6 +25,7 @@ class WarpingController extends Controller
     public function SaveWarping(Request $request){
         $request->validate([
             'date' => 'required|date',
+            'set_number' => 'required|unique:warpings',
         ]);
         try {
             $Warping = new Warping;
