@@ -95,5 +95,7 @@ Route::post('/warping/Add', 'AdminControllers\WarpingController@SaveWarping')->n
 
 //Sizing
 Route::get('/Sizing', 'AdminControllers\SizingController@ShowAllSizing');
+Route::get('/Sizing/{id}/setlist', 'AdminControllers\SizingController@SizingSetList')->name('ViewSizingSetList');
+Route::post('/Sizing/{id}/AddSigingBeamSetList', 'AdminControllers\SizingController@AddSigingBeamSetList')->name('AddSigingBeamSetList');
 
 

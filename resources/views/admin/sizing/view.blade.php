@@ -25,9 +25,9 @@
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
+                    <th>Set Number</th>
                     <th>Date</th>
                     <th>Customer</th>
-                    <th>Set Number</th>
                     <th>Net_Weight</th>
                     <th>Action</th>
                 </tr>
@@ -36,14 +36,15 @@
 
                 @foreach($Sizings as $Sizing)
                     <tr>
-                        <td>Date</td>
-                        <td>{{ @$Sizing->Warping->Customer->name }}</td>
                         <td>{{ @$Sizing->Warping->set_number }}</td>
+                        <td>Date {{ $Sizing->id }}</td>
+                        <td>{{ @$Sizing->Warping->Customer->name }}</td>
                         <td>{{ @$Sizing->Warping->net_weight }}</td>
                         <td>
                             <form  method="POST" action="">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="_method" value="DELETE">
+                                <a href="{{ route('admin.ViewSizingSetList',$Sizing->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
                                 <a href="" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
                                 <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> </button>
                             </form>
