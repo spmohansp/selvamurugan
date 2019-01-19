@@ -164,7 +164,40 @@
             setTimeout(function(){
                 $("#sub_customer_id option[value='<?php echo $IncomeYarn->sub_customer_id ?>']").attr("selected",true);
             }, 500);
+            $( window ).load(function() {
+                console.log($('.YarnType').val());
+                if ($('.YarnType').val() == 'full') {
+                    $('#net_weight').attr('readonly', true);
+                    $('#total_bag_div').show();
+                    $('#total_kg_bag_div').show();
+                    $('#total_kg_bag').attr('required', true);
+                    $('#total_bag').attr('required', true);
+                    $('#net_weight').attr('required', false);
+                } else if ($('.YarnType').val() == 'baby') {
+                    $('#net_weight').attr('readonly', false);
+                    $('#net_weight').attr('required', true);
+                    $('#total_kg_bag').attr('required', false);
+                    $('#total_bag').attr('required', false);
+                    $('#total_bag').val('');
+                    $('#net_weight').val('');
+                    $('#total_kg_bag').val('');
+                    $('#total_bag_div').hide();
+                    $('#total_kg_bag_div').hide();
+                } else if ($('.YarnType').val() == 'warping') {
+                    $('#net_weight').attr('readonly', false);
+                    $('#net_weight').attr('required', true);
+                    $('#total_kg_bag').attr('required', false);
+                    $('#total_bag').attr('required', false);
+                    $('#total_bag').val('');
+                    $('#net_weight').val('');
+                    $('#total_kg_bag').val('');
+                    $('#total_bag_div').hide();
+                    $('#total_kg_bag_div').hide();
+                }
+            })
+
         });
+
     </script>
 @endsection
 

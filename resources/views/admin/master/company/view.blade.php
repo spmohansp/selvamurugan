@@ -38,10 +38,11 @@
                             <td>{{ $company->company_name }}</td>
                             <td>{{ $company->company_address }}</td>
                             <td>
-                                    <form  method="post" enctype="multipart/form-data" >
+                                    <form  method="post" enctype="multipart/form-data" action=" {{ route('admin.DeleteCompany',$company->id) }}" >
+                                        @csrf
                                     <input type="hidden" name="_method" value="DELETE">
                                     <a href="{{ route('admin.EditCompany',$company->id) }}" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
-                                   <a href="{{ route('admin.DeleteCompany',$company->id) }}"> <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> </button></a>
+                                    <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> </button>
                                     </form>
                             </td>
                         </tr>

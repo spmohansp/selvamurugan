@@ -6,6 +6,8 @@ $(document).ready(function () {
     });
 
 
+
+
     $(".YarnType").on('change keyup',function(e){
         e.preventDefault();
         if ($(this).val() == 'full'){
@@ -21,6 +23,7 @@ $(document).ready(function () {
             $('#net_weight').attr('required', true);
             $('#total_kg_bag').attr('required', false);
             $('#total_bag').attr('required', false);
+            $('#total_bag').val('');
             $('#net_weight').val('');
             $('#total_kg_bag').val('');
             $('#total_bag_div').hide();
@@ -30,6 +33,7 @@ $(document).ready(function () {
             $('#net_weight').attr('required', true);
             $('#total_kg_bag').attr('required', false);
             $('#total_bag').attr('required', false);
+            $('#total_bag').val('');
             $('#net_weight').val('');
             $('#total_kg_bag').val('');
             $('#total_bag_div').hide();

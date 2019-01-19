@@ -18,14 +18,14 @@
 
 <!-- Bootstrap core JavaScript-->
 
-<script src="{{ url('assets\plugins\jquery\jquery.min.js') }}"></script>
-<script src="{{ url('assets\plugins\bootstrap\js\bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url('/assets/plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{ url('/assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="{{ url('assets\plugins\jquery-easing\jquery.easing.min.js') }}"></script>
+<script src="{{ url('/assets/plugins/jquery-easing/jquery.easing.min.js') }}"></script>
 
 <!-- Slick Slider Js -->
-<script src="{{ url('assets\plugins\slick-slider\slick.js') }}"></script>
+<script src="{{ url('/assets/plugins/slick-slider/slick.js') }}"></script>
 
 <!-- Slim Scroll -->
 <script src="{{ url('assets\plugins\slim-scroll\jquery.slimscroll.min.js') }}"></script>
@@ -39,13 +39,13 @@
 <script src="{{ url('assets\plugins\validator\validator.js') }}"></script>
 
 <!-- Custom scripts for all pages -->
-<script src="{{ url('assets\dist\js\glovia.js') }}"></script>
-<script src="{{ url('assets\dist\js\jQuery.style.switcher.js') }}"></script>
-<script src="{{ url('js\customer.js') }}"></script>
-<script src="{{ url('js\yarn.js') }}"></script>
-<script src="{{ url('js\chemical.js') }}"></script>
+<script src="{{ url('/assets/dist/js/glovia.js') }}"></script>
+<script src="{{ url('/assets/dist/js/jQuery.style.switcher.js') }}"></script>
+<script src="{{ url('/js/customer.js') }}"></script>
+<script src="{{ url('/js/yarn.js') }}"></script>
+<script src="{{ url('/js/chemical.js') }}"></script>
 
-<script src="{{ url('js\warping.js') }}"></script>
+<script src="{{ url('/js/warping.js') }}"></script>
 <script>
     function openRightMenu() {
         document.getElementById("rightMenu").style.display = "block";
@@ -53,8 +53,7 @@
     function closeRightMenu() {
         document.getElementById("rightMenu").style.display = "none";
     }
-</script>
-<script type="text/javascript">
+
     $(document).ready(function() {
         $('#styleOptions').styleSwitcher();
     });
@@ -76,9 +75,7 @@
       return false;
       }
   });
-</script>
 
-<script>
     $('.dropdown-toggle').dropdown()
 </script>
 

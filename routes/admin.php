@@ -56,7 +56,7 @@ Route::get('companies/Add', 'AdminControllers\CompanyController@AddCompany');
 Route::post('companies/Add', 'AdminControllers\CompanyController@saveCompany')->name('AddNewCompany');
 Route::get('companies/{id}/edit', 'AdminControllers\CompanyController@EditCompany')->name('EditCompany');
 Route::post('companies/{id}/update', 'AdminControllers\CompanyController@UpdateCompany')->name('UpdateCompany');
-Route::get('companies/{id}/delete', 'AdminControllers\CompanyController@DeleteCompany')->name('DeleteCompany');
+Route::delete('companies/{id}/delete', 'AdminControllers\CompanyController@DeleteCompany')->name('DeleteCompany');
 
 
 
@@ -82,11 +82,11 @@ Route::delete('/Product/yarn/{id}/Delete', 'AdminControllers\YarnController@Inco
 
 //Chemical Income Product
 Route::get('/Chemicals', 'AdminControllers\ChemicalController@ShowAllincomeChemicals');
-Route::get('/Chemicals/Add', 'AdminControllers\ChemicalController@AddChemical');
-Route::post('/Chemicals/AddChemical', 'AdminControllers\ChemicalController@saveChemical')->name('AddChemical');
-Route::get('/Chemicals/{id}/edit', 'AdminControllers\ChemicalController@EditChemical')->name('EditChemical');
-Route::post('/Chemicals/{id}/update', 'AdminControllers\ChemicalController@UpdateChemical')->name('UpdateChemical');
-Route::delete('/Chemicals/{id}/delete', 'AdminControllers\ChemicalController@DeleteChemical')->name('DeleteChemical');
+Route::get('/Chemicals/Add', 'AdminControllers\ChemicalController@AddIncomeChemical');
+Route::post('Chemicals/AddChemical', 'AdminControllers\ChemicalController@saveIncomeChemical')->name('AddIncomeChemical');
+Route::get('Chemicals/{id}/edit', 'AdminControllers\ChemicalController@EditIncomeChemical')->name('EditIncomeChemical');
+Route::post('Chemicals/{id}/update', 'AdminControllers\ChemicalController@UpdateIncomeChemical')->name('UpdateIncomeChemical');
+Route::delete('Chemicals/{id}/delete', 'AdminControllers\ChemicalController@DeleteIncomeChemical')->name('DeleteIncomeChemical');
 
 
 
@@ -103,8 +103,7 @@ Route::post('/warping/{id}/update', 'AdminControllers\WarpingController@UpdateWa
 //Sizing
 Route::get('/Sizing', 'AdminControllers\SizingController@ShowAllSizing');
 Route::get('/Sizing/{id}/setlist', 'AdminControllers\SizingController@SizingSetList')->name('ViewSizingSetList');
-Route::post('/Sizing/{id}/AddSigingBeamSetList', 'AdminControllers\SizingController@AddSigingBeamSetList')->name('AddSigingBeamSetList');
-
-Route::delete('/SizingSetList/{id}/delete', 'AdminControllers\SizingController@DeleteSigingBeamSetList')->name('DeleteSigingBeamSetList');
-
-
+Route::post('/Sizing/{id}/AddSigingBeamSetList', 'AdminControllers\SizingController@AddSizingBeamSetList')->name('AddSizingBeamSetList');
+Route::get('/SizingSetList/{id}/edit', 'AdminControllers\SizingController@EditSizingSetList')->name('EditSizingSetList');
+Route::post('/SizingSetList/{id}/update', 'AdminControllers\SizingController@UpdateSizingBeamSetList')->name('UpdateSizingBeamSetList');
+Route::delete('/SizingSetList/{id}/delete', 'AdminControllers\SizingController@DeleteSizingBeamSetList')->name('DeleteSizingBeamSetList');
