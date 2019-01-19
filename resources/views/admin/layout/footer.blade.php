@@ -43,6 +43,8 @@
 <script src="{{ url('assets\dist\js\jQuery.style.switcher.js') }}"></script>
 <script src="{{ url('js\customer.js') }}"></script>
 <script src="{{ url('js\yarn.js') }}"></script>
+<script src="{{ url('js\chemical.js') }}"></script>
+
 <script src="{{ url('js\warping.js') }}"></script>
 <script>
     function openRightMenu() {

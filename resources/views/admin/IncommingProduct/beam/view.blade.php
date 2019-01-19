@@ -44,8 +44,11 @@
                         <td>{{ @$Beam->beam_total }}</td>
                         <td>{{ @$Beam->beam_inch }}</td>
                         <td>
+                            <form  method="post" enctype="multipart/form-data" action="{{ route('admin.IncomeBeamDelete',$Beam->id)  }}" >
+                                @csrf
                             <a href="{{ route('admin.IncomeBeamEdit',$Beam->id) }}" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
                             <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> </button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach

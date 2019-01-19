@@ -26,4 +26,8 @@ class IncomeYarn extends Model
     public function SubCustomer(){
         return $this->belongsTo(SubCustomer::class);
     }
+
+    public function Companies(){
+        return $this->hasMany(Customer::class,'id','company_id');
+    }
 }
