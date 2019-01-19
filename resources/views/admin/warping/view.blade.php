@@ -44,7 +44,7 @@
                                 <form  method="POST" action="">
                                     {{ csrf_field() }}
                                     <input type="hidden" name="_method" value="DELETE">
-                                    <a href="" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
+                                    <a href="{{ route('admin.EditWarping',$Warping->id) }}" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
                                     <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> </button>
                                 </form>
                             </td>
