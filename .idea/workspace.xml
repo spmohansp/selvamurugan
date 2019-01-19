@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64cf7327-e14a-4404-a54d-1a21ac2f9d15" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/public/js/chemical.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/admin/IncommingProduct/yarn/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -16,6 +17,10 @@
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/master/company/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/master/company/view.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/sizing/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sizing/view.blade.php" afterDir="false" />
+>>>>>>> d8fd8a1b4817032b797721a5ec38d2d18bbbeec6
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,11 +33,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/chemical.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="4" column="70" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="70" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/WarpingController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="51" column="74" lean-forward="true" selection-start-line="51" selection-start-column="74" selection-end-line="51" selection-end-column="74" />
+              <folding>
+                <element signature="e#57#72#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/sizing/add.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="61">
+              <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="148" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/sizing/view.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="509">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
+>>>>>>> d8fd8a1b4817032b797721a5ec38d2d18bbbeec6
             </state>
           </provider>
         </entry>
@@ -40,8 +74,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/add.blade.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="361">
               <caret line="77" column="107" selection-start-line="77" selection-start-column="107" selection-end-line="77" selection-end-column="107" />
+=======
+            <state relative-caret-position="1470">
+              <caret line="98" column="11" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="11" />
+>>>>>>> d8fd8a1b4817032b797721a5ec38d2d18bbbeec6
             </state>
           </provider>
         </entry>
@@ -49,8 +88,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/YarnController.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="391">
               <caret line="64" column="64" lean-forward="true" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="64" />
+=======
+            <state relative-caret-position="495">
+              <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+>>>>>>> d8fd8a1b4817032b797721a5ec38d2d18bbbeec6
               <folding>
                 <element signature="e#57#73#0#PHP" expanded="true" />
               </folding>
@@ -107,12 +151,12 @@
         <option value="$PROJECT_DIR$/resources/views/admin/warping/add.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_14_125011_create_sizings_table.php" />
         <option value="$PROJECT_DIR$/app/Sizing.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/sizing/view.blade.php" />
         <option value="$PROJECT_DIR$/app/SizingBeam.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_18_055620_create_sizing_beams_table.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/sizing/sizingSetList.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/SizingController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminControllers/WarpingController.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/resources/views/admin/IncommingProduct/beam/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/master/company/view.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/IncommingProduct/beam/view.blade.php" />
@@ -126,6 +170,9 @@
         <option value="$PROJECT_DIR$/resources/views/admin/layout/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/IncommingProduct/chemical/add.blade.php" />
         <option value="$PROJECT_DIR$/public/js/chemical.js" />
+=======
+        <option value="$PROJECT_DIR$/resources/views/admin/sizing/view.blade.php" />
+>>>>>>> d8fd8a1b4817032b797721a5ec38d2d18bbbeec6
       </list>
     </option>
   </component>
@@ -223,9 +270,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="-2" />
-    <option name="width" value="1680" />
-    <option name="height" value="1052" />
+    <option name="x" value="-337" />
+    <option name="y" value="234" />
+    <option name="width" value="1670" />
+    <option name="height" value="787" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -240,6 +288,7 @@
               <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
               <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
             <path>
               <item name="selvamurugan" type="b2602c69:ProjectViewProjectNode" />
               <item name="selvamurugan" type="462c0819:PsiDirectoryNode" />
@@ -321,6 +370,8 @@
               <item name="IncommingProduct" type="462c0819:PsiDirectoryNode" />
               <item name="yarn" type="462c0819:PsiDirectoryNode" />
             </path>
+=======
+>>>>>>> d8fd8a1b4817032b797721a5ec38d2d18bbbeec6
           </expand>
           <select />
         </subPane>
@@ -329,8 +380,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GenericSQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../JCB" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FeetFinance" />
+>>>>>>> d8fd8a1b4817032b797721a5ec38d2d18bbbeec6
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -388,12 +443,18 @@
       <workItem from="1547210106285" duration="2140000" />
       <workItem from="1547268752895" duration="5469000" />
       <workItem from="1547442251992" duration="14270000" />
+<<<<<<< HEAD
       <workItem from="1547787284907" duration="6402000" />
       <workItem from="1547872957971" duration="16159000" />
+=======
+      <workItem from="1547787284907" duration="7981000" />
+      <workItem from="1547873379741" duration="3318000" />
+>>>>>>> d8fd8a1b4817032b797721a5ec38d2d18bbbeec6
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="114393000" />
   </component>
   <component name="ToolWindowManager">
@@ -401,6 +462,14 @@
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.303127" />
+=======
+    <option name="totallyTimeSpent" value="102662000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="-2" width="1680" height="1052" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31456548" />
+>>>>>>> d8fd8a1b4817032b797721a5ec38d2d18bbbeec6
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -413,7 +482,11 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.21428572" />
+=======
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21451788" />
+>>>>>>> d8fd8a1b4817032b797721a5ec38d2d18bbbeec6
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -446,6 +519,37 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/master/customer/view.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="42" column="48" lean-forward="true" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_04_043253_create_chemicals_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/master/chemical/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="50" column="41" lean-forward="true" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> d8fd8a1b4817032b797721a5ec38d2d18bbbeec6
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminAuth/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -618,23 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/sizing/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="148" selection-end-column="10" />
-          <folding>
-            <element signature="e#418#7951#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/sizing/view.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_02_103323_create_income_beams_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -666,10 +753,20 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/routes/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="98" column="11" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> d8fd8a1b4817032b797721a5ec38d2d18bbbeec6
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/SizingController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        <state relative-caret-position="495">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
           <folding>
             <element signature="e#57#72#0#PHP" expanded="true" />
           </folding>
@@ -678,21 +775,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/sizing/sizingSetList.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="-420">
           <caret line="81" column="99" selection-start-line="81" selection-start-column="99" selection-end-line="81" selection-end-column="99" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminControllers/WarpingController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="448">
+          <caret line="51" column="74" lean-forward="true" selection-start-line="51" selection-start-column="74" selection-end-line="51" selection-end-column="74" />
           <folding>
             <element signature="e#57#72#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/views/admin/master/company/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -839,6 +937,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="70" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="70" />
+=======
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/sizing/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="148" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/sizing/view.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+>>>>>>> d8fd8a1b4817032b797721a5ec38d2d18bbbeec6
         </state>
       </provider>
     </entry>
