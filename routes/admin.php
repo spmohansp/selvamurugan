@@ -65,12 +65,17 @@ Route::get('/Product/beam', 'AdminControllers\BeamController@ShowAllCustomerBeam
 Route::get('/Product/beam/Add', 'AdminControllers\BeamController@AddCustomerBeam');
 Route::post('/Product/beam/Add', 'AdminControllers\BeamController@saveIncomeBeam')->name('addIncomeBeam');
 Route::get('/Product/beam/{id}/Edit', 'AdminControllers\BeamController@IncomeBeamEdit')->name('IncomeBeamEdit');
+Route::post('/Product/beam/{id}/Update','AdminControllers\BeamController@IncomeBeamUpdate')->name('IncomeBeamUpdate');
+Route::post('/Product/beam/{id}/Delete','AdminControllers\BeamController@IncomeBeamDelete')->name('IncomeBeamDelete');
 
 
 //Yarn Product
 Route::get('/Product/yarn', 'AdminControllers\YarnController@ShowAllCustomerYarn');
 Route::get('/Product/yarn/Add', 'AdminControllers\YarnController@AddCustomerYarn');
 Route::post('/Product/yarn/Add', 'AdminControllers\YarnController@SaveCustomerYarn')->name('AddCustomerYarn');
+Route::get('/Product/yarn/{id}/Edit', 'AdminControllers\YarnController@IncomeYarnEdit')->name('IncomeYarnEdit');
+Route::post('/Product/yarn/{id}/Update', 'AdminControllers\YarnController@IncomeYarnUpdate')->name('IncomeYarnUpdate');
+Route::delete('/Product/yarn/{id}/Delete', 'AdminControllers\YarnController@IncomeYarnDelete')->name('IncomeYarnDelete');
 
 
 

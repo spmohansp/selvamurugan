@@ -68,21 +68,21 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label"><span class="asterisk">Total Bag</span></label>
-                                <input type="number" name="count" class="form-control" value="{{ old('count') }}" required="">
+                                <input type="number" name="count" class="form-control CalculateChemicalTotal" value="{{ old('count') }}" id="total_bag" required="">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label"><span class="asterisk">Cost Per</span></label>
-                                <input type="number" name="cost" class="form-control" value="{{ old('cost') }}" required="">
+                                <input type="number" name="cost" class="form-control CalculateChemicalTotal" value="{{ old('cost') }}" id="cost_per" required="">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label"><span class="asterisk">Total</span></label>
-                                <input type="number" name="total" class="form-control" value="{{ old('total') }}" required="">
+                                <input type="number" name="total" class="form-control " value="{{ old('total') }}" id="total" required="">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>

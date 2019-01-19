@@ -43,10 +43,10 @@
                             <td>{{ $IncomeYarn->net_weight }}</td>
                             <td>{{ $IncomeYarn->yarn_count }}</td>
                             <td>
-                                <form  method="POST" action="">
+                                <form  method="POST" action="{{ route('admin.IncomeYarnDelete',$IncomeYarn->id) }}" enctype="multipart/form-data">
                                     {{ csrf_field() }}
                                     <input type="hidden" name="_method" value="DELETE">
-                                    <a href="" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
+                                    <a href="{{ route('admin.IncomeYarnEdit',$IncomeYarn->id)  }}" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
                                     <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> </button>
                                 </form>
                             </td>
