@@ -104,5 +104,5 @@ Route::post('/warping/{id}/update', 'AdminControllers\WarpingController@UpdateWa
 Route::get('/Sizing', 'AdminControllers\SizingController@ShowAllSizing');
 Route::get('/Sizing/{id}/setlist', 'AdminControllers\SizingController@SizingSetList')->name('ViewSizingSetList');
 Route::post('/Sizing/{id}/AddSigingBeamSetList', 'AdminControllers\SizingController@AddSigingBeamSetList')->name('AddSigingBeamSetList');
-
-
+Route::get('/Sizing/{id}/editsetlist', 'AdminControllers\SizingController@EditSizingSetList')->name('EditSizingSetList');
+Route::post('/Sizing/{id}/UpdateSizingBeamSetList', 'AdminControllers\SizingController@UpdateSizingBeamSetList')->name('UpdateSizingBeamSetList');

@@ -83,7 +83,6 @@ class WarpingController extends Controller
             $Warping->warping = serialize(request('warping'));
             $Warping->note = request('note');
             $Warping->save();
-
             return back()->with('success','Warping Added Successfully!!');
         }catch (Exception $e){
             return back()->with('danger','Something went wrong!');
