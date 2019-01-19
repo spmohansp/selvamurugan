@@ -53,4 +53,16 @@ class SizingController extends Controller
     }
 
 
+
+
+    public function DeleteSigingBeamSetList($id){
+        try {
+            SizingBeam::findorfail($id)->delete();
+            return back()->with('success','Sizing Beam Deleted Successfully!');
+        }catch (Exception $e){
+            return back()->with('danger','Something went wrong!');
+        }
+    }
+
+
 }

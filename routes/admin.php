@@ -83,10 +83,10 @@ Route::delete('/Product/yarn/{id}/Delete', 'AdminControllers\YarnController@Inco
 //Chemical Income Product
 Route::get('/Chemicals', 'AdminControllers\ChemicalController@ShowAllincomeChemicals');
 Route::get('/Chemicals/Add', 'AdminControllers\ChemicalController@AddChemical');
-Route::post('Chemicals/AddChemical', 'AdminControllers\ChemicalController@saveChemical')->name('AddChemical');
-Route::get('Chemicals/{id}/edit', 'AdminControllers\ChemicalController@EditChemical')->name('EditChemical');
-Route::post('Chemicals/{id}/update', 'AdminControllers\ChemicalController@UpdateChemical')->name('UpdateChemical');
-Route::delete('Chemicals/{id}/delete', 'AdminControllers\ChemicalController@DeleteChemical')->name('DeleteChemical');
+Route::post('/Chemicals/AddChemical', 'AdminControllers\ChemicalController@saveChemical')->name('AddChemical');
+Route::get('/Chemicals/{id}/edit', 'AdminControllers\ChemicalController@EditChemical')->name('EditChemical');
+Route::post('/Chemicals/{id}/update', 'AdminControllers\ChemicalController@UpdateChemical')->name('UpdateChemical');
+Route::delete('/Chemicals/{id}/delete', 'AdminControllers\ChemicalController@DeleteChemical')->name('DeleteChemical');
 
 
 
@@ -104,5 +104,7 @@ Route::post('/warping/{id}/update', 'AdminControllers\WarpingController@UpdateWa
 Route::get('/Sizing', 'AdminControllers\SizingController@ShowAllSizing');
 Route::get('/Sizing/{id}/setlist', 'AdminControllers\SizingController@SizingSetList')->name('ViewSizingSetList');
 Route::post('/Sizing/{id}/AddSigingBeamSetList', 'AdminControllers\SizingController@AddSigingBeamSetList')->name('AddSigingBeamSetList');
+
+Route::delete('/SizingSetList/{id}/delete', 'AdminControllers\SizingController@DeleteSigingBeamSetList')->name('DeleteSigingBeamSetList');
 
 

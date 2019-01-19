@@ -144,7 +144,7 @@
                             <td>{{ $SizingBeam->kanchi }}</td>
                             <td>{{ $SizingBeam->name }}</td>
                             <td>
-                                <form  method="POST" action="">
+                                <form  method="POST" action="{{ route('admin.DeleteSigingBeamSetList',$SizingBeam->id) }}">
                                     {{ csrf_field() }}
                                     <input type="hidden" name="_method" value="DELETE">
                                     <a href="" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
