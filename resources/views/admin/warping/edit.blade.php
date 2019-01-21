@@ -89,7 +89,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">இழை</span></label>
-                                <input type="number" class="form-control" name="ilai"  value="{{$Warping->ilai }}"  required="" >
+                                <input type="number" class="form-control" name="ilai"  value="{{ $Warping->ilai }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -97,21 +97,28 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Total Bag</span></label>
-                                <input type="number" class="form-control CalculateWarpingBagQuantity" id="total_bag" name="total_bag"  value="{{ $Warping->total_bag }}"  required="" >
+                                <input type="number" class="form-control CalculateWarpingBagQuantity" id="total_bag" name="total_bag"  value="{{ @$Warping->total_bag }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">KG / Bag</span></label>
-                                <input type="text" class="form-control CalculateWarpingBagQuantity" id="total_kg_bag" name="total_kg_bag"  value="{{$Warping->total_kg_bag }}"  required="" >
+                                <input type="text" class="form-control CalculateWarpingBagQuantity" id="total_kg_bag" name="total_kg_bag"  value="{{ @$Warping->total_kg_bag }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label">Total Rewainding Cone KG</label>
-                                <input type="text" class="form-control CalculateWarpingBagQuantity" id="rewainding_weight" name="rewainding_weight"  value="{{ $Warping->rewainding_weight }}">
+                                <input type="text" class="form-control CalculateWarpingBagQuantity" id="rewainding_weight" name="rewainding_weight"  value="{{ @$Warping->rewainding_weight }}">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Total Baby Cone KG</label>
+                                <input type="text" class="form-control CalculateWarpingBagQuantity" id="baby_cone_weight" name="baby_cone_weight"  value="{{ @$Warping->baby_cone_weight }}">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -119,7 +126,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label">Net Weight</label>
-                                <input type="text" class="form-control" name="net_weight" id="net_weight"  value="{{ $Warping->net_weight }}" readonly="">
+                                <input type="text" class="form-control" name="net_weight" id="net_weight"  value="{{ @$Warping->net_weight }}" readonly="">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>

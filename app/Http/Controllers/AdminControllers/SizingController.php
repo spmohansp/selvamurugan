@@ -23,7 +23,7 @@ class SizingController extends Controller
 
     public function SizingSetList($id){
         $Sizing = Sizing::findorfail($id);
-        $SizingBeams = SizingBeam::where([['sizing_id',$id]])->get()->all();
+        $SizingBeams = SizingBeam::where([['sizing_id',$id]])->get();
         $SizingBeamsLastData = SizingBeam::orderBy('beam_number','desc')->first();
         return view('admin.sizing.sizingSetList',compact('Sizing','SizingBeams','SizingBeamsLastData'));
     }
@@ -45,6 +45,8 @@ class SizingController extends Controller
             $SizingBeam->kanchi = request('kanchi');
             $SizingBeam->name = request('name');
             $SizingBeam->sizing_id = $id;
+            $SizingBeam->warping_id = @Sizing::findorfail($id)->Warping->id;
+            $SizingBeam->customer_id = @Sizing::findorfail($id)->Warping->customer_id;
             $SizingBeam->save();
             return back()->with('success','Sizing Beam Added Successfully!');
         }catch (Exception $e){
@@ -74,12 +76,11 @@ class SizingController extends Controller
             $SizingBeam->kanchi = request('kanchi');
             $SizingBeam->name = request('name');
             $SizingBeam->save();
-            return back()->with('success','Sizing Beam Updated Successfully!');
+            return redirect(route('admin.ViewSizingSetList',$SizingBeam->sizing_id))->with('success','Sizing Beam Updated Successfully!');
         }catch (Exception $e){
             return back()->with('danger','Something went wrong!');
         }
     }
-
 
 
     public function DeleteSizingBeamSetList($id){

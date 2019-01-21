@@ -18,11 +18,23 @@
             content:"*" ;
             color: red;
     </style>
-    <div class="row">
-        <div class="col-md-12 col-sm-12">
-            <div class="card">
-                <div class="row mrg-0">
-                    {{ $Sizing->Warping }}
+
+
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="alert alert-success" role="alert">
+                    Customer  : {{ @$Sizing->Warping->Customer->name }}
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="alert alert-info" role="alert">
+                    மொத்த பாவு  : {{ count(@$SizingBeams) }}
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="alert alert-info" role="alert">
+                    மொத்த மீ  : {{ $SizingBeams->sum('meter') }}
                 </div>
             </div>
         </div>

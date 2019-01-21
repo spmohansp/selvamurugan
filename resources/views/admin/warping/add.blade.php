@@ -116,6 +116,13 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Total Baby Cone KG</label>
+                                <input type="text" class="form-control CalculateWarpingBagQuantity" id="baby_cone_weight" name="baby_cone_weight"  value="{{ old("baby_cone_weight") }}">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
 
                         <div class="col-sm-4">
                             <div class="form-group">

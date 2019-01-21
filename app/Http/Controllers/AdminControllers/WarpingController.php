@@ -40,7 +40,8 @@ class WarpingController extends Controller
             $Warping->total_kg_bag = request('total_kg_bag');
             $Warping->total_weight = request('total_kg_bag') * request('total_bag');
             $Warping->rewainding_weight = request('rewainding_weight');
-            $Warping->net_weight = request('rewainding_weight') + (request('total_kg_bag') * request('total_bag'));
+            $Warping->baby_cone_weight = request('baby_cone_weight');
+            $Warping->net_weight = request('rewainding_weight') + request('baby_cone_weight') + (request('total_kg_bag') * request('total_bag'));
             $Warping->warping = serialize(request('warping'));
             $Warping->note = request('note');
             $Warping->save();
@@ -79,7 +80,7 @@ class WarpingController extends Controller
             $Warping->total_kg_bag = request('total_kg_bag');
             $Warping->total_weight = request('total_kg_bag') * request('total_bag');
             $Warping->rewainding_weight = request('rewainding_weight');
-            $Warping->net_weight = request('rewainding_weight') + (request('total_kg_bag') * request('total_bag'));
+            $Warping->net_weight = request('rewainding_weight') + request('baby_cone_weight') + (request('total_kg_bag') * request('total_bag'));
             $Warping->warping = serialize(request('warping'));
             $Warping->note = request('note');
             $Warping->save();

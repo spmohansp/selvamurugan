@@ -29,6 +29,7 @@ class CreateWarpingsTable extends Migration
             $table->string('total_kg_bag')->nullable();
             $table->string('total_weight')->nullable();
             $table->string('rewainding_weight')->nullable();
+            $table->string('baby_cone_weight')->nullable();
             $table->string('net_weight')->nullable();
             $table->longText('warping')->nullable();
             $table->string('note')->nullable();
