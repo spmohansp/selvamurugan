@@ -75,7 +75,7 @@
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <label class="control-label"><span class="asterisk">Set Number</span></label>
+                                <label class="control-label"><span class="asterisk">Warping Number</span></label>
                                 <input type="number" class="form-control" name="set_number"  value="{{ old("set_number") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -97,32 +97,78 @@
 
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <label class="control-label"><span class="asterisk">Total Bag</span></label>
-                                <input type="number" class="form-control CalculateWarpingBagQuantity" id="total_bag" name="total_bag"  value="{{ old("total_bag") }}"  required="" >
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label class="control-label"><span class="asterisk">KG / Bag</span></label>
-                                <input type="text" class="form-control CalculateWarpingBagQuantity" id="total_kg_bag" name="total_kg_bag"  value="{{ old("total_kg_bag") }}"  required="" >
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form-group">
                                 <label class="control-label">Total Rewainding Cone KG</label>
-                                <input type="text" class="form-control CalculateWarpingBagQuantity" id="rewainding_weight" name="rewainding_weight"  value="{{ old("rewainding_weight") }}">
+                                <input type="text" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="rewainding_weight" name="rewainding_weight"  value="{{ old("rewainding_weight") }}">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label">Total Baby Cone KG</label>
-                                <input type="text" class="form-control CalculateWarpingBagQuantity" id="baby_cone_weight" name="baby_cone_weight"  value="{{ old("baby_cone_weight") }}">
+                                <input type="text" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="baby_cone_weight" name="baby_cone_weight"  value="{{ old("baby_cone_weight") }}">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
+
+                        <hr>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="inputphone" class="control-label"><span class="asterisk">Yarn Company</span></label>
+                                <select name="company_id" class="form-control" required>
+                                    <option value="">Yarn Company</option>
+                                    @foreach(auth()->user()->getAllCompanies() as $Company)
+                                        <option value="{{ $Company->id }}">{{ $Company->company_name }}</option>
+                                    @endforeach
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label"><span class="asterisk">Total Bag</span></label>
+                                <input type="number" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="total_bag1" name="total_bag1"  value="{{ old("total_bag") }}"  required="" >
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label"><span class="asterisk">KG / Bag</span></label>
+                                <input type="text" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="total_kg_bag1" name="total_kg_bag1"  value="{{ old("total_kg_bag") }}"  required="" >
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="inputphone" class="control-label">Yarn Company</label>
+                                <select name="company_id_2" id="company_id_2" class="form-control">
+                                    <option value="">Yarn Company</option>
+                                    @foreach(auth()->user()->getAllCompanies() as $Company)
+                                        <option value="{{ $Company->id }}">{{ $Company->company_name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Total Bag</label>
+                                <input type="number" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="total_bag2" name="total_bag2"  value="{{ old("total_bag") }}" >
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">KG / Bag</label>
+                                <input type="text" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="total_kg_bag2" name="total_kg_bag2"  value="{{ old("total_kg_bag") }}">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <hr>
 
                         <div class="col-sm-4">
                             <div class="form-group">
@@ -142,6 +188,24 @@
                             <div class="AddWarpingDiv"></div>
                         </div>
                     </div>
+                    <hr>
+                    <div class="row mrg-0">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Remaining Weight</label>
+                                <input type="text" class="form-control" name="remaining_cone_weight" id="remaining_cone_weight"  value="{{ old("remaining_cone_weight") }}">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="inputphone" class="control-label">Note</label>
+                                <textarea name="note" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-12">
                         <div class="form-group">
                             <div class="text-center">
@@ -168,15 +232,15 @@
                     '<div class="row">' +
                     '<div class="col-2">' +
                     '<label class="c-field__label">பாவுடன்</label>' +
-                    '<input class="form-control CalculateWeight" name="warping[' + warpingi + '][totalBeemWeight]" type="number" id="haltFromDate">' +
+                    '<input class="form-control CalculateWeight CalculateBalanceConeWeight" min="0" name="warping[' + warpingi + '][totalBeemWeight]" type="number" id="haltFromDate">' +
                     '</div>' +
                     '<div class="col-2">' +
                     '<label class="c-field__label">காலி பீம் எடை</label>' +
-                    '<input class="form-control CalculateWeight" name="warping[' + warpingi + '][emptyBeemWeight]" type="number" id="emptyBeem">' +
+                    '<input class="form-control CalculateWeight CalculateBalanceConeWeight" min="0" name="warping[' + warpingi + '][emptyBeemWeight]" type="number" id="emptyBeem">' +
                     '</div>' +
                     '<div class="col-2">' +
                     '<label class="c-field__label">நிகர் எடை</label>' +
-                    '<input class="form-control CalculateWeight" name="warping[' + warpingi + '][totalWeight]" type="number" id="totalWeight" required>' +
+                    '<input class="form-control CalculateWeight CalculateBalanceConeWeight" name="warping[' + warpingi + '][totalWeight]" type="number" id="totalWeight" required>' +
                     '</div>' +
                     '<div class="col-2">' +
                     '<label class="c-field__label">வார்ப்பிங் ஜெகம்</label>' +
@@ -195,7 +259,7 @@
 
             });
 
-            $('body').on("keyup paste", '.CalculateWeight', function (e) { // REMOVE HALT
+            $('body').on("keyup paste change", '.CalculateWeight', function (e) { // REMOVE HALT
                 e.preventDefault();
                 $(".CalculateWeight").prop("required", true);
                 for(i=0;i < warpingi;i++){
@@ -203,9 +267,22 @@
                 }
             });
 
+
+            $('body').on("keyup paste change", '.CalculateBalanceConeWeight', function (e) { // REMOVE HALT
+                e.preventDefault();
+                var warpingUsedTotal =0;
+                for(j=0;j < warpingi;j++){
+                    if(($("input[name='warping[" + j + "][totalBeemWeight]']").val() !=  undefined) || ($("input[name='warping[" + j + "][emptyBeemWeight]']").val() != undefined)){
+                        warpingUsedTotal += parseFloat($("input[name='warping[" + j + "][totalBeemWeight]']").val()) - parseFloat($("input[name='warping[" + j + "][emptyBeemWeight]']").val());
+                    }
+                }
+                $('#remaining_cone_weight').val(parseFloat($('#net_weight').val() - warpingUsedTotal));
+            });
+
             $('.AddWarpingDiv').on("click", ".RemoveWarpingButon", function (e) { // REMOVE HALT
                 e.preventDefault();
                 $(this).closest('div').parent('div').remove();
+                $('.CalculateBalanceConeWeight').trigger('change');
             });
         });
 </script>
