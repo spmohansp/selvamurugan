@@ -114,7 +114,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label"><span class="asterisk">Yarn Company</span></label>
-                                <select name="company_id" class="form-control" required>
+                                <select name="company_id_1" class="form-control" required>
                                     <option value="">Yarn Company</option>
                                     @foreach(auth()->user()->getAllCompanies() as $Company)
                                         <option value="{{ $Company->id }}">{{ $Company->company_name }}</option>
