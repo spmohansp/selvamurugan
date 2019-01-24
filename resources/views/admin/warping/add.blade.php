@@ -117,7 +117,7 @@
                                 <select name="company_id_1" class="form-control" required>
                                     <option value="">Yarn Company</option>
                                     @foreach(auth()->user()->getAllCompanies() as $Company)
-                                        <option value="{{ $Company->id }}">{{ $Company->company_name }}</option>
+                                        <option value="{{ $Company->id }}" {{ ($Company->id ==  old('company_id_1'))?'selected':'' }}>{{ $Company->company_name }}</option>
                                     @endforeach
                                 </select>
                                 <div class="help-block with-errors"></div>
@@ -127,7 +127,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Total Bag</span></label>
-                                <input type="number" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="total_bag1" name="total_bag1"  value="{{ old("total_bag") }}"  required="" >
+                                <input type="number" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="total_bag1" name="total_bag1"  value="{{ old("total_bag1") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -135,7 +135,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">KG / Bag</span></label>
-                                <input type="text" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="total_kg_bag1" name="total_kg_bag1"  value="{{ old("total_kg_bag") }}"  required="" >
+                                <input type="text" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="total_kg_bag1" name="total_kg_bag1"  value="{{ old("total_kg_bag1") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -147,7 +147,7 @@
                                 <select name="company_id_2" id="company_id_2" class="form-control">
                                     <option value="">Yarn Company</option>
                                     @foreach(auth()->user()->getAllCompanies() as $Company)
-                                        <option value="{{ $Company->id }}">{{ $Company->company_name }}</option>
+                                        <option value="{{ $Company->id }}" {{ ($Company->id ==  old('company_id_2'))?'selected':'' }}>{{ $Company->company_name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -156,7 +156,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label">Total Bag</label>
-                                <input type="number" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="total_bag2" name="total_bag2"  value="{{ old("total_bag") }}" >
+                                <input type="number" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="total_bag2" name="total_bag2"  value="{{ old("total_bag2") }}" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -164,7 +164,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label">KG / Bag</label>
-                                <input type="text" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="total_kg_bag2" name="total_kg_bag2"  value="{{ old("total_kg_bag") }}">
+                                <input type="text" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="total_kg_bag2" name="total_kg_bag2"  value="{{ old("total_kg_bag2") }}">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -201,7 +201,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label">Note</label>
-                                <textarea name="note" class="form-control"></textarea>
+                                <textarea name="note" class="form-control">{{ old('note') }}</textarea>
                             </div>
                         </div>
                     </div>

@@ -27,7 +27,6 @@ class WarpingController extends Controller
             'date' => 'required|date',
             'set_number' => 'required|unique:warpings',
         ]);
-//        dd(request()->all());
         try {
             $Warping = new Warping;
             $Warping->unit_id = request('unit_id');
@@ -54,14 +53,13 @@ class WarpingController extends Controller
                 foreach (request('warping') as $warping){
                     $WarpingData=array();
                     $WarpingData['totalBeemWeight'] = @$warping['totalBeemWeight'];
-                    $WarpingData['emptyBeemWeight'] = @$warping['totalBeemWeight'] - @$warping['emptyBeemWeight'];
-                    $WarpingData['totalWeight'] = @$warping['emptyBeemWeight'];
+                    $WarpingData['emptyBeemWeight'] = @$warping['emptyBeemWeight'];
+                    $WarpingData['totalWeight'] = @$warping['totalBeemWeight'] - @$warping['emptyBeemWeight'];
                     $WarpingData['warpingGeagam'] = @$warping['warpingGeagam'];
                     $WarpingData['warperName'] = @$warping['warperName'];
                     array_push($WarpingDatas,$WarpingData);
                     $warpingYarnUsage += @$warping['totalBeemWeight'] - @$warping['emptyBeemWeight'];
                 }
-
             }
 
             $Warping->warping = serialize($WarpingDatas);
@@ -89,7 +87,6 @@ class WarpingController extends Controller
             'date' => 'required|date',
             'set_number' => 'required',
         ]);
-//        dd(request()->all());
         try {
             $Warping = Warping::findorfail($id);
             $Warping->unit_id = request('unit_id');
@@ -99,12 +96,34 @@ class WarpingController extends Controller
             $Warping->set_number = request('set_number');
             $Warping->yarn_count = request('yarn_count');
             $Warping->ilai = request('ilai');
-            $Warping->total_bag = request('total_bag');
-            $Warping->total_kg_bag = request('total_kg_bag');
-            $Warping->total_weight = request('total_kg_bag') * request('total_bag');
             $Warping->rewainding_weight = request('rewainding_weight');
-            $Warping->net_weight = request('rewainding_weight') + request('baby_cone_weight') + (request('total_kg_bag') * request('total_bag'));
-            $Warping->warping = serialize(request('warping'));
+            $Warping->baby_cone_weight = request('baby_cone_weight');
+
+            $Warping->company_id_1 = request('company_id_1');
+            $Warping->total_bag1 = request('total_bag1');
+            $Warping->total_kg_bag1 = request('total_kg_bag1');
+            $Warping->company_id_2 = request('company_id_2');
+            $Warping->total_bag2 = request('total_bag2');
+            $Warping->total_kg_bag2 = request('total_kg_bag2');
+            $Warping->total_weight = request('total_bag1') * request('total_kg_bag1') + request('total_bag2') * request('total_kg_bag2');
+            $Warping->net_weight = $netWeight = request('rewainding_weight') + request('baby_cone_weight') + (request('total_kg_bag1') * request('total_bag1')) + (request('total_kg_bag2') * request('total_bag2'));
+
+            $WarpingDatas=array();$warpingYarnUsage=0;
+            if(!empty(request('warping'))){
+                foreach (request('warping') as $warping){
+                    $WarpingData=array();
+                    $WarpingData['totalBeemWeight'] = @$warping['totalBeemWeight'];
+                    $WarpingData['emptyBeemWeight'] = @$warping['emptyBeemWeight'];
+                    $WarpingData['totalWeight'] = @$warping['totalBeemWeight'] - @$warping['emptyBeemWeight'];
+                    $WarpingData['warpingGeagam'] = @$warping['warpingGeagam'];
+                    $WarpingData['warperName'] = @$warping['warperName'];
+                    array_push($WarpingDatas,$WarpingData);
+                    $warpingYarnUsage += @$warping['totalBeemWeight'] - @$warping['emptyBeemWeight'];
+                }
+            }
+
+            $Warping->warping = serialize($WarpingDatas);
+            $Warping->remaining_cone_weight = @$netWeight - @$warpingYarnUsage;
             $Warping->note = request('note');
             $Warping->save();
             return back()->with('success','Warping Added Successfully!!');
@@ -112,9 +131,6 @@ class WarpingController extends Controller
             return back()->with('danger','Something went wrong!');
         }
     }
-
-
-
 
 
 
