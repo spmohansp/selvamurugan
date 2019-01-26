@@ -56,21 +56,21 @@
                         <div class="col-sm-2">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">GW</span></label>
-                                <input type="text" class="form-control" name="gw"  value="{{ old("gw") }}"  required="" >
+                                <input type="text" class="form-control controlcalculateSizingBeemWeight" name="gw" id="gw" value="{{ old("gw") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-2">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">TW</span></label>
-                                <input type="text" class="form-control" name="tw"  value="{{ old("tw") }}"  required="" >
+                                <input type="text" class="form-control controlcalculateSizingBeemWeight" name="tw" id="tw" value="{{ old("tw") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-2">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">NW</span></label>
-                                <input type="text" class="form-control" name="nw"  value="{{ old("nw") }}"  required="" >
+                                <input type="text" class="form-control" name="nw" id="nw" value="{{ old("nw") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -172,4 +172,15 @@
     </div>
 
 
+@endsection
+
+@section('scriptOnload')
+    <script>
+        $(document).ready(function () {
+            $('.controlcalculateSizingBeemWeight').on("change keyup", function (e) { // REMOVE HALT
+                e.preventDefault();
+                $("#nw").val(parseFloat($("#gw").val()) - parseFloat($("#tw").val()));
+            });
+        });
+    </script>
 @endsection

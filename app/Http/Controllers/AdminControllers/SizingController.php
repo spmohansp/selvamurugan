@@ -30,15 +30,16 @@ class SizingController extends Controller
 
     public function AddSizingBeamSetList($id,Request $request){
         $request->validate([
-            'gw' => 'required',
-            'meter' => 'required',
-            'beam_number' => 'required|unique:sizing_beams',
+            'gw' => 'required|min:1|regex:/^\d*(\.\d{1,2})?$/',
+            'tw' => 'required|min:1|regex:/^\d*(\.\d{1,2})?$/',
+            'meter' => 'required|min:0',
+            'beam_number' => 'required',
         ]);
         try {
             $SizingBeam = new SizingBeam;
             $SizingBeam->gw = request('gw');
             $SizingBeam->tw = request('tw');
-            $SizingBeam->nw = request('nw');
+            $SizingBeam->nw = round(request('gw') - request('tw'),2);
             $SizingBeam->kuri = request('kuri');
             $SizingBeam->meter = request('meter');
             $SizingBeam->beam_number = request('beam_number');
@@ -61,15 +62,16 @@ class SizingController extends Controller
 
     public function UpdateSizingBeamSetList($id,Request $request){
         $request->validate([
-            'gw' => 'required',
-            'meter' => 'required',
+            'gw' => 'required|min:1|regex:/^\d*(\.\d{1,2})?$/',
+            'tw' => 'required|min:1|regex:/^\d*(\.\d{1,2})?$/',
+            'meter' => 'required|min:0',
             'beam_number' => 'required',
         ]);
         try {
             $SizingBeam =  SizingBeam::FindorFail($id);
             $SizingBeam->gw = request('gw');
             $SizingBeam->tw = request('tw');
-            $SizingBeam->nw = request('nw');
+            $SizingBeam->nw = round(request('gw') - request('tw'),2);
             $SizingBeam->kuri = request('kuri');
             $SizingBeam->meter = request('meter');
             $SizingBeam->beam_number = request('beam_number');
