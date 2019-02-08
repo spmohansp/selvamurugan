@@ -110,6 +110,19 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
+
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label class="control-label">Sub Customer</label>
+                                <select class="form-control" name="sub_customer_id" data-parsley-required="true">
+                                    <option value="">Select Subcustomer</option>
+                                    @foreach ($SubCustomers as $SubCustomer) 
+                                        <option value="{{ $SubCustomer->id }}" {{ ($SubCustomer->id == old('sub_customer_id'))? 'selected':'' }}>{{ $SubCustomer->name }}</option>
+                                    @endforeach
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-12">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\AdminControllers;
 
 use App\Sizing;
 use App\SizingBeam;
+use App\SubCustomer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -23,9 +24,14 @@ class SizingController extends Controller
 
     public function SizingSetList($id){
         $Sizing = Sizing::findorfail($id);
+
+        // return $Sizing->Warping;
+        $SubCustomers = SubCustomer::where('customer_id',$Sizing->Warping->customer_id)->get();
+
         $SizingBeams = SizingBeam::where([['sizing_id',$id]])->get();
+
         $SizingBeamsLastData = SizingBeam::orderBy('beam_number','desc')->first();
-        return view('admin.sizing.sizingSetList',compact('Sizing','SizingBeams','SizingBeamsLastData'));
+        return view('admin.sizing.sizingSetList',compact('Sizing','SizingBeams','SizingBeamsLastData','SubCustomers'));
     }
 
     public function AddSizingBeamSetList($id,Request $request){
@@ -45,6 +51,7 @@ class SizingController extends Controller
             $SizingBeam->beam_number = request('beam_number');
             $SizingBeam->kanchi = request('kanchi');
             $SizingBeam->name = request('name');
+            $SizingBeam->sub_customer_id = request('sub_customer_id');
             $SizingBeam->sizing_id = $id;
             $SizingBeam->warping_id = @Sizing::findorfail($id)->Warping->id;
             $SizingBeam->customer_id = @Sizing::findorfail($id)->Warping->customer_id;
