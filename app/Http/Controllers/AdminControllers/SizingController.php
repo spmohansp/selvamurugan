@@ -21,6 +21,10 @@ class SizingController extends Controller
         return view('admin.sizing.view',compact('Sizings'));
     }
 
+    public function EditSizing($id){
+        $Sizing = Sizing::findorfail($id);
+        return view('admin.sizing.EditSizing',compact('Sizing'));
+    }
 
     public function SizingSetList($id){
         $Sizing = Sizing::findorfail($id);

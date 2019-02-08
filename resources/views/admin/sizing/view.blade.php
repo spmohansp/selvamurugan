@@ -41,7 +41,7 @@
                             <td>{{ @$Sizing->Warping->net_weight }}</td>
                             <td>
                                 <a href="{{ route('admin.ViewSizingSetList',$Sizing->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
-                                <a href="" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
+                                <a href="{{ route('admin.EditSizing',$Sizing->id) }}" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
                             </td>
                         </tr>
                     @endforeach
