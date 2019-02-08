@@ -24,12 +24,8 @@ class SizingController extends Controller
 
     public function SizingSetList($id){
         $Sizing = Sizing::findorfail($id);
-
-        // return $Sizing->Warping;
         $SubCustomers = SubCustomer::where('customer_id',$Sizing->Warping->customer_id)->get();
-
         $SizingBeams = SizingBeam::where([['sizing_id',$id]])->get();
-
         $SizingBeamsLastData = SizingBeam::orderBy('beam_number','desc')->first();
         return view('admin.sizing.sizingSetList',compact('Sizing','SizingBeams','SizingBeamsLastData','SubCustomers'));
     }
@@ -64,7 +60,8 @@ class SizingController extends Controller
 
     public function EditSizingSetList($id){
         $SizingSetList = SizingBeam::FindorFail($id);
-        return view ('admin.sizing.EditSizingSetList',compact('SizingSetList'));
+        $SubCustomers = SubCustomer::where('customer_id',$SizingSetList->customer_id)->get();
+        return view ('admin.sizing.EditSizingSetList',compact('SizingSetList','SubCustomers'));
     }
 
     public function UpdateSizingBeamSetList($id,Request $request){
@@ -84,6 +81,7 @@ class SizingController extends Controller
             $SizingBeam->beam_number = request('beam_number');
             $SizingBeam->kanchi = request('kanchi');
             $SizingBeam->name = request('name');
+            $SizingBeam->sub_customer_id = request('sub_customer_id');
             $SizingBeam->save();
             return redirect(route('admin.ViewSizingSetList',$SizingBeam->sizing_id))->with('success','Sizing Beam Updated Successfully!');
         }catch (Exception $e){

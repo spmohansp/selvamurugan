@@ -48,10 +48,9 @@
                     {{ csrf_field() }}
                     <div class="row page-titles">
                         <div class="align-center">
-                            <h4 class="theme-cl">Beam Information</h4>
+                            <h4 class="theme-cl">Sizing Beam Information</h4>
                         </div>
                     </div>
-
                     <div class="row mrg-0">
                         <div class="col-sm-2">
                             <div class="form-group">
@@ -110,7 +109,6 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
-
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label class="control-label">Sub Customer</label>
@@ -137,11 +135,14 @@
         </div>
     </div>
 
-
-
-{{--VIEW LIST--}}
+{{--VIEW SIZING BEAM LIST--}}
 
     <div class="card">
+        <div class="row page-titles">
+            <div class="align-center">
+                <h4 class="theme-cl">Sizing Beams</h4>
+            </div>
+        </div>
         <div class="table-responsive">
             <table class="table table-striped table-hover">
                 <thead>

@@ -36,7 +36,7 @@
                     @foreach($Sizings as $Sizing)
                         <tr>
                             <td>{{ @$Sizing->Warping->set_number }}</td>
-                            <td>Date {{ $Sizing->id }}</td>
+                            <td></td>
                             <td>{{ @$Sizing->Warping->Customer->name }}</td>
                             <td>{{ @$Sizing->Warping->net_weight }}</td>
                             <td>
