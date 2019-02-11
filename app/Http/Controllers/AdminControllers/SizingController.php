@@ -26,6 +26,28 @@ class SizingController extends Controller
         return view('admin.sizing.EditSizing',compact('Sizing'));
     }
 
+     public function UpdateSizing($id,Request $request){
+        $request->validate([
+            'date' => 'required',
+            'lab_length' => 'required',
+            'palsekaram' => 'required',
+            'warp_weight' => 'required',
+            'gegam' => 'required',
+        ]);
+        try {
+            $Sizing =  Sizing::FindorFail($id);
+            $Sizing->date = request('date');
+            $Sizing->lab_length = request('lab_length');
+            $Sizing->palsekaram = request('palsekaram');
+            $Sizing->warp_weight = request('warp_weight');
+            $Sizing->gegam = request('gegam');
+            $Sizing->save();
+            return back()->with('success','Sizing Updated Successfully');
+        }catch (Exception $e){
+            return back()->with('danger','Something went wrong!');
+        }
+    }
+    
     public function SizingSetList($id){
         $Sizing = Sizing::findorfail($id);
         $SubCustomers = SubCustomer::where('customer_id',$Sizing->Warping->customer_id)->get();

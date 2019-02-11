@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 Route::get('/home', function () {
     $users[] = Auth::user();
@@ -103,6 +103,7 @@ Route::post('/warping/{id}/update', 'AdminControllers\WarpingController@UpdateWa
 //Sizing
 Route::get('/Sizing', 'AdminControllers\SizingController@ShowAllSizing');
 Route::get('/Sizing/{id}/edit', 'AdminControllers\SizingController@EditSizing')->name('EditSizing');
+Route::post('/Sizing/{id}/update', 'AdminControllers\SizingController@UpdateSizing')->name('UpdateSizing');
 Route::get('/Sizing/{id}/setlist', 'AdminControllers\SizingController@SizingSetList')->name('ViewSizingSetList');
 Route::post('/Sizing/{id}/AddSigingBeamSetList', 'AdminControllers\SizingController@AddSizingBeamSetList')->name('AddSizingBeamSetList');
 Route::get('/SizingSetList/{id}/edit', 'AdminControllers\SizingController@EditSizingSetList')->name('EditSizingSetList');

@@ -21,6 +21,7 @@ class CreateSizingsTable extends Migration
             $table->string('lab_length')->nullable();
             $table->string('palsekaram')->nullable();
             $table->string('warp_weight')->nullable();
+            $table->string('gegam')->nullable();
             $table->string('note')->nullable();
             $table->softDeletes();
             $table->timestamps();
