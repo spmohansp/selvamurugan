@@ -94,21 +94,30 @@
                     </ul>
                 </li>
 
-
-                <li class="nav-item @yield('approval')" data-toggle="tooltip" data-placement="right" title="Projects">
-                    <a class="nav-link" href="{{ url('/admin/exportApproval') }}">
-                        <i class="ti i-cl-2 ti-dashboard"></i>
-                        <span class="nav-link-text">Approvals</span>
+                <li class="nav-item @yield('Delevery')" data-toggle="tooltip" data-placement="right" title="Master">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Delevery" data-parent="#exampleAccordion">
+                        <i class="ti i-cl-12 ti-settings"></i>
+                        <span class="nav-link-text">Delevery</span>
                     </a>
+                    <ul class="sidenav-second-level collapse" id="Delevery">
+                        <li>
+                            <a href="#">Beam Delevery</a>
+                        </li>
+                        <li>
+                            <a href="#">Yarn Delevery</a>
+                        </li>
+                    </ul>
                 </li>
 
+                <li class="nav-item @yield('approval')" data-toggle="tooltip" data-placement="right" title="Projects">
+                    <a class="nav-link" href="">
+                        <i class="ti i-cl-2 ti-dashboard"></i>
+                        <span class="nav-link-text">Report</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- =============== End Side Menu ============== -->
-
-        <!-- =============== Search Bar ============== -->
-        
-        <!-- =============== End Search Bar ============== -->
 
         <!-- =============== Header Rightside Menu ============== -->
         @include('admin.layout.user_nav')
