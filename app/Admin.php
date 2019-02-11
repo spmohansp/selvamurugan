@@ -47,4 +47,8 @@ class Admin extends Authenticatable
     public function getAllCustomers(){
         return Customer::get()->all();
     }
+
+    public function getAllCompanies(){
+        return Company::get()->all();
+    }
 }

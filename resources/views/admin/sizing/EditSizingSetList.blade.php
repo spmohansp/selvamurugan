@@ -22,7 +22,7 @@
                     {{ csrf_field() }}
                     <div class="row page-titles">
                         <div class="align-center">
-                            <h4 class="theme-cl">Edit Beam Information</h4>
+                            <h4 class="theme-cl">Edit Sizing Beam Information</h4>
                         </div>
                     </div>
 
@@ -30,21 +30,21 @@
                         <div class="col-sm-2">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">GW</span></label>
-                                <input type="text" class="form-control" name="gw"  value="{{ $SizingSetList->gw }}"  required="" >
+                                <input type="text" class="form-control controlcalculateSizingBeemWeight" name="gw" id="gw"  value="{{ $SizingSetList->gw }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-2">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">TW</span></label>
-                                <input type="text" class="form-control" name="tw"  value="{{ $SizingSetList->tw }}"  required="" >
+                                <input type="text" class="form-control controlcalculateSizingBeemWeight" name="tw" id="tw"  value="{{ $SizingSetList->tw }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-2">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">NW</span></label>
-                                <input type="text" class="form-control" name="nw"  value="{{ $SizingSetList->nw }}"  required="" >
+                                <input type="text" class="form-control" name="nw"  value="{{ $SizingSetList->nw }}" id="nw" required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -84,6 +84,18 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label class="control-label">Sub Customer</label>
+                                <select class="form-control" name="sub_customer_id" data-parsley-required="true">
+                                    <option value="">Select Subcustomer</option>
+                                    @foreach ($SubCustomers as $SubCustomer)
+                                        <option value="{{ $SubCustomer->id }}" {{ ($SubCustomer->id == $SizingSetList->sub_customer_id)? 'selected':'' }}>{{ $SubCustomer->name }}</option>
+                                    @endforeach
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-12">
@@ -97,4 +109,15 @@
             </form>
         </div>
     </div>
+@endsection
+
+@section('scriptOnload')
+    <script>
+        $(document).ready(function () {
+            $('.controlcalculateSizingBeemWeight').on("change keyup", function (e) { // REMOVE HALT
+                e.preventDefault();
+                $("#nw").val(parseFloat($("#gw").val()) - parseFloat($("#tw").val()));
+            });
+        });
+    </script>
 @endsection

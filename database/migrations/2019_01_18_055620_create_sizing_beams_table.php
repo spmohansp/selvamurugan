@@ -17,6 +17,8 @@ class CreateSizingBeamsTable extends Migration
             $table->increments('id');
             $table->integer('sizing_id')->unsigned();
             $table->foreign('sizing_id')->references('id')->on('sizings');
+            $table->integer('warping_id')->unsigned()->nullable();
+            $table->foreign('warping_id')->references('id')->on('warpings');
             $table->string('beam_number')->nullable();
             $table->string('gw')->nullable();
             $table->string('tw')->nullable();

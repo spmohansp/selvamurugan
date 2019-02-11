@@ -18,11 +18,23 @@
             content:"*" ;
             color: red;
     </style>
-    <div class="row">
-        <div class="col-md-12 col-sm-12">
-            <div class="card">
-                <div class="row mrg-0">
-                    {{ $Sizing->Warping }}
+
+
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="alert alert-success" role="alert">
+                    Customer  : {{ @$Sizing->Warping->Customer->name }}
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="alert alert-info" role="alert">
+                    மொத்த பாவு  : {{ count(@$SizingBeams) }}
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="alert alert-info" role="alert">
+                    மொத்த மீ  : {{ $SizingBeams->sum('meter') }}
                 </div>
             </div>
         </div>
@@ -36,29 +48,28 @@
                     {{ csrf_field() }}
                     <div class="row page-titles">
                         <div class="align-center">
-                            <h4 class="theme-cl">Beam Information</h4>
+                            <h4 class="theme-cl">Sizing Beam Information</h4>
                         </div>
                     </div>
-
                     <div class="row mrg-0">
                         <div class="col-sm-2">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">GW</span></label>
-                                <input type="text" class="form-control" name="gw"  value="{{ old("gw") }}"  required="" >
+                                <input type="text" class="form-control controlcalculateSizingBeemWeight" name="gw" id="gw" value="{{ old("gw") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-2">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">TW</span></label>
-                                <input type="text" class="form-control" name="tw"  value="{{ old("tw") }}"  required="" >
+                                <input type="text" class="form-control controlcalculateSizingBeemWeight" name="tw" id="tw" value="{{ old("tw") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-2">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">NW</span></label>
-                                <input type="text" class="form-control" name="nw"  value="{{ old("nw") }}"  required="" >
+                                <input type="text" class="form-control" name="nw" id="nw" value="{{ old("nw") }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -98,6 +109,18 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label class="control-label">Sub Customer</label>
+                                <select class="form-control" name="sub_customer_id" data-parsley-required="true">
+                                    <option value="">Select Subcustomer</option>
+                                    @foreach ($SubCustomers as $SubCustomer) 
+                                        <option value="{{ $SubCustomer->id }}" {{ ($SubCustomer->id == old('sub_customer_id'))? 'selected':'' }}>{{ $SubCustomer->name }}</option>
+                                    @endforeach
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-12">
@@ -112,11 +135,14 @@
         </div>
     </div>
 
-
-
-{{--VIEW LIST--}}
+{{--VIEW SIZING BEAM LIST--}}
 
     <div class="card">
+        <div class="row page-titles">
+            <div class="align-center">
+                <h4 class="theme-cl">Sizing Beams</h4>
+            </div>
+        </div>
         <div class="table-responsive">
             <table class="table table-striped table-hover">
                 <thead>
@@ -160,4 +186,15 @@
     </div>
 
 
+@endsection
+
+@section('scriptOnload')
+    <script>
+        $(document).ready(function () {
+            $('.controlcalculateSizingBeemWeight').on("change keyup", function (e) { // REMOVE HALT
+                e.preventDefault();
+                $("#nw").val(parseFloat($("#gw").val()) - parseFloat($("#tw").val()));
+            });
+        });
+    </script>
 @endsection
