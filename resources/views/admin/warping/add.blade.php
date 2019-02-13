@@ -65,7 +65,6 @@
                             </div>
                         </div>
 
-                        <hr>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Date</span></label>
@@ -102,6 +101,7 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
+                        
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label">Total Baby Cone KG</label>
@@ -109,8 +109,16 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
-
-                        <hr>
+                    </div>
+                      <div class="row page-titles">
+                        <div class="align-center">
+                            <h4 class="theme-cl">Yarn Details <button type="button" class="btn btn-primary btn-sm AddYarn">+</button></h4>
+                        </div>
+                    </div>
+                    <div class="row mrg-0">
+                        <div class="col-sm-12">
+                            <div class="AddYarnDiv"></div>
+                        </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label"><span class="asterisk">Yarn Company</span></label>
@@ -139,7 +147,6 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
-                        <hr>
 
                         <div class="col-sm-4">
                             <div class="form-group">
@@ -168,7 +175,7 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
-                        <hr>
+                
 
                         <div class="col-sm-4">
                             <div class="form-group">
@@ -188,7 +195,6 @@
                             <div class="AddWarpingDiv"></div>
                         </div>
                     </div>
-                    <hr>
                     <div class="row mrg-0">
                         <div class="col-sm-6">
                             <div class="form-group">
@@ -222,7 +228,7 @@
 @endsection
 
 @section('scriptOnload')
-    <script>
+<script>
         $(document).ready(function () {
             var warpingi = 0;
 
@@ -286,4 +292,49 @@
             });
         });
 </script>
+<script>
+        $(document).ready(function () {
+            var yarni = 0;
+
+            $('.AddYarn').click(function (e) {
+                e.preventDefault();
+                $('.AddYarnDiv').append(
+                    '<div class="row">' +
+                    '<div class="col-3">' +
+                    '<label for="inputphone" class="control-label">Yarn Company</label>'+
+                            '<select name="company_id_1" class="form-control">'+
+                                '<option value="">Yarn Company</option>'+
+                                    '@foreach(auth()->user()->getAllCompanies() as $Company)'+
+                                        '<option value="{{ $Company->id }}" {{ ($Company->id ==  @$Warping->company_id_1)?'selected':'' }}>{{ $Company->company_name }}</option>'+
+                                    '@endforeach'+
+                                '</select>'+
+                    '</div>'+
+                    '<div class="col-3">' +
+                    '<label class="c-field__label">Yarn Count</label>' +
+                    '<input class="form-control" name="Yarn[' + yarni + '][yarn_count]" type="number" id="yarn_count" required>' +
+                    '</div>' +
+                    '<div class="col-3">' +
+                    '<label class="c-field__label">Total Bag</label>' +
+                    '<input class="form-control" name="Yarn[' + yarni + '][total_bag]" type="number" id="total_bag" required>' +
+                    '</div>' +
+                    '<div class="col-2">' +
+                    '<label class="c-field__label">KG / Bag</label>' +
+                    '<input class="form-control" name="Yarn[' + yarni + '][total_kg_bag]" type="number" id="total_kg_bag" required>' +
+                    '</div>' +
+                    '<div class="col-1">' +
+                    '<button type="button" class="btn btn-danger btn-sm RemoveYarnButton">X</button>' +
+                    '</div>' +
+                    '</div>'
+                );
+                yarni++;
+
+            });
+
+            $('.AddYarnDiv').on("click", ".RemoveYarnButton", function (e) { // REMOVE HALT
+                e.preventDefault();
+                $(this).closest('div').parent('div').remove();
+            });
+        });
+</script>
+
 @endsection
