@@ -36,7 +36,7 @@ class YarnController extends Controller
             $IncomeYarn->company_id = request('company_id');
             $IncomeYarn->total_bag = request('total_bag');
             $IncomeYarn->total_kg_bag = request('total_kg_bag');
-            $IncomeYarn->net_weight = request('net_weight');
+            $IncomeYarn->net_weight = request('total_bag') * request('total_kg_bag');
             $IncomeYarn->color = request('color');
             $IncomeYarn->yarn_count = request('yarn_count');
             $IncomeYarn->note = request('note');
