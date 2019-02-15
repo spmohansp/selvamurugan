@@ -36,10 +36,10 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Customer Name</span></label>
-                                <select name="customer_id" class="form-control" required>
+                                <select name="customer_id" class="form-control SearchableDropDownSelect" required>
                                     <option value="">Select Customer</option>
                                     @foreach($Customers as $customer)
-                                    <option value="{{ $customer->id }}" {{ ($customer->id == $SubCustomers->customer_id) ? 'selected':'' }} >{{ $customer->name }}</option>
+                                    <option value="{{ $customer->id }}" {{ ($customer->id == $SubCustomers->customer_id) ? 'selected':'' }} >{{ $customer->name }} | {{ $customer->mobile }}</option>
                                     @endforeach
                                 </select>
                                 <div class="help-block with-errors"></div>

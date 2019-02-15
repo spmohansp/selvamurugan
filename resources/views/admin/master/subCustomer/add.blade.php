@@ -36,10 +36,10 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Customer Name</span></label>
-                                <select name="customer_id" class="form-control" required>
-                                    <option value="">Select Customer</option>
-                                    @foreach($Customers as $Customer)
-                                        <option value="{{ $Customer->id }}" {{ ($Customer->id == old('customer_id'))? 'selected':'' }}>{{ $Customer->name }}</option>
+                                <select name="customer_id" class="form-control SearchableDropDownSelect" id="CustomerIdsChanges" required>
+                                    <option value="" disabled="" selected>Select Customer</option>
+                                    @foreach(auth()->user()->getAllCustomers() as $Customer)
+                                        <option value="{{ $Customer->id }}" {{ ($Customer->id == old('customer_id'))? 'selected':'' }}>{{ $Customer->name }} | {{ $Customer->mobile }}</option>
                                     @endforeach
                                 </select>
                                 <div class="help-block with-errors"></div>

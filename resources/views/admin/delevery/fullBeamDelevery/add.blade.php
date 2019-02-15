@@ -6,11 +6,7 @@ active
 
 
 @section('scriptOnload')
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    <script>$(document).ready(function() {
-            $('.js-example-basic-single').select2();
-        });</script>
+
     @endsection
 @section('content')
 
@@ -46,28 +42,16 @@ active
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label class="control-label"><span class="asterisk">Customer Name</span></label>
-                            <select name="customer_id" class="form-control js-example-basic-single " id="CustomerIdsChanges" required>
+                            <select name="customer_id" class="form-control SearchableDropDownSelect" id="CustomerIdsChanges" required>
                                 <option value="" disabled="" selected>Select Customer</option>
                                 @foreach(auth()->user()->getAllCustomers() as $Customer)
-                                    <option value="{{ $Customer->id }}" {{ ($Customer->id == old('customer_id'))? 'selected':'' }}>{{ $Customer->name }}</option>
+                                    <option value="{{ $Customer->id }}" {{ ($Customer->id == old('customer_id'))? 'selected':'' }}>{{ $Customer->name }} | {{ $Customer->mobile }}</option>
                                 @endforeach
                             </select>
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
 
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label class="control-label"><span class="asterisk">Customer Name</span></label>
-                            <select name="customer_id" class="form-control" id="CustomerIdsChanges" required>
-                                <option value="">Select Customer</option>
-                                @foreach(auth()->user()->getAllCustomers() as $Customer)
-                                    <option value="{{ $Customer->id }}" {{ ($Customer->id == old('customer_id'))? 'selected':'' }}>{{ $Customer->name }}</option>
-                                @endforeach
-                            </select>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label class="control-label"><span class="asterisk">Sub Customer Name</span></label>
