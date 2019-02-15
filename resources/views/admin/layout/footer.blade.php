@@ -20,6 +20,9 @@
 
 <script src="{{ url('/assets/plugins/jquery/jquery.min.js') }}"></script>
 <script src="{{ url('/assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!-- select 2 -->
+<link href="{{ url('/assets/plugins/select2/select2.min.css') }}" rel="stylesheet" />
+<script src="{{ url('/assets/plugins/select2/select2.min.js') }}"></script>
 
 <!-- Core plugin JavaScript-->
 <script src="{{ url('/assets/plugins/jquery-easing/jquery.easing.min.js') }}"></script>
@@ -76,6 +79,10 @@
       }
   });
 
-    $('.dropdown-toggle').dropdown()
+    $('.dropdown-toggle').dropdown();
+
+    $(document).ready(function() {
+        $('.SearchableDropDownSelect').select2();
+    });
 </script>
 

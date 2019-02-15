@@ -2,7 +2,7 @@ $(document).ready(function () {
 $("#CustomerIdsChanges").change(function(e){
         e.preventDefault();
         var Customer_id =$("#CustomerIdsChanges option:selected").val();
-        console.log(Customer_id);
+        // console.log(Customer_id);
         $.ajax({
             type:"get",
             url :'/admin/getSubCustomerData',

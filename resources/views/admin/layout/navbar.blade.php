@@ -101,7 +101,7 @@
                     </a>
                     <ul class="sidenav-second-level collapse" id="Delevery">
                         <li>
-                            <a href="#">Beam Delevery</a>
+                            <a href="{{ url('/admin/delevery/fullBeam') }}">Full Beam Delevery</a>
                         </li>
                         <li>
                             <a href="#">Yarn Delevery</a>

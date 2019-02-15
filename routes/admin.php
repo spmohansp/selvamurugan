@@ -109,3 +109,8 @@ Route::post('/Sizing/{id}/AddSigingBeamSetList', 'AdminControllers\SizingControl
 Route::get('/SizingSetList/{id}/edit', 'AdminControllers\SizingController@EditSizingSetList')->name('EditSizingSetList');
 Route::post('/SizingSetList/{id}/update', 'AdminControllers\SizingController@UpdateSizingBeamSetList')->name('UpdateSizingBeamSetList');
 Route::delete('/SizingSetList/{id}/delete', 'AdminControllers\SizingController@DeleteSizingBeamSetList')->name('DeleteSizingBeamSetList');
+
+
+//Full Beam Delevery
+ Route::get('/delevery/fullBeam', 'AdminControllers\FullBeamDeleveryController@showFullBeamDeleveryList');
+ Route::get('/delevery/fullBeam/Add', 'AdminControllers\FullBeamDeleveryController@AddFullBeamDelevery');
