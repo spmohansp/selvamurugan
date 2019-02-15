@@ -15,18 +15,12 @@ $(document).ready(function () {
             $('#net_weight').attr('readonly', true);
             $('#total_bag_div').show();
             $('#total_kg_bag_div').show();
-            $('#total_bag').val('');
-            $('#net_weight').val('');
-            $('#total_kg_bag').val('');
-            $("#net_weight").val('');
+
         } else {
             $('#net_weight').attr('readonly', true);
             $('#net_weight').attr('required', true);
             $('#total_kg_bag').attr('required', true);
             $('#total_bag').attr('required', true);
-            $('#total_bag').val('');
-            $('#net_weight').val('');
-            $('#total_kg_bag').val('');
             $('#total_bag_div').show();
             $('#total_kg_bag_div').show();
         }

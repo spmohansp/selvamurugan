@@ -48,10 +48,9 @@ active
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label class="control-label"><span class="asterisk">Customer Name</span></label>
-                            <select name="customer_id" class="form-control" id="CustomerIdsChanges" required>
-                                <option value="">Select Customer</option>
+                            <select name="customer_id" class="form-control SearchableDropDownSelect" id="CustomerIdsChanges" required>
                                 @foreach(auth()->user()->getAllCustomers() as $Customer)
-                                <option value="{{ $Customer->id }}"
+                                    <option value="{{ $Customer->id }}"
                                     {{ ($Customer->id == $IncomeYarn->customer_id)? 'selected':'' }}>{{ $Customer->name
                                     }}</option>
                                 @endforeach
@@ -79,8 +78,7 @@ active
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="inputphone" class="control-label"><span class="asterisk">Yarn Company</span></label>
-                            <select name="company_id" class="form-control" required>
-                                <option value="">Yarn Company</option>
+                            <select name="company_id" class="form-control SearchableDropDownSelect Yarn_company" required>
                                 @foreach(auth()->user()->getAllCompanies() as $Company)
                                     <option value="{{ $Company->id }}" {{ ($Company->id == $IncomeYarn->company_id)? 'selected':'' }}>{{ $Company->company_name
                                     }}</option>
