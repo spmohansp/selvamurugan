@@ -31,7 +31,10 @@
                         <span class="nav-link-text">Master</span>
                     </a>
                     <ul class="sidenav-second-level collapse" id="Master">
-                         <li>
+                        <li>
+                            <a href="{{ url('/admin/units') }}">Units</a>
+                        </li>
+                        <li>
                             <a href="{{ url('/admin/Customers') }}">Customer</a>
                         </li>
                         <li>
@@ -39,9 +42,6 @@
                         </li>
                         <li>
                             <a href="{{ url('/admin/companies') }}">Companies</a>
-                        </li>
-                        <li>
-                            <a href="{{ url('/admin/units') }}">Units</a>
                         </li>
                         <li>
                             <a href="{{ url('/admin/chemicalsProduct') }}">Chemicals</a>
