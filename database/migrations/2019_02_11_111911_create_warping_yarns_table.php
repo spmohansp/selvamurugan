@@ -19,10 +19,14 @@ class CreateWarpingYarnsTable extends Migration
             $table->foreign('warping_id')->references('id')->on('warpings');
             $table->integer('company_id')->unsigned();
             $table->foreign('company_id')->references('id')->on('companies');
+            $table->integer('customer_id')->unsigned()->nullable();
+            $table->foreign('customer_id')->references('id')->on('customers');
+            $table->integer('sub_customer_id')->unsigned()->nullable();
+            $table->foreign('sub_customer_id')->references('id')->on('sub_customers');
             $table->string('yarn_count')->nullable();
             $table->string('total_bag')->nullable();
             $table->string('total_kg_bag')->nullable();
-            $table->string('total_kg')->nullable();
+            $table->string('yarn_total_kg')->nullable();
             $table->timestamps();
         });
     }

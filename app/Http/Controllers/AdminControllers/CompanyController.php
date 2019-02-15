@@ -54,6 +54,9 @@ class CompanyController extends Controller
     }
 
     public function DeleteCompany($id){
+        if($id ==1 || $id ==2){
+            return back()->with('danger','Delete Not Allowed! Contact Admin!');
+        }
          try {
             $Company = Company::FindorFail($id);
             $Company->delete();
