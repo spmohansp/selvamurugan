@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSizingsTable extends Migration
+class CreateWarpingYarnsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,16 @@ class CreateSizingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sizings', function (Blueprint $table) {
+        Schema::create('warping_yarns', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('warping_id')->unsigned();
             $table->foreign('warping_id')->references('id')->on('warpings');
-            $table->string('date')->nullable();
-            $table->string('lab_length')->nullable();
-            $table->string('palsekaram')->nullable();
-            $table->string('warp_weight')->nullable();
-            $table->string('gegam')->nullable();
-            $table->string('note')->nullable();
-            $table->softDeletes();
+            $table->integer('company_id')->unsigned();
+            $table->foreign('company_id')->references('id')->on('companies');
+            $table->string('yarn_count')->nullable();
+            $table->string('total_bag')->nullable();
+            $table->string('total_kg_bag')->nullable();
+            $table->string('total_kg')->nullable();
             $table->timestamps();
         });
     }
@@ -35,6 +34,6 @@ class CreateSizingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sizings');
+        Schema::dropIfExists('warping_yarns');
     }
 }

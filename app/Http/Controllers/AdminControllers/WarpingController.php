@@ -27,6 +27,7 @@ class WarpingController extends Controller
             'date' => 'required|date',
             'set_number' => 'required|unique:warpings',
         ]);
+        // dd(request()->all());
         try {
             $Warping = new Warping;
             $Warping->unit_id = request('unit_id');
@@ -34,8 +35,12 @@ class WarpingController extends Controller
             $Warping->sub_customer_id = request('sub_customer_id');
             $Warping->date = request('date');
             $Warping->set_number = request('set_number');
+            $Warping->company_id = request('company_id');
+            $Warping->total_bag = request('total_bag'); 
+            $Warping->total_kg_bag = request('total_kg_bag');
+            $Warping->total_kg = request('total_kg');
             $Warping->yarn_count = request('yarn_count');
-            $Warping->ilai = request('ilai');
+            $Warping->ilai = request('ilai'); 
             $Warping->rewainding_weight = request('rewainding_weight');
             $Warping->baby_cone_weight = request('baby_cone_weight');
 

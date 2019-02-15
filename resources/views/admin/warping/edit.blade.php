@@ -108,7 +108,6 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
-
                         <hr>
                         <div class="col-sm-4">
                             <div class="form-group">
@@ -166,8 +165,6 @@
                             </div>
                         </div>
                         <hr>
-
-
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label">Net Weight</label>

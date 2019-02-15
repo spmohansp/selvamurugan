@@ -19,11 +19,11 @@
             content:"*" ;
             color: red;
     </style>
-{{ $Sizing }}
-
+<!-- {{ $Sizing }}
+ -->
     <div class="row">
         <div class="col-md-12 col-sm-12">
-            <form data-toggle="validator" class="padd-20" method="post" action="">
+            <form data-toggle="validator" class="padd-20" method="post" action="{{ route('admin.UpdateSizing',$Sizing->id) }}">
                 <div class="card">
                     {{ csrf_field() }}
                     <div class="row page-titles">
@@ -63,7 +63,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label">Gegam</label>
-                                {{--<input type="text" class="form-control" name="palsekaram"  value="{{ $Sizing->palsekaram }}">--}}
+                               <input type="text" class="form-control" name="gegam"  value="{{ $Sizing->gegam }}">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
