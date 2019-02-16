@@ -4,8 +4,10 @@ namespace App\Http\Controllers\AdminControllers;
 
 use App\Sizing;
 use App\Warping;
+use App\WarpingYarn;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class WarpingController extends Controller
 {
@@ -27,7 +29,6 @@ class WarpingController extends Controller
             'date' => 'required|date',
             'set_number' => 'required|unique:warpings',
         ]);
-         dd(request()->all());
         try {
             $Warping = new Warping;
             $Warping->unit_id = request('unit_id');
@@ -36,13 +37,6 @@ class WarpingController extends Controller
             $Warping->date = request('date');
             $Warping->set_number = request('set_number');
             $Warping->ilai = request('ilai');
-
-
-
-
-
-//            $Warping->total_weight = request('total_bag1') * request('total_kg_bag1') + request('total_bag2') * request('total_kg_bag2');
-//            $Warping->net_weight = $netWeight = request('rewainding_weight') + request('baby_cone_weight') + (request('total_kg_bag1') * request('total_bag1')) + (request('total_kg_bag2') * request('total_bag2'));
 
             $WarpingDatas=array();$warpingYarnUsage=0;
             if(!empty(request('warping'))){
@@ -58,14 +52,34 @@ class WarpingController extends Controller
                 }
             }
 
-            $Warping->warping = serialize($WarpingDatas);
+            $warpingYarnTotal=0;
+            if(!empty(request('WarpingYarn'))){
+                foreach (request('WarpingYarn') as $WarpingYarn){
+                    $warpingYarnTotal += @$WarpingYarn['total_bag'] * @$WarpingYarn['total_kg_bag'];
+                }
+            }
 
-
-//            $Warping->remaining_cone_weight = @$netWeight - @$warpingYarnUsage; ////sadf
-
-
+            $Warping->warping_details = serialize($WarpingDatas);
+            $Warping->total_yarn_weight = $warpingYarnTotal;
+            $Warping->warping_used_yarn_weight = $warpingYarnUsage;
+            $Warping->remaining_cone_weight = $warpingYarnTotal-$warpingYarnUsage;
             $Warping->note = request('note');
             $Warping->save();
+
+            if(!empty(request('WarpingYarn'))){
+                foreach (request('WarpingYarn') as $warpingYarn){
+                   $WarpingYarn = new WarpingYarn;
+                    $WarpingYarn->company_id = @$warpingYarn['company_id'];
+                    $WarpingYarn->yarn_count = @$warpingYarn['yarn_count'];
+                    $WarpingYarn->total_bag = @$warpingYarn['total_bag'];
+                    $WarpingYarn->total_kg_bag = @$warpingYarn['total_kg_bag'];
+                    $WarpingYarn->yarn_total_kg = @$warpingYarn['total_bag'] * @$warpingYarn['total_kg_bag'];
+                    $WarpingYarn->customer_id = request('customer_id');
+                    $WarpingYarn->sub_customer_id = request('sub_customer_id');
+                    $WarpingYarn->warping_id = @$Warping->id;
+                    $WarpingYarn->save();
+                }
+            }
 
             $Sizing = new Sizing;
             $Sizing->warping_id = $Warping->id;
