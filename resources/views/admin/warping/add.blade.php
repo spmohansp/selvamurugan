@@ -100,7 +100,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label">Net Weight</label>
-                                <input type="text" class="form-control CalculateFinalWeight" name="net_weight" id="net_weight"  value="{{ old("net_weight") }}" readonly="">
+                                <input type="text" class="form-control CalculateFinalWeight" name="total_yarn_weight" id="net_weight"  value="{{ old("net_weight") }}" readonly="">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
