@@ -204,6 +204,11 @@
 
             $('body').on("keyup paste change", '.CalculateBalanceConeWeight', function (e) { // REMOVE HALT
                 e.preventDefault();
+                WarpingUsesYarn();
+                calculateRemainingYarn();
+            });
+
+            function WarpingUsesYarn(){
                 var warpingUsedTotal =0;
                 for(j=0;j < warpingi;j++){
                     if(($("input[name='warping[" + j + "][totalBeemWeight]']").val() !=  undefined) || ($("input[name='warping[" + j + "][emptyBeemWeight]']").val() != undefined)){
@@ -211,17 +216,15 @@
                     }
                 }
                 $('#warping_used_yarn_weight').val(warpingUsedTotal);
-            });
+            }
 
             $('.AddWarpingDiv').on("click", ".RemoveWarpingButon", function (e) { // REMOVE HALT
                 e.preventDefault();
                 $(this).closest('div').parent('div').remove();
-                $('.CalculateBalanceConeWeight').trigger('change');
+                WarpingUsesYarn();
+                calculateRemainingYarn();
             });
-        });
-</script>
-<script>
-        $(document).ready(function () {
+
             var yarni = 0;
 
             $('.AddYarn').click(function (e) {
@@ -274,28 +277,31 @@
             /*Calculate Net Weight*/
             $('body').on("keyup paste change", '.CalculateNetWeight', function (e) { // REMOVE HALT
                 e.preventDefault();
+                CalculateWarpingYarn();
+                calculateRemainingYarn();
+            });
+
+            function CalculateWarpingYarn(){
                 var NetWeight =0;
-                for(j=0;j < yarni;j++){
+                for(var j=0;j < yarni;j++){
                     if(($("input[name='WarpingYarn[" + j + "][total_bag]']").val() !=  undefined) || ($("input[name='WarpingYarn[" + j + "][total_kg_bag]']").val() != undefined)){
                         NetWeight += parseFloat($("input[name='WarpingYarn[" + j + "][total_bag]']").val()) * parseFloat($("input[name='WarpingYarn[" + j + "][total_kg_bag]']").val());
                     }
                 }
-                
                 $('#net_weight').val(NetWeight);
-            });
-
-             /*Remaining Weight*/
-            function calculateRemainingYarn(){
-                $('#remaining_cone_weight').val(parseFloat($("#net_weight").val())- parseFloat($("#warping_used_yarn_weight").val()));
-                console.log(remaining_cone_weight);
             }
-            
-            $('.AddYarnDiv').on("click", ".RemoveYarnButton", function (e) { 
+
+            $('.AddYarnDiv').on("click", ".RemoveYarnButton", function (e) {
                 e.preventDefault();
                 $(this).closest('div').parent('div').remove();
-                $('.CalculateTotalKG').trigger('change');
+                CalculateWarpingYarn();
                 calculateRemainingYarn();
             });
+
+            /*Remaining Weight*/
+            function calculateRemainingYarn(){
+                $('#remaining_cone_weight').val(parseFloat($("#net_weight").val())- parseFloat($("#warping_used_yarn_weight").val()));
+            }
         });
 
 
