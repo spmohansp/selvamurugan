@@ -24,6 +24,7 @@ class CreateWarpingsTable extends Migration
             $table->string('date')->nullable();
             $table->string('set_number')->nullable();
             $table->string('ilai')->nullable();
+            $table->longText('warping_details')->nullable();
             $table->string('total_yarn_weight')->nullable();
             $table->string('warping_used_yarn_weight')->nullable();
             $table->string('remaining_cone_weight')->nullable();

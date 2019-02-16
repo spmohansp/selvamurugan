@@ -35,23 +35,14 @@ class WarpingController extends Controller
             $Warping->sub_customer_id = request('sub_customer_id');
             $Warping->date = request('date');
             $Warping->set_number = request('set_number');
-            $Warping->company_id = request('company_id');
-            $Warping->total_bag = request('total_bag'); 
-            $Warping->total_kg_bag = request('total_kg_bag');
-            $Warping->total_kg = request('total_kg');
-            $Warping->yarn_count = request('yarn_count');
-            $Warping->ilai = request('ilai'); 
-            $Warping->rewainding_weight = request('rewainding_weight');
-            $Warping->baby_cone_weight = request('baby_cone_weight');
+            $Warping->ilai = request('ilai');
 
-            $Warping->company_id_1 = request('company_id_1');
-            $Warping->total_bag1 = request('total_bag1');
-            $Warping->total_kg_bag1 = request('total_kg_bag1');
-            $Warping->company_id_2 = request('company_id_2');
-            $Warping->total_bag2 = request('total_bag2');
-            $Warping->total_kg_bag2 = request('total_kg_bag2');
-            $Warping->total_weight = request('total_bag1') * request('total_kg_bag1') + request('total_bag2') * request('total_kg_bag2');
-            $Warping->net_weight = $netWeight = request('rewainding_weight') + request('baby_cone_weight') + (request('total_kg_bag1') * request('total_bag1')) + (request('total_kg_bag2') * request('total_bag2'));
+
+
+
+
+//            $Warping->total_weight = request('total_bag1') * request('total_kg_bag1') + request('total_bag2') * request('total_kg_bag2');
+//            $Warping->net_weight = $netWeight = request('rewainding_weight') + request('baby_cone_weight') + (request('total_kg_bag1') * request('total_bag1')) + (request('total_kg_bag2') * request('total_bag2'));
 
             $WarpingDatas=array();$warpingYarnUsage=0;
             if(!empty(request('warping'))){
@@ -68,7 +59,11 @@ class WarpingController extends Controller
             }
 
             $Warping->warping = serialize($WarpingDatas);
-            $Warping->remaining_cone_weight = @$netWeight - @$warpingYarnUsage;
+
+
+//            $Warping->remaining_cone_weight = @$netWeight - @$warpingYarnUsage; ////sadf
+
+
             $Warping->note = request('note');
             $Warping->save();
 
