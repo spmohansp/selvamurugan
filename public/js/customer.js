@@ -11,6 +11,7 @@ $("#CustomerIdsChanges").change(function(e){
                 // console.log(data);
                 if(data !=''){
                     $('#SubCustomerDivDataLoad').html(data);
+                    $('.SearchableDropDownSelect').select2();
                 }else{
                     $('#SubCustomerDivDataLoad').html('<p style="color: red">Nill Sub Customer</p>');
                 }

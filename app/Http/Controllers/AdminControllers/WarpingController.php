@@ -27,7 +27,7 @@ class WarpingController extends Controller
             'date' => 'required|date',
             'set_number' => 'required|unique:warpings',
         ]);
-        // dd(request()->all());
+         dd(request()->all());
         try {
             $Warping = new Warping;
             $Warping->unit_id = request('unit_id');

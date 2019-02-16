@@ -48,7 +48,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Customer Name</span></label>
-                                <select name="customer_id" class="form-control" id="CustomerIdsChanges" required>
+                                <select name="customer_id" class="form-control SearchableDropDownSelect" id="CustomerIdsChanges" required>
                                     <option value="">Select Customer</option>
                                     @foreach(auth()->user()->getAllCustomers() as $Customer)
                                         <option value="{{ $Customer->id }}" {{ ($Customer->id == old('customer_id'))? 'selected':'' }}>{{ $Customer->name }}</option>
@@ -81,31 +81,8 @@
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <label class="control-label"><span class="asterisk">Yarn Count</span></label>
-                                <input type="number" class="form-control" name="yarn_count"  value="{{ old("yarn_count") }}"  required="" >
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form-group">
                                 <label class="control-label"><span class="asterisk">இழை</span></label>
                                 <input type="number" class="form-control" name="ilai"  value="{{ old("ilai") }}"  required="" >
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label class="control-label">Total Rewainding Cone KG</label>
-                                <input type="text" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="rewainding_weight" name="rewainding_weight"  value="{{ old("rewainding_weight") }}">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label class="control-label">Total Baby Cone KG</label>
-                                <input type="text" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="baby_cone_weight" name="baby_cone_weight"  value="{{ old("baby_cone_weight") }}">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -253,7 +230,7 @@
                     '<div class="row">' +
                         '<div class="col-3">' +
                             '<label for="inputphone" class="control-label">Yarn Company</label>'+
-                            '<select name="WarpingYarn[' + yarni + '][company_id]" class="form-control">'+
+                            '<select name="WarpingYarn[' + yarni + '][company_id]" class="form-control SearchableDropDownSelect">'+
                                 '<option value="">Yarn Company</option>'+
                                     '@foreach(auth()->user()->getAllCompanies() as $Company)'+
                                         '<option value="{{ $Company->id }}" {{ ($Company->id ==  @$WarpingYarn->company_id)?'selected':'' }}>{{ $Company->company_name }}</option>'+
@@ -282,6 +259,7 @@
                     '</div>'
                 );
                 yarni++;
+                $('.SearchableDropDownSelect').select2(); //for option search design
             });
 
            /* Calculate Total KG*/
@@ -318,8 +296,6 @@
                 $('.CalculateTotalKG').trigger('change');
                 calculateRemainingYarn();
             });
-            
-            
         });
 
 
