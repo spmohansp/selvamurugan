@@ -72,7 +72,7 @@ class CustomerController extends Controller
 
     public function DeleteCustomer($id){
         try{
-        Customer::FindorFail($id)->delete();
+            Customer::FindorFail($id)->delete();
             return back()->with('success','Customer Deleted Successfully!!');
         }catch(Exception $e){
             return back()->with('danger','Something went wrong!');

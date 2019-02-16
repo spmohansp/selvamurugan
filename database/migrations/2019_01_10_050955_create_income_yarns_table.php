@@ -24,7 +24,6 @@ class CreateIncomeYarnsTable extends Migration
             $table->string('date')->nullable();
             $table->integer('company_id')->unsigned()->nullable();
             $table->foreign('company_id')->references('id')->on('companies');
-            $table->string('yarn_type')->nullable();
             $table->string('total_bag')->nullable();
             $table->string('total_kg_bag')->nullable();
             $table->string('net_weight')->nullable();

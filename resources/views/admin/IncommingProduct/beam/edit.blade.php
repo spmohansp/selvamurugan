@@ -49,10 +49,10 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label"><span class="asterisk">Customer Name</span></label>
-                                <select name="customer_id" class="form-control" id="CustomerIdsChanges" required>
+                                <select name="customer_id" class="form-control SearchableDropDownSelect" id="CustomerIdsChanges" required>
                                     <option value="">Select Customer</option>
                                     @foreach(auth()->user()->getAllCustomers() as $Customer)
-                                        <option value="{{ $Customer->id }}" {{ ($Customer->id == $IncomeBeam->customer_id)? 'selected':'' }}>{{ $Customer->name }}</option>
+                                        <option value="{{ $Customer->id }}" {{ ($Customer->id == $IncomeBeam->customer_id)? 'selected':'' }}>{{ $Customer->name }} | {{ $Customer->mobile }}</option>
                                     @endforeach
                                 </select>
                                 <div class="help-block with-errors"></div>

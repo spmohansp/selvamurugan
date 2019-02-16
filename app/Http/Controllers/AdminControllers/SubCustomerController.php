@@ -25,11 +25,11 @@ class SubCustomerController extends Controller
 
     public function getSubCustomerData(){
         $SubCustomers = SubCustomer::where('customer_id',request('Customer_id'))->get();
-        $FinalDatas = '<select name="sub_customer_id" id="sub_customer_id" class="form-control"> 
+        $FinalDatas = '<select name="sub_customer_id" id="sub_customer_id" class="form-control SearchableDropDownSelect"> 
         <option value="">Select Sub Customer</option>';
         if(!empty($SubCustomers)){
             foreach($SubCustomers as $SubCustomer){
-                $FinalDatas .= '<option value="'.$SubCustomer->id.'">'.$SubCustomer->name.'</option>';
+                $FinalDatas .= '<option value="'.$SubCustomer->id.'">'.$SubCustomer->name.' | '.$SubCustomer->mobile.'</option>';
             }
         }
         return $FinalDatas.'</select>';
