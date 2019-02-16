@@ -29,7 +29,7 @@ class SubCustomerController extends Controller
         <option value="">Select Sub Customer</option>';
         if(!empty($SubCustomers)){
             foreach($SubCustomers as $SubCustomer){
-                $FinalDatas .= '<option value="'.$SubCustomer->id.'">'.$SubCustomer->name.'</option>';
+                $FinalDatas .= '<option value="'.$SubCustomer->id.'">'.$SubCustomer->name.' | '.$SubCustomer->mobile.'</option>';
             }
         }
         return $FinalDatas.'</select>';

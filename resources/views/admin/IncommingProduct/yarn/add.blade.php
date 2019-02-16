@@ -52,7 +52,7 @@ active
                                 <option value="">Select Customer</option>
                                 @foreach(auth()->user()->getAllCustomers() as $Customer)
                                 <option value="{{ $Customer->id }}"
-                                    {{ ($Customer->id == old('customer_id'))? 'selected':'' }}>{{ $Customer->name }}</option>
+                                    {{ ($Customer->id == old('customer_id'))? 'selected':'' }}>{{ $Customer->name }} | {{ $Customer->mobile }}</option>
                                 @endforeach
                             </select>
                             <div class="help-block with-errors"></div>
