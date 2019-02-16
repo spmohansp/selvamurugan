@@ -123,7 +123,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label class="control-label">Net Weight</label>
-                                <input type="text" class="form-control" name="net_weight" id="net_weight"  value="{{ old("net_weight") }}" readonly="">
+                                <input type="text" class="form-control CalculateFinalWeight" name="net_weight" id="net_weight"  value="{{ old("net_weight") }}" readonly="">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -139,10 +139,17 @@
                         </div>
                     </div>
                     <div class="row mrg-0">
-                        <div class="col-sm-6">
+                        <div class="col-sm-3">
                             <div class="form-group">
-                                <label class="control-label">Remaining Weight</label>
-                                <input type="text" class="form-control" name="remaining_cone_weight" id="remaining_cone_weight"  value="{{ old("remaining_cone_weight") }}">
+                                <label class="control-label">Warping Usage</label>
+                                <input type="text" class="form-control CalculateFinalWeight" name="warping_used_yarn_weight" id="warping_used_yarn_weight"  value="{{ old("warping_used_yarn_weight") }}" readonly="">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                         <div class="col-sm-3">
+                            <div class="form-group">
+                                    <label class="control-label">Remaining Weight</label>
+                                    <input type="text" class="form-control CalculateFinalWeight" name="remaining_cone_weight" id="remaining_cone_weight"  value="{{ old("remaining_cone_weight") }}" readonly="">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -154,6 +161,7 @@
                             </div>
                         </div>
                     </div>
+                   
 
                     <div class="col-12">
                         <div class="form-group">
@@ -225,7 +233,7 @@
                         warpingUsedTotal += parseFloat($("input[name='warping[" + j + "][totalBeemWeight]']").val()) - parseFloat($("input[name='warping[" + j + "][emptyBeemWeight]']").val());
                     }
                 }
-                $('#remaining_cone_weight').val(parseFloat($('#net_weight').val() - warpingUsedTotal));
+                $('#warping_used_yarn_weight').val(warpingUsedTotal);
             });
 
             $('.AddWarpingDiv').on("click", ".RemoveWarpingButon", function (e) { // REMOVE HALT
@@ -243,46 +251,79 @@
                 e.preventDefault();
                 $('.AddYarnDiv').append(
                     '<div class="row">' +
-                    '<div class="col-3">' +
-                    '<label for="inputphone" class="control-label">Yarn Company</label>'+
-                            '<select name="company_id" class="form-control">'+
+                        '<div class="col-3">' +
+                            '<label for="inputphone" class="control-label">Yarn Company</label>'+
+                            '<select name="WarpingYarn[' + yarni + '][company_id]" class="form-control">'+
                                 '<option value="">Yarn Company</option>'+
                                     '@foreach(auth()->user()->getAllCompanies() as $Company)'+
                                         '<option value="{{ $Company->id }}" {{ ($Company->id ==  @$WarpingYarn->company_id)?'selected':'' }}>{{ $Company->company_name }}</option>'+
                                     '@endforeach'+
-                                '</select>'+
-                    '</div>'+
-                    '<div class="col-2">' +
-                    '<label class="c-field__label">Yarn Count</label>' +
-                    '<input class="form-control" name="WarpingYarn[' + yarni + '][yarn_count]" type="number" id="yarn_count" required>' +
-                    '</div>' +
-                    '<div class="col-2">' +
-                    '<label class="c-field__label">Total Bag</label>' +
-                    '<input class="form-control" name="WarpingYarn[' + yarni + '][total_bag]" type="number" id="total_bag" required>' +
-                    '</div>' +
-                    '<div class="col-2">' +
-                    '<label class="c-field__label">KG / Bag</label>' +
-                    '<input class="form-control" name="WarpingYarn[' + yarni + '][total_kg_bag]" type="number" id="total_kg_bag" required>' +
-                    '</div>' +
-                     '<div class="col-2">' +
-                    '<label class="c-field__label">Total KG</label>' +
-                    '<input class="form-control" name="WarpingYarn[' + yarni + '][total_kg]" type="number" id="total_kg" required>' +
-                    '</div>' +
-                    '<div class="col-1">' +
-                    '<button type="button" class="btn btn-danger btn-sm RemoveYarnButton">X</button>' +
-                    '</div>' +
+                            '</select>'+
+                        '</div>'+
+                        '<div class="col-2">' +
+                            '<label class="c-field__label">Yarn Count</label>' +
+                            '<input class="form-control" name="WarpingYarn[' + yarni + '][yarn_count]" type="number" id="yarn_count" required>' +
+                        '</div>' +
+                        '<div class="col-2">' +
+                            '<label class="c-field__label">Total Bag</label>' +
+                            '<input class="form-control CalculateTotalKG CalculateNetWeight" name="WarpingYarn[' + yarni + '][total_bag]" type="number" id="total_bag" required>' +
+                        '</div>' +
+                        '<div class="col-2">' +
+                            '<label class="c-field__label">KG / Bag</label>' +
+                            '<input class="form-control CalculateTotalKG CalculateNetWeight" name="WarpingYarn[' + yarni + '][total_kg_bag]" type="number" id="total_kg_bag" required>' +
+                        '</div>' +
+                         '<div class="col-2">' +
+                            '<label class="c-field__label">Total KG</label>' +
+                            '<input class="form-control CalculateTotalKG CalculateNetWeight" name="WarpingYarn[' + yarni + '][total_kg]" type="number" id="total_kg" required>' +
+                        '</div>' +
+                        '<div class="col-1">' +
+                            '<button type="button" class="btn btn-danger btn-sm RemoveYarnButton">X</button>' +
+                        '</div>' +
                     '</div>'
                 );
                 yarni++;
-
             });
-            
 
-            $('.AddYarnDiv').on("click", ".RemoveYarnButton", function (e) { // REMOVE HALT
+           /* Calculate Total KG*/
+            $('body').on("keyup paste change", '.CalculateTotalKG', function (e) { 
+                e.preventDefault();
+                $(".CalculateTotalKG").prop("required", true);
+                for(i=0;i < yarni;i++){
+                    $("input[name='WarpingYarn[" + i + "][total_kg]']").val(parseFloat($("input[name='WarpingYarn[" + i + "][total_bag]']").val()) * parseFloat($("input[name='WarpingYarn[" + i + "][total_kg_bag]']").val()));
+                }
+            });
+
+            /*Calculate Net Weight*/
+            $('body').on("keyup paste change", '.CalculateNetWeight', function (e) { // REMOVE HALT
+                e.preventDefault();
+                var NetWeight =0;
+                for(j=0;j < yarni;j++){
+                    if(($("input[name='WarpingYarn[" + j + "][total_bag]']").val() !=  undefined) || ($("input[name='WarpingYarn[" + j + "][total_kg_bag]']").val() != undefined)){
+                        NetWeight += parseFloat($("input[name='WarpingYarn[" + j + "][total_bag]']").val()) * parseFloat($("input[name='WarpingYarn[" + j + "][total_kg_bag]']").val());
+                    }
+                }
+                
+                $('#net_weight').val(NetWeight);
+            });
+
+             /*Remaining Weight*/
+            function calculateRemainingYarn(){
+                $('#remaining_cone_weight').val(parseFloat($("#net_weight").val())- parseFloat($("#warping_used_yarn_weight").val()));
+                console.log(remaining_cone_weight);
+            }
+            
+            $('.AddYarnDiv').on("click", ".RemoveYarnButton", function (e) { 
                 e.preventDefault();
                 $(this).closest('div').parent('div').remove();
+                $('.CalculateTotalKG').trigger('change');
+                calculateRemainingYarn();
             });
+            
+            
         });
+
+
 </script>
+
 
 @endsection
