@@ -114,3 +114,22 @@ Route::delete('/SizingSetList/{id}/delete', 'AdminControllers\SizingController@D
 //Full Beam Delevery
  Route::get('/delevery/fullBeam', 'AdminControllers\FullBeamDeleveryController@showFullBeamDeleveryList');
  Route::get('/delevery/fullBeam/Add', 'AdminControllers\FullBeamDeleveryController@AddFullBeamDelevery');
+
+
+
+ //Beam Product
+ Route::get('/delevery/emptyBeams', 'AdminControllers\EmptyBeamDeleveryController@ShowAllCustomerEmptyBeamDelevery');
+ Route::get('/delevery/emptyBeam/Add', 'AdminControllers\EmptyBeamDeleveryController@AddCustomerEmptyBeamDelevery');
+ Route::post('/delevery/emptyBeam/Add', 'AdminControllers\EmptyBeamDeleveryController@saveEmptyBeamDelevery')->name('addEmptyBeamDelevery');
+ Route::get('/delevery/emptyBeam/{id}/Edit', 'AdminControllers\EmptyBeamDeleveryController@EmptyBeamDeleveryEdit')->name('EmptyBeamDeleveryEdit');
+ Route::post('/delevery/emptyBeam/{id}/Update','AdminControllers\EmptyBeamDeleveryController@EmptyBeamDeleveryUpdate')->name('EmptyBeamDeleveryUpdate');
+ Route::post('/delevery/emptyBeam/{id}/Delete','AdminControllers\EmptyBeamDeleveryController@EmptyBeamDeleveryDelete')->name('EmptyBeamDeleveryDelete');
+
+
+ //Yarn Product
+ Route::get('/delevery/yarns', 'AdminControllers\YarnDeleveryController@ShowAllYarnDelevery');
+ Route::get('/delevery/yarn/Add', 'AdminControllers\YarnDeleveryController@AddCustomerYarnDelevery');
+ Route::post('/delevery/yarn/Add', 'AdminControllers\YarnDeleveryController@SaveYarnDelevery')->name('AddYarnDelevery');
+ Route::get('/delevery/yarn/{id}/Edit', 'AdminControllers\YarnDeleveryController@DeleveryYarnEdit')->name('DeleveryYarnEdit');
+ Route::post('/delevery/yarn/{id}/Update', 'AdminControllers\YarnDeleveryController@DeleveryYarnUpdate')->name('DeleveryYarnUpdate');
+ Route::delete('/delevery/yarn/{id}/Delete', 'AdminControllers\YarnDeleveryController@DeleveryYarnDelete')->name('DeleveryYarnDelete');
