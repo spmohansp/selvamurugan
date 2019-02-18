@@ -254,7 +254,7 @@
                         '</div>' +
                          '<div class="col-2">' +
                             '<label class="c-field__label">Total KG</label>' +
-                            '<input class="form-control CalculateTotalKG CalculateNetWeight" name="WarpingYarn[' + yarni + '][total_kg]" type="number" id="total_kg" required>' +
+                            '<input class="form-control CalculateTotalKG CalculateNetWeight" name="WarpingYarn[' + yarni + '][yarn_total_kg]" type="number" id="total_kg" required>' +
                         '</div>' +
                         '<div class="col-1">' +
                             '<button type="button" class="btn btn-danger btn-sm RemoveYarnButton">X</button>' +

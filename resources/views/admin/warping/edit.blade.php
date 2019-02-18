@@ -81,98 +81,69 @@
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <label class="control-label"><span class="asterisk">Yarn Count</span></label>
-                                <input type="number" class="form-control" name="yarn_count"  value="{{ $Warping->yarn_count }}"  required="" >
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form-group">
                                 <label class="control-label"><span class="asterisk">இழை</span></label>
                                 <input type="number" class="form-control" name="ilai"  value="{{ $Warping->ilai }}"  required="" >
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
-
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label class="control-label">Total Rewainding Cone KG</label>
-                                <input type="text" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="rewainding_weight" name="rewainding_weight"  value="{{ @$Warping->rewainding_weight }}">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label class="control-label">Total Baby Cone KG</label>
-                                <input type="text" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="baby_cone_weight" name="baby_cone_weight"  value="{{ @$Warping->baby_cone_weight }}">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label for="inputphone" class="control-label"><span class="asterisk">Yarn Company</span></label>
-                                <select name="company_id_1" class="form-control" required>
-                                    <option value="">Yarn Company</option>
-                                    @foreach(auth()->user()->getAllCompanies() as $Company)
-                                        <option value="{{ $Company->id }}" {{ ($Company->id ==  @$Warping->company_id_1)?'selected':'' }}>{{ $Company->company_name }}</option>
-                                    @endforeach
-                                </select>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label class="control-label"><span class="asterisk">Total Bag</span></label>
-                                <input type="number" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="total_bag1" name="total_bag1" value="{{ @$Warping->total_bag1 }}"  required="" >
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label class="control-label"><span class="asterisk">KG / Bag</span></label>
-                                <input type="text" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="total_kg_bag1" name="total_kg_bag1"  value="{{ @$Warping->total_kg_bag1 }}"  required="" >
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label for="inputphone" class="control-label">Yarn Company</label>
-                                <select name="company_id_2" id="company_id_2" class="form-control">
-                                    <option value="">Yarn Company</option>
-                                    @foreach(auth()->user()->getAllCompanies() as $Company)
-                                        <option value="{{ $Company->id }}" {{ ($Company->id ==  @$Warping->company_id_2)?'selected':'' }}>{{ $Company->company_name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label class="control-label">Total Bag</label>
-                                <input type="number" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="total_bag2" name="total_bag2"  value="{{ @$Warping->total_bag2 }}" >
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label class="control-label">KG / Bag</label>
-                                <input type="text" class="form-control CalculateWarpingBagQuantity CalculateBalanceConeWeight" id="total_kg_bag2" name="total_kg_bag2"  value="{{ @$Warping->total_kg_bag2 }}">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label class="control-label">Net Weight</label>
-                                <input type="text" class="form-control" name="net_weight" id="net_weight"  value="{{ @$Warping->net_weight }}" readonly="">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
                     </div>
+                        <div class="row page-titles">
+                            <div class="align-center">
+                                <h4 class="theme-cl">Yarn Details <button type="button" class="btn btn-primary btn-sm AddYarn">+</button></h4>
+                            </div>
+                        </div>
+                        <div class="row mrg-0">
+                            <div class="col-sm-12">
+                                <div class="AddYarnDiv">
+
+                                    <?php $yarni = 0?>
+                                    @if(!empty($Warping->WarpingYarn))
+                                        @foreach($Warping->WarpingYarn as $WarpingYarn)
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label for="inputphone" class="control-label">Yarn Company</label>
+                                                <select name="WarpingYarn[{{ $yarni }}][company_id]" class="form-control SearchableDropDownSelect">
+                                                    <option value="">Yarn Company</option>
+                                                    @foreach(auth()->user()->getAllCompanies() as $Company)
+                                                        <option value="{{ $Company->id }}" {{ ($Company->id ==  @$WarpingYarn->company_id)?'selected':'' }}>{{ $Company->company_name }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                            <div class="col-2">
+                                                <label class="c-field__label">Yarn Count</label>
+                                                <input class="form-control" name="WarpingYarn[{{ $yarni }}][yarn_count]" type="number" value="{{ $WarpingYarn->yarn_count }}" id="yarn_count" required>
+                                            </div>
+                                            <div class="col-2">
+                                                <label class="c-field__label">Total Bag</label>
+                                                <input class="form-control CalculateTotalKG CalculateNetWeight" name="WarpingYarn[{{ $yarni }}][total_bag]" value="{{ $WarpingYarn->total_bag }}" type="number" id="total_bag" required>
+                                            </div>
+                                            <div class="col-2">
+                                                <label class="c-field__label">KG / Bag</label>
+                                                <input class="form-control CalculateTotalKG CalculateNetWeight" name="WarpingYarn[{{ $yarni }}][total_kg_bag]" value="{{ $WarpingYarn->total_kg_bag }}" type="number" id="total_kg_bag" required>
+                                            </div>
+                                            <div class="col-2">
+                                                <label class="c-field__label">Total KG</label>
+                                                <input class="form-control CalculateTotalKG CalculateNetWeight" name="WarpingYarn[{{ $yarni  }}][yarn_total_kg]" value="{{ $WarpingYarn->yarn_total_kg }}" type="number" id="total_kg" required>
+                                            </div>
+                                            <div class="col-1">
+                                                <button type="button" class="btn btn-danger btn-sm RemoveYarnButton">X</button>
+                                            </div>
+                                        </div>
+                                            <?php $yarni++?>
+                                        @endforeach
+                                    @endif
+
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label class="control-label">Net Weight</label>
+                                    <input type="text" class="form-control CalculateFinalWeight" name="total_yarn_weight" id="net_weight"  value="{{ $Warping->total_yarn_weight }}" readonly="">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
                     <div class="row page-titles">
                         <div class="align-center">
                             <h4 class="theme-cl">Warping Details <button type="button" class="btn btn-primary btn-sm AddWarping">+</button></h4>
@@ -182,8 +153,8 @@
                         <div class="col-sm-12">
                             <div class="AddWarpingDiv">
                                 <?php $warpingi = 0?>
-                            @if(!empty(unserialize($Warping->warping)))
-                                @foreach(unserialize($Warping->warping) as $WarpingData)
+                            @if(!empty(unserialize($Warping->warping_details)))
+                                @foreach(unserialize($Warping->warping_details) as $WarpingData)
                                         <div class="row">
                                             <div class="col-2">
                                                 <label class="c-field__label">பாவுடன்</label>
@@ -217,10 +188,17 @@
                     </div>
                     <hr>
                     <div class="row mrg-0">
-                        <div class="col-sm-6">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label class="control-label">Warping Usage</label>
+                                <input type="text" class="form-control CalculateFinalWeight" name="warping_used_yarn_weight" id="warping_used_yarn_weight"  value="{{$Warping->warping_used_yarn_weight }}" readonly="">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
                             <div class="form-group">
                                 <label class="control-label">Remaining Weight</label>
-                                <input type="text" class="form-control" name="remaining_cone_weight" id="remaining_cone_weight"  value="{{ @$Warping->remaining_cone_weight }}">
+                                <input type="text" class="form-control CalculateFinalWeight" name="remaining_cone_weight" id="remaining_cone_weight"  value="{{$Warping->remaining_cone_weight }}" readonly="">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -228,7 +206,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="inputphone" class="control-label">Note</label>
-                                <textarea name="note" class="form-control">{{ @$Warping->note }}</textarea>
+                                <textarea name="note" class="form-control">{{$Warping->note }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -259,15 +237,15 @@
                     '<div class="row">' +
                     '<div class="col-2">' +
                     '<label class="c-field__label">பாவுடன்</label>' +
-                    '<input class="form-control CalculateWeight" name="warping[' + warpingi + '][totalBeemWeight]" type="number" id="haltFromDate">' +
+                    '<input class="form-control CalculateWeight CalculateBalanceConeWeight" min="0" name="warping[' + warpingi + '][totalBeemWeight]" type="number" id="haltFromDate">' +
                     '</div>' +
                     '<div class="col-2">' +
                     '<label class="c-field__label">காலி பீம் எடை</label>' +
-                    '<input class="form-control CalculateWeight" name="warping[' + warpingi + '][emptyBeemWeight]" type="number" id="emptyBeem">' +
+                    '<input class="form-control CalculateWeight CalculateBalanceConeWeight" min="0" name="warping[' + warpingi + '][emptyBeemWeight]" type="number" id="emptyBeem">' +
                     '</div>' +
                     '<div class="col-2">' +
                     '<label class="c-field__label">நிகர் எடை</label>' +
-                    '<input class="form-control CalculateWeight" name="warping[' + warpingi + '][totalWeight]" type="number" id="totalWeight" required>' +
+                    '<input class="form-control CalculateWeight CalculateBalanceConeWeight" name="warping[' + warpingi + '][totalWeight]" type="number" id="totalWeight" required>' +
                     '</div>' +
                     '<div class="col-2">' +
                     '<label class="c-field__label">வார்ப்பிங் ஜெகம்</label>' +
@@ -286,7 +264,7 @@
 
             });
 
-            $('body').on("keyup paste", '.CalculateWeight', function (e) { // REMOVE HALT
+            $('body').on("keyup paste change", '.CalculateWeight', function (e) { // REMOVE HALT
                 e.preventDefault();
                 $(".CalculateWeight").prop("required", true);
                 for(i=0;i < warpingi;i++){
@@ -294,21 +272,111 @@
                 }
             });
 
+
             $('body').on("keyup paste change", '.CalculateBalanceConeWeight', function (e) { // REMOVE HALT
                 e.preventDefault();
+                WarpingUsesYarn();
+                calculateRemainingYarn();
+            });
+
+            function WarpingUsesYarn(){
                 var warpingUsedTotal =0;
                 for(j=0;j < warpingi;j++){
                     if(($("input[name='warping[" + j + "][totalBeemWeight]']").val() !=  undefined) || ($("input[name='warping[" + j + "][emptyBeemWeight]']").val() != undefined)){
                         warpingUsedTotal += parseFloat($("input[name='warping[" + j + "][totalBeemWeight]']").val()) - parseFloat($("input[name='warping[" + j + "][emptyBeemWeight]']").val());
                     }
                 }
-                $('#remaining_cone_weight').val(parseFloat($('#net_weight').val() - warpingUsedTotal));
-            });
+                $('#warping_used_yarn_weight').val(warpingUsedTotal);
+            }
 
             $('.AddWarpingDiv').on("click", ".RemoveWarpingButon", function (e) { // REMOVE HALT
                 e.preventDefault();
                 $(this).closest('div').parent('div').remove();
+                WarpingUsesYarn();
+                calculateRemainingYarn();
             });
+
+            var yarni = <?php echo $yarni ?>;
+
+            $('.AddYarn').click(function (e) {
+                e.preventDefault();
+                $('.AddYarnDiv').append(
+                    '<div class="row">' +
+                    '<div class="col-3">' +
+                    '<label for="inputphone" class="control-label">Yarn Company</label>'+
+                    '<select name="WarpingYarn[' + yarni + '][company_id]" class="form-control SearchableDropDownSelect">'+
+                    '<option value="">Yarn Company</option>'+
+                    '@foreach(auth()->user()->getAllCompanies() as $Company)'+
+                    '<option value="{{ $Company->id }}" {{ ($Company->id ==  @$WarpingYarn->company_id)?'selected':'' }}>{{ $Company->company_name }}</option>'+
+                    '@endforeach'+
+                    '</select>'+
+                    '</div>'+
+                    '<div class="col-2">' +
+                    '<label class="c-field__label">Yarn Count</label>' +
+                    '<input class="form-control" name="WarpingYarn[' + yarni + '][yarn_count]" type="number" id="yarn_count" required>' +
+                    '</div>' +
+                    '<div class="col-2">' +
+                    '<label class="c-field__label">Total Bag</label>' +
+                    '<input class="form-control CalculateTotalKG CalculateNetWeight" name="WarpingYarn[' + yarni + '][total_bag]" type="number" id="total_bag" required>' +
+                    '</div>' +
+                    '<div class="col-2">' +
+                    '<label class="c-field__label">KG / Bag</label>' +
+                    '<input class="form-control CalculateTotalKG CalculateNetWeight" name="WarpingYarn[' + yarni + '][total_kg_bag]" type="number" id="total_kg_bag" required>' +
+                    '</div>' +
+                    '<div class="col-2">' +
+                    '<label class="c-field__label">Total KG</label>' +
+                    '<input class="form-control CalculateTotalKG CalculateNetWeight" name="WarpingYarn[' + yarni + '][yarn_total_kg]" type="number" id="total_kg" required>' +
+                    '</div>' +
+                    '<div class="col-1">' +
+                    '<button type="button" class="btn btn-danger btn-sm RemoveYarnButton">X</button>' +
+                    '</div>' +
+                    '</div>'
+                );
+                yarni++;
+                $('.SearchableDropDownSelect').select2(); //for option search design
+            });
+
+            /* Calculate Total KG*/
+            $('body').on("keyup paste change", '.CalculateTotalKG', function (e) {
+                e.preventDefault();
+                $(".CalculateTotalKG").prop("required", true);
+                for(i=0;i < yarni;i++){
+                    $("input[name='WarpingYarn[" + i + "][total_kg]']").val(parseFloat($("input[name='WarpingYarn[" + i + "][total_bag]']").val()) * parseFloat($("input[name='WarpingYarn[" + i + "][total_kg_bag]']").val()));
+                }
+            });
+
+            /*Calculate Net Weight*/
+            $('body').on("keyup paste change", '.CalculateNetWeight', function (e) { // REMOVE HALT
+                e.preventDefault();
+                CalculateWarpingYarn();
+                calculateRemainingYarn();
+            });
+
+            function CalculateWarpingYarn(){
+                var NetWeight =0;
+                for(var j=0;j < yarni;j++){
+                    if(($("input[name='WarpingYarn[" + j + "][total_bag]']").val() !=  undefined) || ($("input[name='WarpingYarn[" + j + "][total_kg_bag]']").val() != undefined)){
+                        NetWeight += parseFloat($("input[name='WarpingYarn[" + j + "][total_bag]']").val()) * parseFloat($("input[name='WarpingYarn[" + j + "][total_kg_bag]']").val());
+                    }
+                }
+                $('#net_weight').val(NetWeight);
+            }
+
+            $('.AddYarnDiv').on("click", ".RemoveYarnButton", function (e) {
+                e.preventDefault();
+                $(this).closest('div').parent('div').remove();
+                CalculateWarpingYarn();
+                calculateRemainingYarn();
+            });
+
+            /*Remaining Weight*/
+            function calculateRemainingYarn(){
+                $('#remaining_cone_weight').val(parseFloat($("#net_weight").val())- parseFloat($("#warping_used_yarn_weight").val()));
+            }
         });
+
+
     </script>
+
+
 @endsection
