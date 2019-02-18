@@ -26,4 +26,8 @@ class Warping extends Model
     public function SubCustomer(){
         return $this->BelongsTo(SubCustomer::class);
     }
+
+    public function WarpingYarn(){
+        return $this->hasMany(WarpingYarn::class,'warping_id','id');
+    }
 }
