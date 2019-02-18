@@ -100,6 +100,7 @@
                                     @if(!empty($Warping->WarpingYarn))
                                         @foreach($Warping->WarpingYarn as $WarpingYarn)
                                         <div class="row">
+                                            <input name="WarpingYarn[{{ $yarni }}][warping_id]" type="hidden" value="{{ $WarpingYarn->id }}">
                                             <div class="col-3">
                                                 <label for="inputphone" class="control-label">Yarn Company</label>
                                                 <select name="WarpingYarn[{{ $yarni }}][company_id]" class="form-control SearchableDropDownSelect">

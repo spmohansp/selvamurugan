@@ -108,19 +108,7 @@ class WarpingController extends Controller
             $Warping->sub_customer_id = request('sub_customer_id');
             $Warping->date = request('date');
             $Warping->set_number = request('set_number');
-            $Warping->yarn_count = request('yarn_count');
             $Warping->ilai = request('ilai');
-            $Warping->rewainding_weight = request('rewainding_weight');
-            $Warping->baby_cone_weight = request('baby_cone_weight');
-
-            $Warping->company_id_1 = request('company_id_1');
-            $Warping->total_bag1 = request('total_bag1');
-            $Warping->total_kg_bag1 = request('total_kg_bag1');
-            $Warping->company_id_2 = request('company_id_2');
-            $Warping->total_bag2 = request('total_bag2');
-            $Warping->total_kg_bag2 = request('total_kg_bag2');
-            $Warping->total_weight = request('total_bag1') * request('total_kg_bag1') + request('total_bag2') * request('total_kg_bag2');
-            $Warping->net_weight = $netWeight = request('rewainding_weight') + request('baby_cone_weight') + (request('total_kg_bag1') * request('total_bag1')) + (request('total_kg_bag2') * request('total_bag2'));
 
             $WarpingDatas=array();$warpingYarnUsage=0;
             if(!empty(request('warping'))){
@@ -136,16 +124,67 @@ class WarpingController extends Controller
                 }
             }
 
-            $Warping->warping = serialize($WarpingDatas);
-            $Warping->remaining_cone_weight = @$netWeight - @$warpingYarnUsage;
+            $warpingYarnTotal=0;
+            if(!empty(request('WarpingYarn'))){
+                foreach (request('WarpingYarn') as $WarpingYarn){
+                    $warpingYarnTotal += @$WarpingYarn['total_bag'] * @$WarpingYarn['total_kg_bag'];
+                }
+            }
+            $Warping->warping_details = serialize($WarpingDatas);
+            $Warping->total_yarn_weight = $warpingYarnTotal;
+            $Warping->warping_used_yarn_weight = $warpingYarnUsage;
+            $Warping->remaining_cone_weight = $warpingYarnTotal-$warpingYarnUsage;
             $Warping->note = request('note');
             $Warping->save();
-            return back()->with('success','Warping Added Successfully!!');
+
+            if(!empty(request('WarpingYarn'))) {
+                foreach(request('WarpingYarn') as $WarpingYarn) {
+                    if(isset($WarpingYarn['warping_id'])) {
+                        $WarpingYarnIds[] = $WarpingYarn['warping_id'];
+                    }
+                }
+                $WarpingYarnDetails = WarpingYarn::where([['warping_id', $Warping->id]])->get()->all();
+                foreach ($WarpingYarnDetails as $WarpingYarnDetail){
+                    if(!in_array($WarpingYarnDetail->id, $WarpingYarnIds)){
+                        WarpingYarn::where([['id',$WarpingYarnDetail->id]])->first()->delete();
+                    }
+                }
+                foreach (request('WarpingYarn') as $warpingYarns){
+                    if(!isset($warpingYarns['warping_id'])){
+                        $WarpingYarn = new WarpingYarn;
+                        $WarpingYarn->company_id = @$warpingYarns['company_id'];
+                        $WarpingYarn->yarn_count = @$warpingYarns['yarn_count'];
+                        $WarpingYarn->total_bag = @$warpingYarns['total_bag'];
+                        $WarpingYarn->total_kg_bag = @$warpingYarns['total_kg_bag'];
+                        $WarpingYarn->yarn_total_kg = @$warpingYarns['total_bag'] * @$warpingYarns['total_kg_bag'];
+                        $WarpingYarn->customer_id = request('customer_id');
+                        $WarpingYarn->sub_customer_id = request('sub_customer_id');
+                        $WarpingYarn->warping_id = @$Warping->id;
+                        $WarpingYarn->save();
+                    }else{
+                        $WarpingYarn = WarpingYarn::findorfail($warpingYarns['warping_id']);
+                        $WarpingYarn->company_id = @$warpingYarns['company_id'];
+                        $WarpingYarn->yarn_count = @$warpingYarns['yarn_count'];
+                        $WarpingYarn->total_bag = @$warpingYarns['total_bag'];
+                        $WarpingYarn->total_kg_bag = @$warpingYarns['total_kg_bag'];
+                        $WarpingYarn->yarn_total_kg = @$warpingYarns['total_bag'] * @$warpingYarns['total_kg_bag'];
+                        $WarpingYarn->customer_id = request('customer_id');
+                        $WarpingYarn->sub_customer_id = request('sub_customer_id');
+                        $WarpingYarn->save();
+                    }
+                }
+
+            }else{
+                $WarpingYarnDetails = WarpingYarn::where([['warping_id', 1]])->get()->all();
+                foreach ($WarpingYarnDetails as $WarpingYarnDetail){
+                    WarpingYarn::findorfail($WarpingYarnDetail->id)->delete();
+                }
+            }
+
+            return back()->with('success','Warping Updated Successfully!!');
         }catch (Exception $e){
             return back()->with('danger','Something went wrong!');
         }
     }
 
-
-
-}
+ }
