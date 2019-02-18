@@ -104,7 +104,10 @@
                             <a href="{{ url('/admin/delevery/fullBeam') }}">Full Beam Delevery</a>
                         </li>
                         <li>
-                            <a href="#">Yarn Delevery</a>
+                            <a href="{{ url('/admin/delevery/yarns') }}">Yarn Delevery</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('/admin/delevery/emptyBeams') }}">Empty Beam Delevery</a>
                         </li>
                     </ul>
                 </li>

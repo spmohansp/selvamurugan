@@ -2,31 +2,28 @@
 
 namespace App\Http\Controllers\AdminControllers;
 
-use App\Company;
-use App\IncomeYarn;
+use App\YarnDelevery;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class YarnController extends Controller
+class YarnDeleveryController extends Controller
 {
     public function __construct(){
         $this->middleware('admin');
     }
 
 
-    public function ShowAllCustomerYarn(){
-        $IncomeYarns = IncomeYarn::get()->all();
-        return view('admin.IncommingProduct.yarn.view',compact('IncomeYarns'));
+    public function ShowAllYarnDelevery(){
+        $DeleveryYarns = YarnDelevery::get()->all();
+        return view('admin.delevery.yarnDelevery.view',compact('DeleveryYarns'));
     }
 
-    public function AddCustomerYarn(){
-        $Companies = Company::get()->all();
-        $IncomeYarn = IncomeYarn::get();
-        return view('admin.IncommingProduct.yarn.add',compact('Companies','IncomeYarn'));
+    public function AddCustomerYarnDelevery(){
+        return view('admin.delevery.yarnDelevery.add');
     }
 
 
-    public function SaveCustomerYarn(Request $request){
+    public function SaveYarnDelevery(Request $request){
         $request->validate([
             'unit_id' => 'required|exists:units,id',
             'customer_id' => 'required|exists:customers,id',
@@ -37,7 +34,7 @@ class YarnController extends Controller
             'yarn_count' => 'required',
         ]);
         try {
-            $IncomeYarn = new IncomeYarn;
+            $IncomeYarn = new YarnDelevery;
             $IncomeYarn->unit_id = request('unit_id');
             $IncomeYarn->customer_id = request('customer_id');
             $IncomeYarn->sub_customer_id = request('sub_customer_id');
@@ -50,18 +47,18 @@ class YarnController extends Controller
             $IncomeYarn->yarn_count = request('yarn_count');
             $IncomeYarn->note = request('note');
             $IncomeYarn->save();
-            return back()->with('success','Customer Income Yarn Added Successfully!!');
+            return back()->with('success','Yarn Delevery Added Successfully!!');
         }catch (Exception $e){
             return back()->with('danger','Something went wrong!');
         }
     }
 
-    public function IncomeYarnEdit($id){
-        $IncomeYarn = IncomeYarn::FindorFail($id);
-        return view('admin.IncommingProduct.yarn.edit',compact('IncomeYarn'));
+    public function DeleveryYarnEdit($id){
+        $YarnDelevery = YarnDelevery::FindorFail($id);
+        return view('admin.delevery.yarnDelevery.edit',compact('YarnDelevery'));
     }
 
-    public function IncomeYarnUpdate($id , Request $request){
+    public function DeleveryYarnUpdate($id , Request $request){
         $request->validate([
             'unit_id' => 'required|exists:units,id',
             'customer_id' => 'required|exists:customers,id',
@@ -72,7 +69,7 @@ class YarnController extends Controller
             'yarn_count' => 'required',
         ]);
         try {
-            $IncomeYarn = IncomeYarn:: FindorFail($id);
+            $IncomeYarn = YarnDelevery::FindorFail($id);
             $IncomeYarn->unit_id = request('unit_id');
             $IncomeYarn->customer_id = request('customer_id');
             $IncomeYarn->sub_customer_id = request('sub_customer_id');
@@ -85,21 +82,18 @@ class YarnController extends Controller
             $IncomeYarn->yarn_count = request('yarn_count');
             $IncomeYarn->note = request('note');
             $IncomeYarn->save();
-            return back()->with('success','Customer Income Yarn Udpated  Successfully!!');
+            return back()->with('success','Delevery Yarn Updated Successfully!!');
         }catch (Exception $e){
             return back()->with('danger','Something went wrong!');
         }
     }
 
-    public function IncomeYarnDelete($id){
+    public function DeleveryYarnDelete($id){
         try {
-            $IncomeYarn = IncomeYarn::FindorFail($id);
-            $IncomeYarn->delete();
-            return back()->with('success','Customer Income Yarn Deleted  Successfully!!');
+            YarnDelevery::FindorFail($id)->delete();
+            return back()->with('success', 'Delevery Yarn Removed Successfully!!');
         } catch (Exception $e) {
             return back()->with('danger', 'Something went wrong!');
         }
     }
-
-
 }
