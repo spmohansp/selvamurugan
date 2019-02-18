@@ -21,18 +21,27 @@ class YarnController extends Controller
 
     public function AddCustomerYarn(){
         $Companies = Company::get()->all();
-        return view('admin.IncommingProduct.yarn.add',compact('Companies'));
+        $IncomeYarn = IncomeYarn::get();
+        return view('admin.IncommingProduct.yarn.add',compact('Companies','IncomeYarn'));
     }
 
 
-    public function SaveCustomerYarn(){
+    public function SaveCustomerYarn(Request $request){
+        $request->validate([
+            'unit_id' => 'required',
+            'customer_id' => 'required',
+            'sub_customer_id' => 'required',
+            'date' => 'required',
+            'company_id' => 'required',
+            'color' => 'required',
+            'yarn_count' => 'required',
+        ]);
         try {
             $IncomeYarn = new IncomeYarn;
             $IncomeYarn->unit_id = request('unit_id');
             $IncomeYarn->customer_id = request('customer_id');
             $IncomeYarn->sub_customer_id = request('sub_customer_id');
             $IncomeYarn->date = request('date');
-            $IncomeYarn->yarn_type = request('yarn_type');
             $IncomeYarn->company_id = request('company_id');
             $IncomeYarn->total_bag = request('total_bag');
             $IncomeYarn->total_kg_bag = request('total_kg_bag');
@@ -52,14 +61,22 @@ class YarnController extends Controller
         return view('admin.IncommingProduct.yarn.edit',compact('IncomeYarn'));
     }
 
-    public function IncomeYarnUpdate($id){
+    public function IncomeYarnUpdate($id , Request $request){
+        $request->validate([
+            'unit_id' => 'required',
+            'customer_id' => 'required',
+            'sub_customer_id' => 'required',
+            'date' => 'required',
+            'company_id' => 'required',
+            'color' => 'required',
+            'yarn_count' => 'required',
+        ]);
         try {
             $IncomeYarn = IncomeYarn:: FindorFail($id);
             $IncomeYarn->unit_id = request('unit_id');
             $IncomeYarn->customer_id = request('customer_id');
             $IncomeYarn->sub_customer_id = request('sub_customer_id');
             $IncomeYarn->date = request('date');
-            $IncomeYarn->yarn_type = request('yarn_type');
             $IncomeYarn->company_id = request('company_id');
             $IncomeYarn->total_bag = request('total_bag');
             $IncomeYarn->total_kg_bag = request('total_kg_bag');
