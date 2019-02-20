@@ -23,7 +23,7 @@ class CreateFullBeamDeleveriesTable extends Migration
             $table->foreign('sub_customer_id')->references('id')->on('sub_customers');
             $table->string('date')->nullable();
             $table->string('tex_name')->nullable();
-            $table->longText('beam_number')->nullable();
+            $table->longText('sizing_beam')->nullable();
             $table->string('note')->nullable();
             $table->softDeletes();
             $table->timestamps();

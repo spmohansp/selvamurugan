@@ -13,6 +13,8 @@ Route::get('/home', function () {
 
 //AJAX
 Route::get('/getSubCustomerData', 'AdminControllers\SubCustomerController@getSubCustomerData');
+Route::get('/getNonDeleveredSizingBeamList', 'AdminControllers\FullBeamDeleveryController@SizingBeamNonDeleverList');
+Route::get('/getNonDeleveredSizingBeamDetail', 'AdminControllers\FullBeamDeleveryController@getNonDeleveredSizingBeamDetail');
 
 
 //UNIT
@@ -114,6 +116,7 @@ Route::delete('/SizingSetList/{id}/delete', 'AdminControllers\SizingController@D
 //Full Beam Delevery
  Route::get('/delevery/fullBeam', 'AdminControllers\FullBeamDeleveryController@showFullBeamDeleveryList');
  Route::get('/delevery/fullBeam/Add', 'AdminControllers\FullBeamDeleveryController@AddFullBeamDelevery');
+ Route::post('/delevery/fullBeam/Add', 'AdminControllers\FullBeamDeleveryController@AddCustomerFullBeamDelevery')->name('AddCustomerFullBeamDelevery');
 
 
 

@@ -342,7 +342,7 @@
                 e.preventDefault();
                 $(".CalculateTotalKG").prop("required", true);
                 for(i=0;i < yarni;i++){
-                    $("input[name='WarpingYarn[" + i + "][total_kg]']").val(parseFloat($("input[name='WarpingYarn[" + i + "][total_bag]']").val()) * parseFloat($("input[name='WarpingYarn[" + i + "][total_kg_bag]']").val()));
+                    $("input[name='WarpingYarn[" + i + "][yarn_total_kg]']").val(parseFloat($("input[name='WarpingYarn[" + i + "][total_bag]']").val()) * parseFloat($("input[name='WarpingYarn[" + i + "][total_kg_bag]']").val()));
                 }
             });
 

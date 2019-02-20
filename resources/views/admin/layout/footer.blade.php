@@ -49,6 +49,7 @@
 <script src="{{ url('/js/chemical.js') }}"></script>
 
 <script src="{{ url('/js/warping.js') }}"></script>
+<script src="{{ url('/js/delevery.js') }}"></script>
 <script>
     function openRightMenu() {
         document.getElementById("rightMenu").style.display = "block";

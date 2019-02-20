@@ -14,7 +14,7 @@ class CreateSizingBeamsTable extends Migration
     public function up()
     {
         Schema::create('sizing_beams', function (Blueprint $table) {
-            $table->increments('id');
+            $table->uuid('id')->primary();
             $table->integer('sizing_id')->unsigned();
             $table->foreign('sizing_id')->references('id')->on('sizings');
             $table->integer('warping_id')->unsigned()->nullable();
@@ -27,11 +27,12 @@ class CreateSizingBeamsTable extends Migration
             $table->string('meter')->nullable();
             $table->string('kanchi')->nullable();
             $table->string('name')->nullable();
-            $table->string('status')->default(0)->nullable();
             $table->integer('customer_id')->unsigned()->nullable();
             $table->foreign('customer_id')->references('id')->on('customers');
             $table->integer('sub_customer_id')->unsigned()->nullable();
             $table->foreign('sub_customer_id')->references('id')->on('sub_customers');
+            $table->integer('delevery_id')->unsigned()->nullable();
+            $table->foreign('delevery_id')->references('id')->on('full_beam_deleveries');
             $table->softDeletes();
             $table->timestamps();
         });
