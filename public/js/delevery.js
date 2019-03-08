@@ -3,23 +3,22 @@ $(document).ready(function () {
 
     $('body').on('change',".DeleveryChanges",function(e){
         e.preventDefault();
-        var Sub_Customer_id =$("#sub_customer_id option:selected").val();
-        var Customer_id =$(".DeleverCustomerId option:selected").val();
-        if(Customer_id != undefined){
-            $.ajax({
-                type:"get",
-                url :'/admin/getNonDeleveredSizingBeamList',
-                data: {Customer_id:Customer_id,Sub_Customer_id:Sub_Customer_id},
-                success:function(data){
-                    if(data !=''){
-                        $('#NonDeleverBeamListDiv').html(data);
-                        $('.SearchableDropDownSelect').select2();
-                    }else{
-                        $('#SubCustomerDivDataLoad').html('<p style="color: red">Nill Beam Customer</p>');
-                    }
+        // var Sub_Customer_id =$("#sub_customer_id option:selected").val();
+        // var Customer_id =$(".DeleverCustomerId option:selected").val();
+        var Sizing_set_id =$("#Sizing_set_id option:selected").val();
+        $.ajax({
+            type:"get",
+            url :'/admin/getNonDeleveredSizingBeamList',
+            data: {Sizing_set_id:Sizing_set_id},
+            success:function(data){
+                if(data !=''){
+                    $('#NonDeleverBeamListDiv').html(data);
+                    $('.SearchableDropDownSelect').select2();
+                }else{
+                    $('#SubCustomerDivDataLoad').html('<p style="color: red">Nill Beam Customer</p>');
                 }
-            });
-        }
+            }
+        });
     });
 
     $('body').on('click',"#AddFullBeamDelevery",function(e){

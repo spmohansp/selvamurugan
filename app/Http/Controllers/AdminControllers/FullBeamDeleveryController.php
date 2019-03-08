@@ -21,7 +21,7 @@ class FullBeamDeleveryController extends Controller
     }
 
     public function SizingBeamNonDeleverList(){
-        $sizingBeams= SizingBeam::where([['customer_id',request('Customer_id')],['sub_customer_id',request('Sub_Customer_id')]])->whereNull('delevery_id')->get();
+        $sizingBeams= SizingBeam::where([['sizing_id',request('Sizing_set_id')]])->whereNull('delevery_id')->get();
         $FinalDatas = '<select id="Non_Delever_Sizing_Beam" class="form-control SearchableDropDownSelect">';
         if(!empty($sizingBeams)){
             foreach($sizingBeams as $sizingBeam){
@@ -35,10 +35,10 @@ class FullBeamDeleveryController extends Controller
         $sizingBeam= SizingBeam::where([['id',request('sizing_beam_id')]])->whereNull('delevery_id')->first();
         if(!empty($sizingBeam)){
             return '<tr><input type="hidden" name="sizing_beam_id[]" value="'.$sizingBeam->id.'">'.
-                                '<td>'.$sizingBeam->beam_number.'</td>'.
-                                '<td>'.$sizingBeam->meter.'</td>'.
-                                '<td><button type="button" class="btn btn-danger btn-sm RemoveSizingBeam">X</button></td>'.
-                            '</tr>';
+                        '<td>'.$sizingBeam->beam_number.'</td>'.
+                        '<td>'.$sizingBeam->meter.'</td>'.
+                        '<td><button type="button" class="btn btn-danger btn-sm RemoveSizingBeam">X</button></td>'.
+                    '</tr>';
         }
     }
 

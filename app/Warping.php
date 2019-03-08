@@ -30,4 +30,8 @@ class Warping extends Model
     public function WarpingYarn(){
         return $this->hasMany(WarpingYarn::class,'warping_id','id');
     }
+
+    public function Sizing(){
+        return $this->hasOne(Sizing::class,'warping_id','id');
+    }
 }

@@ -13,7 +13,7 @@ class LoginSeeder extends Seeder
     {
         DB::table('admins')->truncate();
         DB::table('admins')->insert([
-            'name' => 'Selva Murugal',
+            'name' => 'Selva Murugan',
             'email' => 'admin@admin.com',
             'password' => bcrypt('123456'),
         ]);
@@ -21,6 +21,7 @@ class LoginSeeder extends Seeder
         $customers = [
             ['name' => 'Test Customer','mobile' => '1234567890','address' => 'Tiruchengode','created_at'=>now(),'updated_at'=>now()],
             ['name' => 'Test Customer1','mobile' => '1234567891','address' => 'Tiruchengode','created_at'=>now(),'updated_at'=>now()],
+            ['name' => 'Test Customer2','mobile' => '1234567892','address' => 'Tiruchengode Namakkal','created_at'=>now(),'updated_at'=>now()],
         ];
         DB::table('customers')->insert($customers);
 

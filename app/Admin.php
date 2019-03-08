@@ -51,4 +51,8 @@ class Admin extends Authenticatable
     public function getAllCompanies(){
         return Company::get()->all();
     }
+
+    public function getAllWarpings(){
+        return Warping::get()->all();
+    }
 }

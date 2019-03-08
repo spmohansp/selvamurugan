@@ -49,34 +49,46 @@ active
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
+                    {{--<div class="col-sm-4">--}}
+                        {{--<div class="form-group">--}}
+                            {{--<label class="control-label"><span class="asterisk">Customer Name</span></label>--}}
+                            {{--<select name="customer_id" class="form-control SearchableDropDownSelect DeleveryChanges DeleverCustomerId" id="CustomerIdsChanges" required>--}}
+                                {{--<option value="" disabled="" selected>Select Customer</option>--}}
+                                {{--@foreach(auth()->user()->getAllCustomers() as $Customer)--}}
+                                    {{--<option value="{{ $Customer->id }}" {{ ($Customer->id == old('customer_id'))? 'selected':'' }}>{{ $Customer->name }} | {{ $Customer->mobile }}</option>--}}
+                                {{--@endforeach--}}
+                            {{--</select>--}}
+                            {{--<div class="help-block with-errors"></div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+
+                    {{--<div class="col-sm-4">--}}
+                        {{--<div class="form-group">--}}
+                            {{--<label class="control-label"><span class="asterisk">Sub Customer Name</span></label>--}}
+                            {{--<div id="SubCustomerDivDataLoad"></div>--}}
+                            {{--<div class="help-block with-errors"></div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label class="control-label"><span class="asterisk">Customer Name</span></label>
-                            <select name="customer_id" class="form-control SearchableDropDownSelect DeleveryChanges DeleverCustomerId" id="CustomerIdsChanges" required>
-                                <option value="" disabled="" selected>Select Customer</option>
-                                @foreach(auth()->user()->getAllCustomers() as $Customer)
-                                    <option value="{{ $Customer->id }}" {{ ($Customer->id == old('customer_id'))? 'selected':'' }}>{{ $Customer->name }} | {{ $Customer->mobile }}</option>
+                            <label class="control-label"><span class="asterisk">Set Number</span></label>
+                            <select name="full_beam_set_list_siging_id" id="Sizing_set_id" class="form-control DeleveryChanges SearchableDropDownSelect" required>
+                                <option value="" disabled="" selected>Select Set Number</option>
+                                @foreach(auth()->user()->getAllWarpings() as $Warping)
+                                    <option value="{{ $Warping->Sizing->id }}" {{ ($Warping->id == old('customer_id'))? 'selected':'' }}>{{ @$Warping->set_number }} | {{ @$Warping->Customer->name }} | {{ @$Warping->Customer->mobile }} | {{ @$Warping->SubCustomer->name }} {{ @$Warping->SubCustomer->mobile }}</option>
                                 @endforeach
                             </select>
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
-
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label class="control-label"><span class="asterisk">Sub Customer Name</span></label>
-                            <div id="SubCustomerDivDataLoad"></div>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <div class="form-group">
                             <label class="control-label"><span class="asterisk">Beam Detail List</span></label>
                             <div id="NonDeleverBeamListDiv"></div>
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-2">
                         <div class="form-group">
                             <button type="button" id="AddFullBeamDelevery" class="btn btn-primary btn-sm">Add Beam</button>
                         </div>
